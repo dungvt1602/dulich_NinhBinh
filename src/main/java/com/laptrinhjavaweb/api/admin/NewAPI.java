@@ -2,6 +2,7 @@ package com.laptrinhjavaweb.api.admin;
 
 import com.laptrinhjavaweb.dto.NewDTO;
 import com.laptrinhjavaweb.dto.PlaceDTO;
+import com.laptrinhjavaweb.repository.PlaceRepository;
 import com.laptrinhjavaweb.service.IPlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,6 +14,8 @@ public class NewAPI {
 
     @Autowired
     IPlaceService placeService;
+
+
 
     //thêm 1 new
     @PostMapping("/api/new")
@@ -31,7 +34,10 @@ public class NewAPI {
     @DeleteMapping("api/new")
     public void delete(@RequestBody long[] ids)
     {
-        System.out.print("thử nghiệm");
+        for(long id : ids)
+        {
+            placeService.deletePlace(id);
+        }
     }
 
 

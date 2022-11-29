@@ -123,9 +123,9 @@
 			type: "warning",
 			showCancelButton: true,
 			confirmButtonClass: "btn-success",
-			cancelButtonClass: "btn-danger",
-			confirmButtonText: "Xác nhận",
-			cancelButtonText: "Hủy bỏ",
+			cancelButtonClass: "btn-dhận",
+			cancelButtonText: "Hủy anger",
+			confirmButtonText: "Xác nbỏ",
 		}).then(function(isConfirm) {
 			if (isConfirm) {
 				var ids = $('tbody input[type=checkbox]:checked').map(function () {

@@ -92,4 +92,9 @@ public class PlaceService implements IPlaceService {
 		}
 		return placeConverter.toDTO(entity);
 	}
+
+	@Override
+	public void deletePlace(long id) {
+		placeRepository.delete(id);
+	}
 }
