@@ -36,7 +36,7 @@
     <ul class="navbar-nav ml-auto">
         <securtity:authorize access="isAnonymous()">
             <li class="nav-item "><a class="nav-link" href="<c:url value="/dang-nhap"/> ">Đăng nhập</a></li>
-            <li class="nav-item "><a class="nav-link" href="<c:url value="/trang-chu"/> ">Đăng ký</a></li>
+            <li class="nav-item "><a class="nav-link" href="<c:url value="/dang-ky"/> ">Đăng ký</a></li>
         </securtity:authorize>
 
         <securtity:authorize access="isAuthenticated()">
@@ -91,7 +91,7 @@
 </section>
 
 <section class="probootstrap-section-half d-md-flex" id="section-about">
-    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_2.jpg"/>)"></div>
+    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_1.jpg"/>)"></div>
     <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
             <h2 class="heading mb-4">Ghềnh Ráng - Tiên Sa</h2>

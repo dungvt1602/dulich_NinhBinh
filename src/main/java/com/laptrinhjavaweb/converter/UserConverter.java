@@ -39,9 +39,9 @@ public class UserConverter {
 
 
     public  UserEntity toEntity(UserEntity result,UserDTO dto){
-        String passwodEncode = bCryptPasswordEncoder.encode(dto.getPassword());
+
         result.setFullName(dto.getFullName());
-        result.setPassword(passwodEncode);
+        result.setPassword(dto.getPassword());
         result.setStatus(1);
         result.setUserName(dto.getUserName());
         return result;

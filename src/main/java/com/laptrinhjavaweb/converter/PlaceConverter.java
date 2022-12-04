@@ -4,13 +4,25 @@ import com.laptrinhjavaweb.dto.NewDTO;
 import com.laptrinhjavaweb.dto.PlaceDTO;
 
 import com.laptrinhjavaweb.entity.PlaceEntity;
-import org.springframework.stereotype.Component;
 
+import com.laptrinhjavaweb.util.MessageUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.ServletContext;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.jar.Pack200;
 
 
 @Component
 public class PlaceConverter {
+
+    @Autowired
+    ServletContext application;
 
     public PlaceDTO toDTO(PlaceEntity entity)
     {
@@ -25,6 +37,7 @@ public class PlaceConverter {
     }
 
     public  PlaceEntity toEntity(PlaceDTO dto){
+
         PlaceEntity result = new PlaceEntity();
         result.setTitle(dto.getTitle());
         result.setShortDescription(dto.getShortDescription());
@@ -37,10 +50,13 @@ public class PlaceConverter {
 
     public  PlaceEntity toEntity(PlaceEntity result,PlaceDTO dto){
 
+
+
         result.setTitle(dto.getTitle());
         result.setShortDescription(dto.getShortDescription());
         result.setContent(dto.getContent());
         result.setThumbnail(dto.getThumbnail());
+
 
         return result;
     }

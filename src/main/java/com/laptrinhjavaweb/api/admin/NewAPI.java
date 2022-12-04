@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController(value = "APIofAdmin")
 public class NewAPI {
 
@@ -19,7 +20,7 @@ public class NewAPI {
 
     //thêm 1 new
     @PostMapping("/api/new")
-    public PlaceDTO addNew(@RequestBody PlaceDTO addPlace)
+    public PlaceDTO addNew(@RequestBody PlaceDTO addPlace )
     {
         return  placeService.save(addPlace);
     }

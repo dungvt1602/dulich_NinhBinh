@@ -4,11 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.laptrinhjavaweb.converter.UserConverter;
+import com.laptrinhjavaweb.dto.PlaceDTO;
 import com.laptrinhjavaweb.dto.UserDTO;
+import com.laptrinhjavaweb.entity.PlaceEntity;
 import com.laptrinhjavaweb.repository.RoleRepository;
 import com.laptrinhjavaweb.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -59,6 +62,35 @@ public class CustomUserDetailsService  implements UserDetailsService , IUserServ
 
 
 	@Override
+	public List<UserDTO> findAll(Pageable pageable) {
+		List<UserDTO> models = new ArrayList<>();
+		List<UserEntity> userEntities = userRepository.findAll(pageable).getContent();
+		for(UserEntity item : userEntities)
+		{
+			UserDTO newModel = new UserDTO();
+			newModel.setId(item.getId());
+			newModel.setUserName(item.getUserName());
+			newModel.setFullName(item.getFullName());
+			newModel.setStatus(item.getStatus());
+			models.add(newModel);
+		}
+		return models;
+
+	}
+
+	@Override
+	public Integer getTotalItem() {
+		return (int) userRepository.count();
+	}
+
+	@Override
+	public UserDTO findByID(Long id) {
+		UserEntity entity = userRepository.findOne(id);
+		UserDTO result = userConverter.toDTO(entity);
+		return result;
+	}
+
+	@Override
 	@Transactional
 	public UserDTO save(UserDTO dto) {
 		UserEntity entity = new UserEntity();
@@ -76,5 +108,16 @@ public class CustomUserDetailsService  implements UserDetailsService , IUserServ
 			entity = userRepository.save(entity);
 		}
 		return userConverter.toDTO(entity);
+	}
+
+	@Override
+	public void delete(long id) {
+		UserEntity userEntity = userRepository.findOne(id);
+		List<RoleEntity> entities = userEntity.getRoles();
+		for(RoleEntity role : entities)
+		{
+			role.getUsers().remove(userEntity);
+		}
+		userRepository.delete(userEntity);
 	}
 }

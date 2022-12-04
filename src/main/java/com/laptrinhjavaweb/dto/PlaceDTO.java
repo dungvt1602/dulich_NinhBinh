@@ -1,5 +1,7 @@
 package com.laptrinhjavaweb.dto;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class PlaceDTO extends AbstractDTO<PlaceDTO> {
 
     private String title;
@@ -8,6 +10,16 @@ public class PlaceDTO extends AbstractDTO<PlaceDTO> {
     private String content;
     private Long categoryId;
     private String categoryCode;
+
+    private MultipartFile imageFile;
+
+    public MultipartFile getImageFile() {
+        return imageFile;
+    }
+
+    public void setImageFile(MultipartFile imageFile) {
+        this.imageFile = imageFile;
+    }
 
     public String getTitle() {
         return title;

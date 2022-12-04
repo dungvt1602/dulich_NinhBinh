@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <%@include file="/common/taglib.jsp"%>
-<c:url var="newURL" value="/quan-tri/bai-viet/danh-sach"/>
-<c:url var="editNewURL" value="/quan-tri/bai-viet/chinh-sua"/>
-<c:url var="newAPI" value="/api/new"/>
+<c:url var="newURL" value="/quan-tri/nguoi-dung/danh-sach"/>
+<c:url var="editNewURL" value="/quan-tri/nguoi-dung/chinh-sua"/>
+<c:url var="newAPI" value="/api/web/user"/>
 <c:url var="upload" value="/update"/>
 <html>
 <head>
@@ -38,19 +38,11 @@
                     </c:if>
                     <%--@elvariable id="model" type=""--%>
                     <form:form  class="form-horizontal" role="form" id="formSubmit" enctype="multipart/form-data" modelAttribute="model">
+
                         <div class="form-group">
-                            <label for="categoryCode" class="col-sm-3 control-label no-padding-right">Thể loại:</label>
+                            <label class="col-sm-3 control-label no-padding-right" for="userName">Tài Khoản</label>
                             <div class="col-sm-9">
-                                <form:select path="categoryCode" id="categoryCode">
-                                    <form:option value="" label="-- Chọn thể loại --"/>
-                                    <form:options items="${categories}"/>
-                                </form:select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right" for="title">Tên bài viết</label>
-                            <div class="col-sm-9">
-                                <form:input path="title" cssClass="col-xs-10 col-sm-5"/>
+                                <form:input path="userName" cssClass="col-xs-10 col-sm-5"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -59,16 +51,28 @@
                                 <input type="file" class="col-xs-10 col-sm-5" id="thumbnail" name="thumbnail"/>
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label for="shortDescription" class="col-sm-3 control-label no-padding-right">Mô tả ngắn:</label>
+                            <label for="content" class="col-sm-3 control-label no-padding-right">Mật khẩu </label>
                             <div class="col-sm-9">
-                                    <form:textarea path="shortDescription" rows="5" cols="10" cssClass="form-control" id="shortDescription"/>
+                                <form:textarea path="password" rows="5" cols="10" cssClass="form-control" id="content"/>
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label for="content" class="col-sm-3 control-label no-padding-right">Nội dung:</label>
+                            <label for="content" class="col-sm-3 control-label no-padding-right">Tên người dùng :</label>
                             <div class="col-sm-9">
-                                <form:textarea path="content" rows="5" cols="10" cssClass="form-control" id="content"/>
+                                <form:textarea path="fullName" rows="5" cols="10" cssClass="form-control" id="content"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="categoryCode" class="col-sm-3 control-label no-padding-right">Tình trạng</label>
+                            <div class="col-sm-9">
+                                <form:select path="status" id="categoryCode">
+                                    <form:option value="" label="-- Chọn thể loại --"/>
+                                    <form:options items="${status}"/>
+                                </form:select>
                             </div>
                         </div>
                         <form:hidden path="id" id="newId"/>
@@ -77,7 +81,7 @@
                                 <c:if test="${not empty model.id}">
                                     <button class="btn btn-info" type="button" id="btnAddOrUpdateNew">
                                         <i class="ace-icon fa fa-check bigger-110"></i>
-                                        Cập nhật bài viết
+                                        Cập nhật người dùng
                                     </button>
                                 </c:if>
                                 <c:if test="${empty model.id}">
@@ -127,6 +131,7 @@
             console.log(file.name);
             data[""+"thumbnail"+""] = file.name;
         }
+
         var id = $('#newId').val();
         if (id == "") {
             addNew(data);

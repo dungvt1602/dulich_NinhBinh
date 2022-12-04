@@ -1,46 +1,48 @@
 package com.laptrinhjavaweb.controller.admin;
 
-import com.laptrinhjavaweb.dto.CategoryDTO;
-
 import com.laptrinhjavaweb.dto.PlaceDTO;
+import com.laptrinhjavaweb.dto.UserDTO;
 import com.laptrinhjavaweb.service.ICategoryService;
 import com.laptrinhjavaweb.service.IPlaceService;
+import com.laptrinhjavaweb.service.IUserService;
 import com.laptrinhjavaweb.util.MessageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 
-@Controller(value = "newControllerOfAdmin")
-public class NewController {
+@Controller(value = "userControllerOfAdmin")
+public class UserController {
 	
 	@Autowired
 	private ICategoryService categoryService;
 
 	@Autowired
-	private IPlaceService placeService;
+	private IUserService userService;
 
 	@Autowired
 	private MessageUtil messageUtil;
 
-	@RequestMapping(value = "/quan-tri/bai-viet/danh-sach", method = RequestMethod.GET)
+	@RequestMapping(value = "/quan-tri/nguoi-dung/danh-sach", method = RequestMethod.GET)
 	public ModelAndView showList(@RequestParam("page") int page ,
 								 @RequestParam("limit") int limit) {
-		PlaceDTO model = new PlaceDTO();
+		UserDTO model = new UserDTO();
 		model.setPage(page);
 		model.setLimit(limit);
 		Pageable pageable = new PageRequest(page-1,limit);
-		ModelAndView mav = new ModelAndView("admin/new/list");
-		model.setListResult(placeService.findAll(pageable));
+		ModelAndView mav = new ModelAndView("admin/users/list_user");
+		model.setListResult(userService.findAll(pageable));
 
 		//cout số danh sách các tin tức database
-		model.setTotalItem(placeService.getTotalItem());
+		model.setTotalItem(userService.getTotalItem());
 
 		//tính tổng số page để hiển thị
 		model.setTotalPage((int) Math.ceil((double)
@@ -53,10 +55,10 @@ public class NewController {
 
 
 
-	@RequestMapping(value = "/quan-tri/bai-viet/chinh-sua", method = RequestMethod.GET)
+	@RequestMapping(value = "/quan-tri/nguoi-dung/chinh-sua", method = RequestMethod.GET)
 	public ModelAndView editNew(@RequestParam(value = "id" , required = false) Long id , HttpServletRequest request) {
-		ModelAndView mav = new ModelAndView("admin/new/edit");
-		PlaceDTO model = new PlaceDTO();
+		ModelAndView mav = new ModelAndView("admin/users/edit_user");
+		UserDTO model = new UserDTO();
 		if(request.getParameter("message")!= null)
 		{
 			Map<String , String> messege = messageUtil.getMessage(request.getParameter("message"));
@@ -65,12 +67,14 @@ public class NewController {
 		}
 		if(id != null)
 		{
-			model = placeService.findbyID(id);
+			model = userService.findByID(id);
 		}
+		Map<Integer, String> status = new HashMap<>();
+		status.put(1,"Hoạt động");
+		status.put(0,"Không hoạt động");
+		mav.addObject("status" , status);
 		mav.addObject("model" , model);
 
-		Map<String , String> categories = categoryService.findAllCategory();
-		mav.addObject("categories", categories);
 		return mav;
 	}
 }

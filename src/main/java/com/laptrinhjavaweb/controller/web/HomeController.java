@@ -3,6 +3,9 @@ package com.laptrinhjavaweb.controller.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.laptrinhjavaweb.dto.UserDTO;
+import com.laptrinhjavaweb.util.MessageUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -11,12 +14,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Map;
+
 @Controller(value = "homeControllerOfWeb")
 public class HomeController {
 
+	@Autowired
+	MessageUtil messageUtil;
+
 	@RequestMapping(value = "/trang-chu", method = RequestMethod.GET)
 	public ModelAndView homePage() {
+		String image = "p2.jpg";
 		ModelAndView mav = new ModelAndView("web/home");
+		mav.addObject("test" , image);
 		return mav;
 	}
 	
@@ -27,8 +37,16 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/dang-ky", method = RequestMethod.GET)
-	public ModelAndView registerPage() {
-		ModelAndView mav = new ModelAndView("login");
+	public ModelAndView registerPage(HttpServletRequest request) {
+		ModelAndView mav = new ModelAndView("sign_up");
+		UserDTO dto = new UserDTO();
+		if(request.getParameter("message")!= null)
+		{
+			Map<String , String> messege = messageUtil.getMessage(request.getParameter("message"));
+			mav.addObject("message", messege.get("message"));
+			mav.addObject("alert", messege.get("alert"));
+		}
+		mav.addObject("model", dto);
 		return mav;
 	}
 	

@@ -16,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.servlet.ServletContext;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +30,9 @@ public class PlaceService implements IPlaceService {
 
 	@Autowired
 	CategoryRepository categoryRepository;
+
+	@Autowired
+	ServletContext application;
 
 	@Autowired
 	PlaceConverter placeConverter;
