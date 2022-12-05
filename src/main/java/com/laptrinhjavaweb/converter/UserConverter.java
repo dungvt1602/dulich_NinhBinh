@@ -22,7 +22,7 @@ public class UserConverter {
         userDTO.setPassword(entity.getPassword());
         userDTO.setFullName(entity.getFullName());
         userDTO.setStatus(entity.getStatus());
-
+        userDTO.setAvatar("avatar.jpg");
         return userDTO;
     }
 
@@ -34,6 +34,7 @@ public class UserConverter {
         result.setPassword(passwodEncode);
         result.setStatus(1);
         result.setUserName(dto.getUserName());
+        result.setAvatar("avatar.jpg");
         return result;
     }
 
@@ -44,6 +45,7 @@ public class UserConverter {
         result.setPassword(dto.getPassword());
         result.setStatus(1);
         result.setUserName(dto.getUserName());
+        result.setAvatar("avatar.jpg");
         return result;
     }
 

@@ -32,6 +32,7 @@ public class PlaceConverter {
         newDTO.setShortDescription(entity.getShortDescription());
         newDTO.setContent(entity.getContent());
         newDTO.setThumbnail(entity.getThumbnail());
+        newDTO.setVideo(entity.getVideo());
         newDTO.setCategoryCode(entity.getCategoryEntity().getCode());
         return newDTO;
     }
@@ -43,6 +44,7 @@ public class PlaceConverter {
         result.setShortDescription(dto.getShortDescription());
         result.setContent(dto.getContent());
         result.setThumbnail(dto.getThumbnail());
+        result.setVideo(dto.getVideo());
 
         return result;
     }
@@ -56,6 +58,7 @@ public class PlaceConverter {
         result.setShortDescription(dto.getShortDescription());
         result.setContent(dto.getContent());
         result.setThumbnail(dto.getThumbnail());
+        result.setVideo(dto.getVideo());
 
 
         return result;

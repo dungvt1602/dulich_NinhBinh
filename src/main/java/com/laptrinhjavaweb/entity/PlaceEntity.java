@@ -1,6 +1,8 @@
 package com.laptrinhjavaweb.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "place")
@@ -18,9 +20,48 @@ public class PlaceEntity extends BaseEntity {
     @Column(name = "content", columnDefinition = "TEXT")
     private String content;
 
+    @Column(name= "video")
+    private String video;
+
+    @Column(name = "diachi")
+    private String address;
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
+    }
+
+    public List<CommentPlaceEntity> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<CommentPlaceEntity> comments) {
+        this.comments = comments;
+    }
+
+    public List<UserEntity> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<UserEntity> users) {
+        this.users = users;
+    }
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private CategoryEntity categoryEntity;
+
+    @OneToMany(mappedBy = "placeEntity")
+    private List<CommentPlaceEntity> comments = new ArrayList<>();
+
+
+    @ManyToMany(mappedBy = "places")
+    private List<UserEntity> users = new ArrayList<>();
+
+
 
     public CategoryEntity getCategoryEntity() {
         return categoryEntity;

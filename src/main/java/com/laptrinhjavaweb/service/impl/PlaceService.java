@@ -52,6 +52,16 @@ public class PlaceService implements IPlaceService {
  		return models;
 	}
 
+
+	@Override
+	public PlaceDTO findNewPlace()
+	{
+		List<PlaceEntity> entities = placeRepository.findNewPlace();
+		List<PlaceDTO> dto = new ArrayList<>();
+
+		return  null;
+	}
+
 	@Override
 	public Integer getTotalItem() {
 		return (int) placeRepository.count();

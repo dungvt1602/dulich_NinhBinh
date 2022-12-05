@@ -20,6 +20,9 @@ public class CategoryEntity extends BaseEntity {
 	@OneToMany(mappedBy = "categoryEntity")
 	private List<PlaceEntity> places = new ArrayList<>();
 
+
+
+
 	public List<PlaceEntity> getPlaces() {
 		return places;
 	}

@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right" for="thumbnail">Ảnh đại diện</label>
+                            <label class="col-sm-3 control-label no-padding-right" for="thumbnail">Ảnh địa điểm</label>
                             <div class="col-sm-9">
                                 <input type="file" class="col-xs-10 col-sm-5" id="thumbnail" name="thumbnail"/>
                             </div>
@@ -69,6 +69,12 @@
                             <label for="content" class="col-sm-3 control-label no-padding-right">Nội dung:</label>
                             <div class="col-sm-9">
                                 <form:textarea path="content" rows="5" cols="10" cssClass="form-control" id="content"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="video" class="col-sm-3 control-label no-padding-right">Nội dung:</label>
+                            <div class="col-sm-9">
+                                <form:textarea path="video" rows="5" cols="10" cssClass="form-control" id="video"/>
                             </div>
                         </div>
                         <form:hidden path="id" id="newId"/>

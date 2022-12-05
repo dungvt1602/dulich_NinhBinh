@@ -90,6 +90,7 @@
     </div>
 </section>
 
+
 <section class="probootstrap-section-half d-md-flex" id="section-about">
     <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_1.jpg"/>)"></div>
     <div class="probootstrap-text">

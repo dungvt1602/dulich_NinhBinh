@@ -13,6 +13,16 @@ public class PlaceDTO extends AbstractDTO<PlaceDTO> {
 
     private MultipartFile imageFile;
 
+    private String video;
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
+    }
+
     public MultipartFile getImageFile() {
         return imageFile;
     }

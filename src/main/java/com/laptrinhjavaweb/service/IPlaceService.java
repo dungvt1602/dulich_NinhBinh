@@ -20,5 +20,7 @@ public interface IPlaceService {
 
     PlaceDTO save(PlaceDTO dto);
 
+    PlaceDTO findNewPlace();
+
     void deletePlace(long id);
 }
