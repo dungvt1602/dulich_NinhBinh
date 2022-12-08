@@ -6,7 +6,7 @@
 <c:url var="upload" value="/update"/>
 <html>
 <head>
-    <title>Chỉnh sửa bài viết</title>
+    <title>Chỉnh sửa người dùng</title>
 </head>
 <body>
 <div class="main-content">

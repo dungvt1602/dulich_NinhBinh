@@ -14,6 +14,10 @@
 <!DOCTYPE html>
 <head>
 
+    <title><dec:title default="Trang chủ" /></title>
+    <link rel="shortcut icon" type="image/png" href="<c:url value="/template/web/assets/images/favicon.png"/>"/>
+
+
 
     <link href="<c:url value="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700"/> " , rel="stylesheet">
 
@@ -50,6 +54,9 @@
 
 
     <link href="<c:url value="/template/web/assets/css/style.css"/> " , rel="stylesheet">
+
+
+    <link href="<c:url value="/template/login/profile.css"/> " , rel="stylesheet">
 
     <script src="<c:url value='/template/admin/assets/js/ace-extra.min.js' />"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">

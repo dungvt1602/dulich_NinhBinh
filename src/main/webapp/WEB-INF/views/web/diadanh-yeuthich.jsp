@@ -11,7 +11,7 @@
 <%@ page import= "com.laptrinhjavaweb.util.SecurityUtils" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Địa danh</title>
 </head>
 <body>
 

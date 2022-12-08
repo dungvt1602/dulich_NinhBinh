@@ -54,12 +54,18 @@ public class PlaceService implements IPlaceService {
 
 
 	@Override
-	public PlaceDTO findNewPlace()
+	public List<PlaceDTO> findNewPlace()
 	{
 		List<PlaceEntity> entities = placeRepository.findNewPlace();
 		List<PlaceDTO> dto = new ArrayList<>();
+		for(PlaceEntity entity : entities)
+		{
+			PlaceDTO result = new PlaceDTO();
+			result = placeConverter.toDTO(entity);
+			dto.add(result);
+		}
 
-		return  null;
+		return  dto;
 	}
 
 	@Override
