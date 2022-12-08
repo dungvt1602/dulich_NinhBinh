@@ -1,219 +1,211 @@
 <%--
   Created by IntelliJ IDEA.
   User: admin
-  Date: 11/12/2022
-  Time: 11:55 AM
+  Date: 11/10/2022
+  Time: 3:04 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
+<%@ taglib prefix="securtity" uri="http://www.springframework.org/security/tags" %>
+<%@ page import= "com.laptrinhjavaweb.util.SecurityUtils" %>
+
+
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
+<style>
+    .normal { font-style: normal; }
+    .italic { font-style: italic;}
+    .oblique { font-style: oblique;}
+</style>
 <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
     <div class="container">
-        <a class="navbar-brand" href="/">BINH DINH - VIET NAM</a>
+        <a class="navbar-brand" href="<c:url value="/trang-chu"/>">BINH DINH - VIET NAM</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-menu" aria-controls="probootstrap-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span><i class="ion-navicon"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="probootstrap-menu">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="city-guides.html">Địa danh</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">Ẩm thực</a></li>
-                <li class="nav-item"><a class="nav-link" href="travel.html">Khách sạn</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Thông tin liên hệ</a></li>
+                <li class="nav-item active"><a class="nav-link" href="<c:url value="/trang-chu"/>">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="<c:url value="/diadanh"/>">Địa danh</a></li>
+                <li class="nav-item"><a class="nav-link" href="<c:url value="/event"/>">Sự kiện</a></li>
+                <li class="nav-item"><a class="nav-link" href="<c:url value="/dacsan"/>">Ẩm thực</a></li>
+                <li class="nav-item"><a class="nav-link" href="<c:url value="/khachsan"/>">Khách sạn</a></li>
+                <li class="nav-item "><a class="nav-link" href="<c:url value="/contact"/> ">Thông tin liên hệ</a></li>
             </ul>
         </div>
     </div>
+    <ul class="navbar-nav ml-auto">
+        <securtity:authorize access="isAnonymous()">
+            <li class="nav-item "><a class="nav-link" href="<c:url value="/dang-nhap"/> ">Đăng nhập</a></li>
+            <li class="nav-item "><a class="nav-link" href="<c:url value="/trang-chu"/> ">Đăng ký</a></li>
+        </securtity:authorize>
+
+        <securtity:authorize access="isAuthenticated()">
+            <li class="nav-item "><a class="nav-link" href="<c:url value="/trang-chu"/> ">Welcome <%=SecurityUtils.getPrincipal().getFullName()%></a></li>
+            <li class="nav-item "><a class="nav-link" href="<c:url value="/thoat"/> ">Đăng xuất</a></li>
+        </securtity:authorize>
+    </ul>
+
 </nav>
-<!-- END nav -->
-
-
-<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('assets/images/bg_1.jpg');" data-stellar-background-ratio="0.5" id="section-home">
+<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/video/HonKho.jpg"/>');" data-stellar-background-ratio="0.5" id="section-home">
     <div class="overlay"></div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md">
-                <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Bình Định có núi Vọng Phu Có Đầm Thị Nại có Cù Lao xanh.</h2>
-                <p class="lead mb-5 probootstrap-animate">
-                </p>
-                <a href="onepage.html" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">See OnePage Verion</a>
-                </p>
-            </div>
-            <div class="col-md probootstrap-animate">
-                <form action="#" class="probootstrap-form">
-                    <div class="form-group">
-                        <div class="row mb-3">
-                            <div class="col-md">
-                                <div class="form-group">
-                                    <label for="ten_dang_nhap">Tên đăng nhập</label>
-                                    <label for="ten_dang_nhap" style="width: 100%;">
-                                        <input type="text" class="form-control" id="ten_dang_nhap" placeholder="User name">
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="form-group">
-                                    <label for="mat_khau">Mật khẩu</label>
-                                    <label for="mat_khau" style="width: 100%;">
-                                        <input type="password" class="form-control" id="mat_khau" placeholder="Password">
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <input type="submit" value="Đăng nhập" class="btn btn-primary btn-block">
-                            </div>
-                        </div>
-                    </div>
-                </form>
+
+        </div>
+    </div>
+
+</section>
+<!-- END section -->
+
+<section class="probootstrap_section" id="section-feature-testimonial">
+
+
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-12 text-center mb-5 probootstrap-animate">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">HÒN KHÔ</h2>
+                <blockquote class="normal">
+                    <p class=" lead mb-4 "><em>Đặt chân đến hòn Khô, bạn sẽ ngạc nhiên trước khung cảnh thiên nhiên quá đỗi bình yên và chưa có nhiều sự khai thác thương mại. Trong đó, điểm đặc trưng của hòn Khô là con đường dài 500m giữa biển được tạo thành khi nước rút, kết nối làng chài Nhơn Hải và hòn đảo này.</em></p>
+                    <p class=" lead mb-4 "><em>Cách đi Hòn Khô cũng vô cùng đơn giản. Từ TP. Hồ Chí Minh bạn có thể đi máy bay, xe khách hoặc tàu hoả đến thẳng Quy Nhơn. Sau đó thuê xe đi hết cây cầu Thị Nại, qua Khu kinh tế Nhơn Hội, đi dọc theo vịnh Mai Hương để đến làng chài xã Nhơn Hãi. Sau đó bạn tiếp tục thuê thuyền là có thể ra được hòn đảo xinh đẹp này. Có rất nhiều thuyền với dịch vụ và giá cả khác nhau cho bạn thoải mái lựa chọn. Giá vé hòn khô đi từ đất liền ra đảo bằng thuyền giao động từ 100K – 1200K. </em></p>
+                    <p class=" lead mb-4 "><em>Hòn Kho yên bình, hoang sơ chưa có quá nhiều bàn tay can thiệp của con người. Bởi thế mà khi đến đây bạn có thể cảm nhận được sự tự do, phóng khoáng, bình dị. Xung quanh đảo không có nhiều cây cao bóng mát, mà chỉ có những bụi cỏ xanh xen lẫn những tảng đá tạo nên khung cảnh hoang dại rất đặc biệt.</em></p>
+                    <p class="probootstrap-author">
+                        <a href="https://probootstrap.com/" target="_blank">
+                            <img src="<c:url value="/template/web/assets/video/angelo.jpg"/> " alt="Free Template by ProBootstrap.com" class="rounded-circle">
+                            <span class="probootstrap-name">Hoàng Minh Châu</span>
+                            <span class="probootstrap-title">Ngày 5 tháng 12 năm 2022</span>
+                        </a>
+                    </p>
+                </blockquote>
             </div>
         </div>
     </div>
 </section>
 <!-- END section -->
-
-
-<section class="probootstrap_section" id="section-feature-testimonial">
+<section class="probootstrap_section">
     <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-12 text-center mb-5 probootstrap-animate">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">GHỀNH RÁNG - TIÊN SA</h2>
-                <img src="./assets/images/img_2.jpg" alt="" class="img-thumbnail">
-                <div class="row mb-4">
-                    <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                        <a href="#" class="probootstrap-thumbnail">
-                            <img src="assets/images/grts1.jpg" class="img-fluid">
-                            <div class="probootstrap-text">
-                                <h3>GHỀNH RÁNG - TIÊN SA</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                        <a href="#" class="probootstrap-thumbnail">
-                            <img src="assets/images/grts1.jpg" class="img-fluid">
-                            <h3>GHỀNH RÁNG - TIÊN SA</h3>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                        <a href="#" class="probootstrap-thumbnail">
-                            <img src="assets/images/grts1.jpg" class="img-fluid">
-                            <h3>GHỀNH RÁNG - TIÊN SA</h3>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                        <a href="#" class="probootstrap-thumbnail">
-                            <img src="assets/images/grts1.jpg" class="img-fluid">
-                            <h3>GHỀNH RÁNG - TIÊN SA</h3>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
-                        <defs>
-                            <filter id="goo">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-                                <feComposite in="SourceGraphic" in2="goo"/>
-                            </filter>
-                        </defs>
-                    </svg>
-                    <div class="YT">
-                        <div class="button--bubble__container">
-                            <button class="button button--bubble" type="button" onclick="alert('Đã thêm vào mục yêu thích')">♥ Yêu thích</button>
-                            <span class="button--bubble__effect-container">
-                            <span class="circle top-left"></span>
-                                <span class="circle top-left"></span>
-                                <span class="circle top-left"></span>
-
-                                <span class="button effect-button"></span>
-
-                                <span class="circle bottom-right"></span>
-                                <span class="circle bottom-right"></span>
-                                <span class="circle bottom-right"></span>
-                                </span>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <table style="background-color: #e5f995 ; width: 100%;">
-                            <tr style="height: 60px; color: #123429;">
-                                <td style="width: 30%; border-right: solid 1px white;">
-                                    ĐỊA CHỈ
-                                </td>
-                                <td style="width: 70%; padding: 5px;">
-                                    6 Ngô Gia Tự, Nguyễn Văn Cừ, Thành phố Qui Nhơn, Bình Định
-                                </td>
-                            </tr>
-                            <tr style="height: 60px; color: #123429; border-top: solid 1px white">
-                                <td style="width: 30%; border-right: solid 1px white;">
-                                    THÔNG TIN
-                                </td>
-                                <td style="width: 70%; padding: 5px;">
-                                    Nằm ở phường Ghềnh Ráng, thành phố Quy Nhơn, Ghềnh Ráng – Tiên Sa nằm cách trung tâm thành phố khoảng 3km về phía Đông-Nam. Điểm đặc biệt của nơi đây chính là quần thể những bãi đá nằm liền kề nhau và những bãi đá tập trung theo đường cong của eo núi
-                                    Xuân Vân. Nhờ vào vẻ đẹp độc đáo mà Ghềnh Ráng đã được Bộ Văn hóa – Thông tin xếp hạng là di tích quốc gia.
-                                </td>
-                            </tr>
-                            <tr style="height: 60px; color: #123429; border-top: solid 1px white">
-                                <td style="width: 30%; border-right: solid 1px white;">
-                                    THỜI ĐIỂM ĐĂNG
-                                </td>
-                                <td style="width: 70%; padding: 5px;">
-                                    31/10/2022
-                                </td>
-                            </tr>
-                            <tr style="height: 60px; color: #123429; border-top: solid 1px white">
-                                <td style="width: 30%; border-right: solid 1px white;">
-                                    MÔ TẢ CHI TIẾT
-                                </td>
-                                <td style="width: 70%; padding: 5px;">
-                                    Nói tới khu du lịch Ghềnh Ráng Bình Định bạn sẽ biết thêm về một sự tích được lưu truyền cho đến tận bây giờ về địa điểm này. Truyền thuyết kể về một người con gái nổi tiếng vừa đẹp người vừa đẹp nết, xinh xắn lại thùy mị nết na. Nàng đem lòng yêu một
-                                    chàng trai trong làng, hai người yêu nhau thắm thiết, cho đến một ngày viên quan huyện nhìn thấy nàng và bị sắc đẹp của nàng mê hoặc, hắn cho người theo dõi và tìm mọi cách để chiếm đoạt được nàng. Nhưng nàng không
-                                    hề yêu hắn, để giữ trọn được lòng thủy chung với người mình yêu, nàng khóc lạy cha mẹ và từ giã chàng trai rồi chạy trốn khỏi làng đến Quy Nhơn. Tên quan huyện thấy thế sai quân lính đuổi theo, khi đến Ghềnh Ráng
-                                    – tên này do ngư dân đặt vì nơi này có nhiều ghềnh, khi tàu bè qua khu vực này thì thủy thủ phải làm sao cho giảm gió trong buồm đi để thuyền đi chậm lại nếu không dễ bị nước ngập vào tàu, trong nghề đi biển thao
-                                    tác ấy gọi là ráng, tên Ghềnh Ráng từ đó mà ra – trời bỗng nổi sấm chớp, dông bão rất lớn làm núi đá bị nứt một khe lớn rồi cô gái biến mất tăm. Khi trời dừng bão và quang đãng trở lại thì khe núi ấy lại biến thành
-                                    một dòng suối uốn lượn bên sườn núi.
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div>
-                        <table style="border: solid 1px #a21b1e; border-radius: 10px; margin-top: 20px; width: 100%; text-align: left; color: #a21b1e; ">
-                            <tr>
-                                <td style="padding-left: 2%; ">
-                                    <h5 style="color: #a21b1e; padding-top:2%;">Bình luận</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding-left: 7%; padding-bottom: 2%;"><img src="assets/images/user.png" style="height: 40px; width: 40px; padding-right: 1%;"><input type="text" placeholder="Bình luận ..." style="width:80%"></td>
-                            </tr>
-                            <tr>
-                                <td style="padding-left: 7%; font-weight: bold; "><img src="assets/images/user.png" style="height: 40px; width: 40px; padding-right: 1%; font-weight: bold;">Nguyễn Thị A</td>
-                            </tr>
-                            <tr>
-                                <td style=" padding-left: 7%; padding-bottom: 2%; padding-right:5%">Truyền thuyết kể về một người con gái nổi tiếng vừa đẹp người vừa đẹp nết, xinh xắn lại thùy mị nết na. Nàng đem lòng yêu một chàng trai trong làng, hai người yêu nhau thắm thiết, cho đến một ngày viên quan huyện nhìn
-                                    thấy nàng và bị sắc đẹp của nàng mê hoặc, hắn cho người theo dõi và tìm mọi cách để chiếm đoạt được nàng. Nhưng nàng không hề yêu hắn, để giữ trọn được lòng thủy chung với người mình yêu, nàng khóc lạy cha mẹ và
-                                    từ giã chàng trai rồi chạy trốn khỏi làng đến Quy Nhơn.</td>
-                            </tr>
-                            <tr>
-                                <td style="padding-left: 12%; font-weight: bold; "><img src="assets/images/user.png" style="height: 40px; width: 40px; padding-right: 1%; font-weight: bold;">Trần Văn B</td>
-                            </tr>
-                            <tr>
-                                <td style=" padding-left: 12%; padding-bottom: 2%; padding-right:5%">Truyền thuyết kể về một người con gái nổi tiếng vừa đẹp người vừa đẹp nết, xinh xắn lại thùy mị nết na. Nàng đem lòng yêu một chàng trai trong làng, hai người yêu nhau thắm thiết, cho đến một ngày viên quan huyện nhìn
-                                    thấy nàng và bị sắc đẹp của nàng mê hoặc, hắn cho người theo dõi và tìm mọi cách để chiếm đoạt được nàng. Nhưng nàng không hề yêu hắn, để giữ trọn được lòng thủy chung với người mình yêu, nàng khóc lạy cha mẹ và
-                                    từ giã chàng trai rồi chạy trốn khỏi làng đến Quy Nhơn.</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+        <div class="row text-center mb-5 probootstrap-animate">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Một số thông tin khác</h2>
             </div>
-
         </div>
+    </div>
+</section>
+<section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px">
+    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_3.jpg"/>)"></div>
+    <div class="probootstrap-text order-1">
+        <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
+            <h2 class="heading mb-4">HÒN KHÔ</h2>
+            <p>Địa chỉ: Thôn Hải Đông, xã Nhơn Hải, TP. Quy Nhơn, tỉnh Bình Định, Việt Nam</p>
+            <p>Lượt bình luận: 826</p>
+            <p>Lượt yêu thích: 826</p>
+            <p><a href="#" class="btn btn-primary"> ♥ Yêu thích</a></p>
+        </div>
+    </div>
 </section>
 
+<section>
+    <div class="container-fluid">
+        <!-- Comments -->
+        <div>
+
+            <h2 class="tm-color-primary tm-post-title">Comments</h2>
+            <hr class="tm-hr-primary tm-mb-45">
+            <div class="tm-comment-reply tm-mb-45">
+
+                <div class="tm-comment">
+                    <figure class="tm-comment-figure">
+                        <img src="<c:url value="/template/web/assets/video/picture1.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
+                        <figcaption class="tm-color-primary text-center">Jewel Soft</figcaption>
+                    </figure>
+                    <p>
+                        Nunc et eros quis enim feugiat tincidunt et vitae dui. Nullam consectetur justo ac ex laoreet rhoncus. Nunc id leo pretium, faucibus sapien vel, euismod turpis.
+                    </p>
+                </div>
+                <span class="d-block text-right tm-color-primary">June 21, 2020</span>
+            </div>
+            <div class="tm-comment-reply tm-mb-45">
+                <hr>
+                <div class="tm-comment">
+                    <figure class="tm-comment-figure">
+                        <img src="<c:url value="/template/web/assets/video/picture1.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
+                        <figcaption class="tm-color-primary text-center">Jewel Soft</figcaption>
+                    </figure>
+                    <p>
+                        Nunc et eros quis enim feugiat tincidunt et vitae dui. Nullam consectetur justo ac ex laoreet rhoncus. Nunc id leo pretium, faucibus sapien vel, euismod turpis.
+                    </p>
+                </div>
+                <span class="d-block text-right tm-color-primary">June 21, 2020</span>
+            </div>
+            <form action="" class="mb-5">
+                <h2 class="tm-color-primary tm-post-title mb-4">Your comment</h2>
+                <div class="mb-4">
+                    <textarea class="form-control" name="message" rows="6"></textarea>
+                </div>
+                <div class="text-right">
+                    <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="probootstrap_section bg-light">
+    <div class="container">
+        <div class="row text-center mb-5 probootstrap-animate">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Những địa danh khác</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
+                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_1.jpg"/>)">
+                    </div>
+                    <div class="media-body">
+                        <h5 class="mb-3">01. Tháp đôi</h5>
+                        <p>Tháp được xây dựng vào khoảng cuối thế kỷ 11 – đầu thế kỷ 13. Đây là thời kỳ vương quốc Chăm Pa gặp nhiều biến động.</p>
+                    </div>
+                </div>
+
+                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
+                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_2.jpg"/>)">
+                    </div>
+                    <div class="media-body">
+                        <h5 class="mb-3">02. Ghềnh Ráng</h5>
+                        <p>Là tác phẩm thiên tạo với quần thể sơn thạch chạy sát biển, nơi những dãy đá núi nhấp nhô, chập trùng tạo thành hang,... </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+
+                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
+                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_4.jpg"/>)">
+                    </div>
+                    <div class="media-body">
+                        <h5 class="mb-3">03. Tháp Dương Long</h5>
+                        <p>Trên đất Bình Định đã có nhiều công trình kiến trúc Champa được xây dựng, nhiều tác phẩm điêu khắc được khắc tạc,...</p>
+                    </div>
+                </div>
+
+                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
+                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_3.jpg"/>)">
+                    </div>
+                    <div class="media-body">
+                        <h5 class="mb-3">04. Mũi Vi Rồng</h5>
+                        <p>Khi được quan sát từ xa hay nhìn từ trên cao, Mũi Vi Rồng hiện ra là một tảng đá vươn mình ra biển hùng dũng.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>

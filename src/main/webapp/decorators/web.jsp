@@ -14,6 +14,15 @@
 <!DOCTYPE html>
 <head>
 
+    <title><dec:title default="Trang chủ" /></title>
+    <link rel="shortcut icon" type="image/png" href="<c:url value="/template/web/assets/images/favicon.png"/>"/>
+
+    <link href="<c:url value="/template/web/assets/placeDetail/all.min.css"/>", rel="stylesheet">
+    <link href="<c:url value="/template/web/assets/placeDetail/bootstrap.min.css"/>", rel="stylesheet">
+    <link href="<c:url value="/template/web/assets/placeDetail/templatemo-xtra-blog.css"/>", rel="stylesheet">
+    <link href="<c:url value="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"/>", rel="stylesheet">
+
+
 
     <link href="<c:url value="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700"/> " , rel="stylesheet">
 
@@ -51,15 +60,20 @@
 
     <link href="<c:url value="/template/web/assets/css/style.css"/> " , rel="stylesheet">
 
-    <script src="<c:url value='/template/admin/assets/js/ace-extra.min.js' />"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+    <script src="<c:url value='/template/admin/assets/js/ace-extra.min.js' />"></script>
+    <link rel="stylesheet" href="<c:url value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"/> ">
+    <link rel="stylesheet" href="<c:url value="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>">
+
+    <script src="<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/> "></script>
     <script type='text/javascript' src='<c:url value="/template/admin/js/jquery-2.2.3.min.js" />'></script>
     <script src="<c:url value='/template/admin/assets/js/jquery.2.1.1.min.js' />"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="<c:url value="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/> ">
+    <script src="<c:url value="https://code.jquery.com/ui/1.12.1/jquery-ui.js" />"></script>
 
 </head>
 <body>
@@ -70,6 +84,7 @@
 <dec:body/>
 
 <%@include file="/common/web/footer.jsp"%>
+
 <script src="<c:url value="/template/web/assets/js/jquery.min.js"/>" ></script>
 
 <script src="<c:url value="/template/web/assets/js/popper.min.js"/>" ></script>

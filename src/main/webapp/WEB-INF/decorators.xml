@@ -13,4 +13,8 @@
     <decorator name="login" page="login.jsp">
         <pattern>/dang-nhap</pattern>
     </decorator>
+
+    <decorator name="profile" page="profile.jsp">
+        <pattern>/nguoi-dung*</pattern>
+    </decorator>
 </decorators>

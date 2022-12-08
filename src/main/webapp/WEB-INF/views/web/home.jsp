@@ -13,7 +13,7 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Trang chủ</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
@@ -40,7 +40,7 @@
         </securtity:authorize>
 
         <securtity:authorize access="isAuthenticated()">
-            <li class="nav-item "><a class="nav-link" href="<c:url value="/trang-chu"/> ">Welcome <%=SecurityUtils.getPrincipal().getFullName()%></a></li>
+            <li class="nav-item "><a class="nav-link" href="<c:url value="/profile"/> ">Welcome <%=SecurityUtils.getPrincipal().getFullName()%></a></li>
             <li class="nav-item "><a class="nav-link" href="<c:url value="/thoat"/> ">Đăng xuất</a></li>
         </securtity:authorize>
     </ul>
@@ -95,9 +95,8 @@
     <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_1.jpg"/>)"></div>
     <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
-            <h2 class="heading mb-4">Ghềnh Ráng - Tiên Sa</h2>
-            <p>Nằm ở phường Ghềnh Ráng, thành phố Quy Nhơn, Ghềnh Ráng – Tiên Sa nằm cách trung tâm thành phố khoảng 3km về phía Đông-Nam. Điểm đặc biệt của nơi đây chính là quần thể những bãi đá nằm liền kề nhau và những bãi đá tập trung theo đường
-                cong của eo núi Xuân Vân. Nhờ vào vẻ đẹp độc đáo mà Ghềnh Ráng đã được Bộ Văn hóa – Thông tin xếp hạng là di tích quốc gia.</p>
+            <h2 class="heading mb-4">${model1.title}</h2>
+            <p>${model1.shortDescription}</p>
             <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
         </div>
     </div>
@@ -107,10 +106,8 @@
     <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_3.jpg"/>)"></div>
     <div class="probootstrap-text order-1">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
-            <h2 class="heading mb-4">Mũi vi rồng</h2>
-            <p>Mũi Vi Rồng hay còn tên ngắn gọn là Mũi Rồng, truyền thuyết kể lại rằng trước kia núi này vẫn còn nguyên một khối, có hình dạng giống như vi cá chép nên khiến người dân liên tưởng đến ngọn núi đá có vảy rồng và gọi là “Đá Vảy Rồng”. Cao
-                Biển – một viên tướng thời ấy – thấy ngọn núi có nhiều linh khí kết tụ cho nên đã phù phép chém đứt vảy rồng đề trừ khử cái xấu – trong lúc ông đang đi tìm vùng đất vượng khí. Khi chém thì máu rồng đổ xuống, đọng lại thành nhiều hòn
-                đá son nhỏ lẫn trong những bãi cát gần đấy. Nếu đi dạo trên cát sẽ có lúc bạn vô tình thấy những viên đá màu đỏ son thì đó chính là máu rồng đọng lại như truyền thuyết nói đến đó.</p>
+            <h2 class="heading mb-4">${model2.title}</h2>
+            <p>${model2.shortDescription}</p>
             <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
         </div>
     </div>

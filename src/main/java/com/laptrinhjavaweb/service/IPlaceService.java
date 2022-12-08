@@ -20,7 +20,7 @@ public interface IPlaceService {
 
     PlaceDTO save(PlaceDTO dto);
 
-    PlaceDTO findNewPlace();
+    List<PlaceDTO> findNewPlace();
 
     void deletePlace(long id);
 }

@@ -3,7 +3,9 @@ package com.laptrinhjavaweb.controller.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.laptrinhjavaweb.dto.PlaceDTO;
 import com.laptrinhjavaweb.dto.UserDTO;
+import com.laptrinhjavaweb.service.IPlaceService;
 import com.laptrinhjavaweb.util.MessageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
 import java.util.Map;
 
 @Controller(value = "homeControllerOfWeb")
@@ -22,10 +25,19 @@ public class HomeController {
 	@Autowired
 	MessageUtil messageUtil;
 
+	@Autowired
+	IPlaceService placeService;
+
 	@RequestMapping(value = "/trang-chu", method = RequestMethod.GET)
 	public ModelAndView homePage() {
 		String image = "p2.jpg";
 		ModelAndView mav = new ModelAndView("web/home");
+		List<PlaceDTO> models = placeService.findNewPlace();
+		PlaceDTO dto1 = models.get(0);
+		PlaceDTO dto2 = models.get(1);
+		mav.addObject("model1" , dto1);
+		mav.addObject("model2" , dto2);
+
 		mav.addObject("test" , image);
 		return mav;
 	}
@@ -35,6 +47,15 @@ public class HomeController {
 		ModelAndView mav = new ModelAndView("login");
 		return mav;
 	}
+
+
+	@RequestMapping(value = "/place_detail", method = RequestMethod.GET)
+	public ModelAndView placeDetail() {
+
+		ModelAndView mav = new ModelAndView("web/placeDetail");
+		return mav;
+	}
+
 
 	@RequestMapping(value = "/dang-ky", method = RequestMethod.GET)
 	public ModelAndView registerPage(HttpServletRequest request) {
