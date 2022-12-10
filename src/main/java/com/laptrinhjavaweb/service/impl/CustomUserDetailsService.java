@@ -9,6 +9,7 @@ import com.laptrinhjavaweb.dto.UserDTO;
 import com.laptrinhjavaweb.entity.PlaceEntity;
 import com.laptrinhjavaweb.repository.RoleRepository;
 import com.laptrinhjavaweb.service.IUserService;
+import com.laptrinhjavaweb.util.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.data.domain.Pageable;
@@ -108,6 +109,25 @@ public class CustomUserDetailsService  implements UserDetailsService , IUserServ
 			entity = userRepository.save(entity);
 		}
 		return userConverter.toDTO(entity);
+	}
+
+	@Override
+	@Transactional
+	public UserDTO saveUserByUser(UserDTO userDTO) {
+		UserEntity oldEntity = userRepository.findOneByUserNameAndStatus(SecurityUtils.getPrincipal().getUsername(),1);
+		UserEntity newEntiy = userConverter.toEntityHasAvatar(oldEntity,userDTO);
+		newEntiy = userRepository.save(newEntiy);
+		return userConverter.toDTO(newEntiy);
+	}
+
+	@Override
+	@Transactional
+	public UserDTO changeAvatar(String file) {
+		UserEntity oldEntity = userRepository.findOneByUserNameAndStatus(SecurityUtils.getPrincipal2().getUserName(), 1);
+		oldEntity.setAvatar(file);
+		oldEntity = userRepository.save(oldEntity);
+
+		return userConverter.toDTO(oldEntity);
 	}
 
 	@Override

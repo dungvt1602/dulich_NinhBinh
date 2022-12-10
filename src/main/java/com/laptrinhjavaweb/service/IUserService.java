@@ -17,5 +17,9 @@ public interface IUserService {
 
    UserDTO save(UserDTO dto);
 
+   UserDTO saveUserByUser(UserDTO userDTO);
+
+   UserDTO changeAvatar(String file);
+
    void delete(long id);
 }

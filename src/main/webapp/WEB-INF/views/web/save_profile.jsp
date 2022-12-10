@@ -16,9 +16,7 @@
     <title>Trang cá nhân</title>
 </head>
 <body>
-
-
-        <div class="container" >
+<div class="container" >
             <div class="row">
                 <div class="col-lg-4 pb-5">
                     <!-- Account Sidebar-->

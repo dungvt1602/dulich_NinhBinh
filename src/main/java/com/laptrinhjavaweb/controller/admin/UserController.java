@@ -53,8 +53,6 @@ public class UserController {
 
 
 
-
-
 	@RequestMapping(value = "/quan-tri/nguoi-dung/chinh-sua", method = RequestMethod.GET)
 	public ModelAndView editNew(@RequestParam(value = "id" , required = false) Long id , HttpServletRequest request) {
 		ModelAndView mav = new ModelAndView("admin/users/edit_user");
