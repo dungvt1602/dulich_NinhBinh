@@ -17,6 +17,8 @@
     <title><dec:title default="Trang chủ" /></title>
     <link rel="shortcut icon" type="image/png" href="<c:url value="/template/web/assets/images/favicon.png"/>"/>
 
+
+
     <link href="<c:url value="/template/web/assets/placeDetail/all.min.css"/>", rel="stylesheet">
     <link href="<c:url value="/template/web/assets/placeDetail/bootstrap.min.css"/>", rel="stylesheet">
     <link href="<c:url value="/template/web/assets/placeDetail/templatemo-xtra-blog.css"/>", rel="stylesheet">
@@ -83,7 +85,9 @@
 
 <dec:body/>
 
+
 <%@include file="/common/web/footer.jsp"%>
+
 
 <script src="<c:url value="/template/web/assets/js/jquery.min.js"/>" ></script>
 
