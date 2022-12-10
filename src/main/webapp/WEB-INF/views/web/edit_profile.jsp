@@ -92,7 +92,7 @@
             <p>Số lượng địa điểm đã yêu thích: 10</p>
             <p>Số lượng địa điểm đã check-in: 8</p>
             <p> </p>
-            <p><a href="#" class="btn btn-primary">Sửa thông tin cá nhân</a></p>
+            <p><a href="#" class="btn btn-primary">Lưu thông tin cá nhân</a></p>
             <p><a href="#" class="btn btn-primary">Thay đổi ảnh đại diện</a></p>
         </div>
     </div>
