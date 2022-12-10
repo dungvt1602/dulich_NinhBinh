@@ -16,9 +16,6 @@
     <title>Trang cá nhân</title>
 </head>
 <body>
-
-
-
     <link href="<c:url value="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/> " rel="stylesheet">
     <div class="container mb-4" style="padding-top: 20px">
         <div class="row">

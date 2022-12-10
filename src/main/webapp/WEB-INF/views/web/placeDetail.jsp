@@ -108,18 +108,16 @@
     </div>
 </section>
 
-<section>
+<section >
     <div class="container-fluid">
         <!-- Comments -->
         <div>
-
             <h2 class="tm-color-primary tm-post-title">Comments</h2>
             <hr class="tm-hr-primary tm-mb-45">
             <div class="tm-comment-reply tm-mb-45">
-
                 <div class="tm-comment">
                     <figure class="tm-comment-figure">
-                        <img src="<c:url value="/template/web/assets/video/picture1.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
+                        <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
                         <figcaption class="tm-color-primary text-center">Jewel Soft</figcaption>
                     </figure>
                     <p>
@@ -132,7 +130,7 @@
                 <hr>
                 <div class="tm-comment">
                     <figure class="tm-comment-figure">
-                        <img src="<c:url value="/template/web/assets/video/picture1.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
+                        <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata3.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
                         <figcaption class="tm-color-primary text-center">Jewel Soft</figcaption>
                     </figure>
                     <p>

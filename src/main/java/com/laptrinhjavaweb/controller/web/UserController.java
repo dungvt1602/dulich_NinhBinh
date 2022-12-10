@@ -25,6 +25,20 @@ public class UserController {
         ModelAndView mav = new ModelAndView("web/list_place");
         return mav;
     }
+
+    @RequestMapping(value = "/user_profile", method = RequestMethod.GET)
+    public ModelAndView user_profile() {
+
+        ModelAndView mav = new ModelAndView("web/user_profile");
+        return mav;
+    }
+
+    @RequestMapping(value = "/edit_profile", method = RequestMethod.GET)
+    public ModelAndView edit_profile() {
+
+        ModelAndView mav = new ModelAndView("web/edit_profile");
+        return mav;
+    }
 }
 
 

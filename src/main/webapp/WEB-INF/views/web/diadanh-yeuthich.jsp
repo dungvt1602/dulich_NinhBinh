@@ -77,7 +77,7 @@
         </div>
         <div class="row mb-4">
             <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                <a href="#" class="probootstrap-thumbnail">
+                <a href="<c:url value="/place_detail"/>" class="probootstrap-thumbnail">
                     <img src="assets/images/img_1.jpg" alt="Free Template by ProBootstrap.com" class="img-fluid">
                     <div class="probootstrap-text">
                         <h3>Buena</h3>
