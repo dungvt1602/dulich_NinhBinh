@@ -22,7 +22,7 @@ public class UserConverter {
         userDTO.setPassword(entity.getPassword());
         userDTO.setFullName(entity.getFullName());
         userDTO.setStatus(entity.getStatus());
-        userDTO.setAvatar("avatar.jpg");
+        userDTO.setAvatar(entity.getAvatar());
         return userDTO;
     }
 
@@ -46,6 +46,13 @@ public class UserConverter {
         result.setStatus(1);
         result.setUserName(dto.getUserName());
         result.setAvatar("avatar.jpg");
+        return result;
+    }
+
+    public  UserEntity toEntityHasAvatar(UserEntity result,UserDTO dto){
+
+        result.setFullName(dto.getFullName());
+        result.setUserName(dto.getUserName());
         return result;
     }
 

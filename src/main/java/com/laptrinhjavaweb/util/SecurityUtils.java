@@ -3,6 +3,7 @@ package com.laptrinhjavaweb.util;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.laptrinhjavaweb.dto.UserDTO;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 
@@ -14,6 +15,11 @@ public class SecurityUtils {
 		MyUser myUser = (MyUser) (SecurityContextHolder.getContext()).getAuthentication().getPrincipal();
         return myUser;
     }
+
+	public static UserDTO getPrincipal2(){
+		UserDTO userDTO =  (UserDTO) (SecurityContextHolder.getContext()).getAuthentication().getPrincipal();
+		return userDTO;
+	}
 	
 	@SuppressWarnings("unchecked")
 	public static List<String> getAuthorities() {
