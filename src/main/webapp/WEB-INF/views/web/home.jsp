@@ -97,7 +97,10 @@
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
             <h2 class="heading mb-4">${model1.title}</h2>
             <p>${model1.shortDescription}</p>
-            <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
+            <c:url value="/place_detail" var="detail1">
+                <c:param name="place_id" value="${model1.id}"/>
+            </c:url>
+            <p><a href="${detail1}" class="btn btn-primary">Xem thêm</a></p>
         </div>
     </div>
 </section>
@@ -108,7 +111,10 @@
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
             <h2 class="heading mb-4">${model2.title}</h2>
             <p>${model2.shortDescription}</p>
-            <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
+            <c:url value="/place_detail" var="detail2">
+                <c:param name="place_id" value="${model2.id}"/>
+            </c:url>
+            <p><a href="${detail2}" class="btn btn-primary">Xem thêm</a></p>
         </div>
     </div>
 </section>

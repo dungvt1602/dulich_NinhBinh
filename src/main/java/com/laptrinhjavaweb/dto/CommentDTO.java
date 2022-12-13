@@ -4,6 +4,8 @@ import com.laptrinhjavaweb.entity.PlaceEntity;
 import com.laptrinhjavaweb.entity.UserEntity;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.sql.Timestamp;
+
 public class CommentDTO extends AbstractDTO<CommentDTO> {
 
     private String thumbnail;
@@ -11,24 +13,35 @@ public class CommentDTO extends AbstractDTO<CommentDTO> {
 
     private MultipartFile imageFile;
 
-    private PlaceEntity placeEntity;
+    private String userAvatar;
 
-    private UserEntity userEntity;
+    private String userName;
 
-    public PlaceEntity getPlaceEntity() {
-        return placeEntity;
+    private Timestamp createDate;
+
+    public void setCreateDate(Timestamp createDate) {
+        this.createDate = createDate;
     }
 
-    public void setPlaceEntity(PlaceEntity placeEntity) {
-        this.placeEntity = placeEntity;
+    public Timestamp getCreateDate() {
+        return createDate;
     }
 
-    public UserEntity getUserEntity() {
-        return userEntity;
+
+    public String getUserAvatar() {
+        return userAvatar;
     }
 
-    public void setUserEntity(UserEntity userEntity) {
-        this.userEntity = userEntity;
+    public void setUserAvatar(String userAvatar) {
+        this.userAvatar = userAvatar;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public MultipartFile getImageFile() {

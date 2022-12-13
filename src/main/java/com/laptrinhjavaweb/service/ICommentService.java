@@ -8,4 +8,8 @@ import java.util.List;
 
 public interface ICommentService {
     List<CommentDTO> findAllCommentPlacebyIdPlace(long idPlace);
+
+    CommentDTO save(CommentDTO dto , long id);
+
+    void delete(long id);
 }

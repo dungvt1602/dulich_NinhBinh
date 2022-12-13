@@ -58,7 +58,7 @@ public class PlaceEntity extends BaseEntity {
     private List<CommentPlaceEntity> comments = new ArrayList<>();
 
 
-    @ManyToMany(mappedBy = "places")
+    @ManyToMany(mappedBy = "places",cascade = CascadeType.ALL)
     private List<UserEntity> users = new ArrayList<>();
 
 

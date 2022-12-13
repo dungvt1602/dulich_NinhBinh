@@ -49,13 +49,6 @@ public class HomeController {
 	}
 
 
-	@RequestMapping(value = "/place_detail", method = RequestMethod.GET)
-	public ModelAndView placeDetail() {
-
-		ModelAndView mav = new ModelAndView("web/placeDetail");
-		return mav;
-	}
-
 
 	@RequestMapping(value = "/dang-ky", method = RequestMethod.GET)
 	public ModelAndView registerPage(HttpServletRequest request) {
