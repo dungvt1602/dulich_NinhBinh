@@ -2,9 +2,12 @@ package com.laptrinhjavaweb.controller.web;
 
 
 import com.laptrinhjavaweb.converter.UserConverter;
+import com.laptrinhjavaweb.dto.CommentDTO;
 import com.laptrinhjavaweb.dto.MyUser;
 import com.laptrinhjavaweb.dto.PlaceDTO;
 import com.laptrinhjavaweb.dto.UserDTO;
+import com.laptrinhjavaweb.entity.CommentPlaceEntity;
+import com.laptrinhjavaweb.entity.PlaceEntity;
 import com.laptrinhjavaweb.entity.UserEntity;
 import com.laptrinhjavaweb.repository.UserRepository;
 import com.laptrinhjavaweb.service.IUserService;
@@ -44,10 +47,20 @@ public class UserController {
     @RequestMapping(value = "/user_profile", method = RequestMethod.GET)
     public ModelAndView homePage() {
         UserEntity userEntity = userRepository.findOneByUserNameAndStatus(SecurityUtils.getPrincipal().getUsername(),1);
+        int coutLike = userService.coutPlaceLike(SecurityUtils.getPrincipal().getUsername());
+        int coutComment = userService.coutComment(SecurityUtils.getPrincipal().getUsername());
         UserDTO result = userConverter.toDTO(userEntity);
+
+        List<CommentPlaceEntity> comments = userEntity.getCommentPlaceEntities();
+
+        List<PlaceEntity> placeEntities = userEntity.getPlaces();
 
         ModelAndView mav = new ModelAndView("web/user_profile");
         mav.addObject("model" , result);
+        mav.addObject("coutLike",coutLike);
+        mav.addObject("coutComment",coutComment);
+        mav.addObject("comments",comments);
+        mav.addObject("placesLike",placeEntities);
         return mav;
     }
 

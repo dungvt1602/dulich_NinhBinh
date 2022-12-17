@@ -10,7 +10,8 @@
 <%@ taglib prefix="securtity" uri="http://www.springframework.org/security/tags" %>
 <%@ page import= "com.laptrinhjavaweb.util.SecurityUtils" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
-
+<%@ taglib prefix="for" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@include file="/common/taglib.jsp"%>
 
 <html>
 <head>
@@ -85,9 +86,16 @@
                     authenticated as <security:authentication property="principal.username" />
                 </security:authorize>
              </h2>
-            <p>Trạng thái tài khoản: Đang hoạt động</p>
-            <p>Số lượng địa điểm đã yêu thích: 10</p>
-            <p>Số lượng địa điểm đã check-in: 8</p>
+            <p>Ngày tạo tài khoản: 10 tháng 12 năm 2001</p>
+            <p>Địa chỉ emai: abc@gmail.com</p>
+            <c:if test="${model.status == 1}">
+            <p>Hoạt động: Đang hoạt động</p>
+            </c:if>
+            <c:if test="${model.status == 0}">
+                <p>Hoạt động: Tài khoản đã vô hiệu hóa</p>
+            </c:if>
+            <p>Số lượng địa điểm đã yêu thích: ${coutLike}</p>
+            <p>Số lượng địa điểm đã check-in bình luận: ${coutComment}</p>
             <p> </p>
             <p><a href="<c:url value="/edit_profile"/>" class="btn btn-primary">Sửa thông tin cá nhân</a></p>
             <p><a href="#" class="btn btn-primary">Thay đổi ảnh đại diện</a></p>
@@ -102,33 +110,21 @@
         <div>
             <h2 class="tm-color-primary tm-post-title">Bình luận của bạn</h2>
             <hr class="tm-hr-primary tm-mb-45">
+            <c:forEach var="item" items="${comments}">
             <div class="tm-comment-reply tm-mb-45">
-                <h2 class="heading mb-4">Hòn Khô</h2>
+                <h2 class="heading mb-4">${item.placeEntity.title}</h2>
                 <div class="tm-comment">
                     <figure class="tm-comment-figure">
                         <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
-                        <figcaption class="tm-color-primary text-center">Jewel Soft</figcaption>
+                        <figcaption class="tm-color-primary text-center">${item.userEntity.fullName}</figcaption>
                     </figure>
                     <p style="font-size: 125%">
-                        Nunc et eros quis enim feugiat tincidunt et vitae dui. Nullam consectetur justo ac ex laoreet rhoncus. Nunc id leo pretium, faucibus sapien vel, euismod turpis.
+                        ${item.content}
                     </p>
                 </div>
-                <span class="d-block text-right tm-color-primary">June 21, 2020</span>
+                <span class="d-block text-right tm-color-primary">${item.createdDate}</span>
             </div>
-            <div class="tm-comment-reply tm-mb-45">
-                <hr>
-                <h2 class="heading mb-4">Ghềnh Ráng - Tiên Sa</h2>
-                <div class="tm-comment">
-                    <figure class="tm-comment-figure">
-                        <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata3.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
-                        <figcaption class="tm-color-primary text-center">Jewel Soft</figcaption>
-                    </figure>
-                    <p style="font-size: 125%">
-                        Nunc et eros quis enim feugiat tincidunt et vitae dui. Nullam consectetur justo ac ex laoreet rhoncus. Nunc id leo pretium, faucibus sapien vel, euismod turpis.
-                    </p>
-                </div>
-                <span class="d-block text-right tm-color-primary">June 21, 2020</span>
-            </div>
+            </c:forEach>
         </div>
     </div>
 </section>
@@ -141,38 +137,37 @@
                 <h2 class="display-4 border-bottom probootstrap-section-heading">Địa danh yêu thích của bạn</h2>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-6">
+                <c:forEach var="item" items="${placesLike}" begin="0" end="1">
                 <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
                     <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_1.jpg"/>)">
                     </div>
                     <div class="media-body">
-                        <h5 class="mb-3">Tháp đôi</h5>
-                        <p>Tháp được xây dựng vào khoảng cuối thế kỷ 11 – đầu thế kỷ 13. Đây là thời kỳ vương quốc Chăm Pa gặp nhiều biến động.</p>
+                        <h5 class="mb-3">${item.title}</h5>
+                        <p>${item.content}</p>
                         </p>
                             <a href="<c:url value="/diadanh"/>" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">💔 Bỏ yêu thích </a>
                         </p>
                     </div>
                 </div>
-
-                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_2.jpg"/>)">
-                    </div>
-                    <div class="media-body">
-                        <h5 class="mb-3">Ghềnh Ráng</h5>
-                        <p>Là tác phẩm thiên tạo với quần thể sơn thạch chạy sát biển, nơi những dãy đá núi nhấp nhô, chập trùng tạo thành hang,... </p>
-                    </div>
-                </div>
+                </c:forEach>
             </div>
             <div class="col-md-6">
-                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_4.jpg"/>)">
+                <c:forEach var="item" items="${placesLike}" begin="2" end="3">
+                    <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
+                        <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_1.jpg"/>)">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="mb-3">${item.title}</h5>
+                            <p>${item.content}</p>
+                            </p>
+                            <a href="<c:url value="/diadanh"/>" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">💔 Bỏ yêu thích </a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="media-body">
-                        <h5 class="mb-3">Tháp Dương Long</h5>
-                        <p>Trên đất Bình Định đã có nhiều công trình kiến trúc Champa được xây dựng, nhiều tác phẩm điêu khắc được khắc tạc,...</p>
-                    </div>
-                </div>
+                </c:forEach>
             </div>
         </div>
     </div>

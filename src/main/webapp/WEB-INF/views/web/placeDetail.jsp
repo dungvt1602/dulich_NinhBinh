@@ -8,7 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
 <%@ taglib prefix="securtity" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="for" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import= "com.laptrinhjavaweb.util.SecurityUtils" %>
+<%@include file="/common/taglib.jsp"%>
+
 
 
 <html>
@@ -68,16 +71,16 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-12 text-center mb-5 probootstrap-animate">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">HÒN KHÔ</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">${model.title}</h2>
                 <blockquote class="normal">
-                    <p class=" lead mb-4 "><em>Đặt chân đến hòn Khô, bạn sẽ ngạc nhiên trước khung cảnh thiên nhiên quá đỗi bình yên và chưa có nhiều sự khai thác thương mại. Trong đó, điểm đặc trưng của hòn Khô là con đường dài 500m giữa biển được tạo thành khi nước rút, kết nối làng chài Nhơn Hải và hòn đảo này.</em></p>
-                    <p class=" lead mb-4 "><em>Cách đi Hòn Khô cũng vô cùng đơn giản. Từ TP. Hồ Chí Minh bạn có thể đi máy bay, xe khách hoặc tàu hoả đến thẳng Quy Nhơn. Sau đó thuê xe đi hết cây cầu Thị Nại, qua Khu kinh tế Nhơn Hội, đi dọc theo vịnh Mai Hương để đến làng chài xã Nhơn Hãi. Sau đó bạn tiếp tục thuê thuyền là có thể ra được hòn đảo xinh đẹp này. Có rất nhiều thuyền với dịch vụ và giá cả khác nhau cho bạn thoải mái lựa chọn. Giá vé hòn khô đi từ đất liền ra đảo bằng thuyền giao động từ 100K – 1200K. </em></p>
-                    <p class=" lead mb-4 "><em>Hòn Kho yên bình, hoang sơ chưa có quá nhiều bàn tay can thiệp của con người. Bởi thế mà khi đến đây bạn có thể cảm nhận được sự tự do, phóng khoáng, bình dị. Xung quanh đảo không có nhiều cây cao bóng mát, mà chỉ có những bụi cỏ xanh xen lẫn những tảng đá tạo nên khung cảnh hoang dại rất đặc biệt.</em></p>
+                    <p class=" lead mb-4 "><em>${model.shortDescription}</em></p>
+                    <p class=" lead mb-4 "><em>${model.content}</em></p>
+
                     <p class="probootstrap-author">
                         <a href="https://probootstrap.com/" target="_blank">
                             <img src="<c:url value="/template/web/assets/video/angelo.jpg"/> " alt="Free Template by ProBootstrap.com" class="rounded-circle">
-                            <span class="probootstrap-name">Hoàng Minh Châu</span>
-                            <span class="probootstrap-title">Ngày 5 tháng 12 năm 2022</span>
+                            <span class="probootstrap-name">${model.modifiedBy}</span>
+                            <span class="probootstrap-title">${model.modifiedDate}</span>
                         </a>
                     </p>
                 </blockquote>
@@ -96,14 +99,28 @@
     </div>
 </section>
 <section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px">
-    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_3.jpg"/>)"></div>
+    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${model.thumbnail}"/>)"></div>
     <div class="probootstrap-text order-1">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
-            <h2 class="heading mb-4">HÒN KHÔ</h2>
-            <p>Địa chỉ: Thôn Hải Đông, xã Nhơn Hải, TP. Quy Nhơn, tỉnh Bình Định, Việt Nam</p>
-            <p>Lượt bình luận: 826</p>
-            <p>Lượt yêu thích: 826</p>
-            <p><a href="#" class="btn btn-primary"> ♥ Yêu thích</a></p>
+            <h2 class="heading mb-4">${model.title}</h2>
+            <p>Địa chỉ: TP. Quy Nhơn, tỉnh Bình Định, Việt Nam</p>
+            <p>Lượt bình luận: ${cout_comment}</p>
+            <p>Lượt yêu thích: ${like}</p>
+            <securtity:authorize access="isAnonymous()">
+
+            </securtity:authorize>
+            <securtity:authorize access="isAuthenticated()">
+                <c:url value="/place_detail" var="redirect">
+                    <c:param name="place_id" value="${model.id}"/>
+                    <c:param name="yeu_thich" value="like"/>
+                </c:url>
+                <c:if test="${check_like == 1}">
+                <p><a href="${redirect}" class="btn btn-primary"> ♥ Bỏ yêu thích</a></p>
+                </c:if>
+                <c:if test="${check_like == 0}">
+                <p><a href="${redirect}" class="btn btn-primary"> ♥ Yêu thích</a></p>
+                </c:if>
+            </securtity:authorize>
         </div>
     </div>
 </section>
@@ -113,41 +130,37 @@
         <!-- Comments -->
         <div>
             <h2 class="tm-color-primary tm-post-title">Comments</h2>
+            <for:forEach var="item" items="${comments}">
             <hr class="tm-hr-primary tm-mb-45">
             <div class="tm-comment-reply tm-mb-45">
                 <div class="tm-comment">
                     <figure class="tm-comment-figure">
                         <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
-                        <figcaption class="tm-color-primary text-center">Jewel Soft</figcaption>
+                        <figcaption class="tm-color-primary text-center">${item.userName}</figcaption>
                     </figure>
                     <p>
-                        Nunc et eros quis enim feugiat tincidunt et vitae dui. Nullam consectetur justo ac ex laoreet rhoncus. Nunc id leo pretium, faucibus sapien vel, euismod turpis.
+                        ${item.content}
                     </p>
                 </div>
-                <span class="d-block text-right tm-color-primary">June 21, 2020</span>
+                <span class="d-block text-right tm-color-primary">${item.createDate}</span>
             </div>
-            <div class="tm-comment-reply tm-mb-45">
-                <hr>
-                <div class="tm-comment">
-                    <figure class="tm-comment-figure">
-                        <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata3.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
-                        <figcaption class="tm-color-primary text-center">Jewel Soft</figcaption>
-                    </figure>
-                    <p>
-                        Nunc et eros quis enim feugiat tincidunt et vitae dui. Nullam consectetur justo ac ex laoreet rhoncus. Nunc id leo pretium, faucibus sapien vel, euismod turpis.
-                    </p>
-                </div>
-                <span class="d-block text-right tm-color-primary">June 21, 2020</span>
-            </div>
-            <form action="" class="mb-5">
+            </for:forEach>
+            <securtity:authorize access="isAnonymous()">
+                <h2 class="tm-color-primary tm-post-title mb-4">Bạn cần đăng nhập để bình luận</h2>
+            </securtity:authorize>
+            <securtity:authorize access="isAuthenticated()">
+                <c:url value="/place_detail" var="post"/>
+            <form:form action="${post}" class="mb-5" modelAttribute="comment" method="POST">
                 <h2 class="tm-color-primary tm-post-title mb-4">Your comment</h2>
                 <div class="mb-4">
-                    <textarea class="form-control" name="message" rows="6"></textarea>
+                    <form:textarea path="content" class="form-control"  rows="6"/>
                 </div>
+                <input type="hidden" id="placeid" name="placeid" value="${model.id}">
                 <div class="text-right">
-                    <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>
+                    <button class="tm-btn tm-btn-primary tm-btn-small">Bình luận</button>
                 </div>
-            </form>
+            </form:form>
+            </securtity:authorize>
         </div>
     </div>
 </section>

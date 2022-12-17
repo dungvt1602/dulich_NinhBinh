@@ -140,4 +140,19 @@ public class CustomUserDetailsService  implements UserDetailsService , IUserServ
 		}
 		userRepository.delete(userEntity);
 	}
+
+	@Override
+	public int coutComment(String userName) {
+
+		UserEntity userEntity = userRepository.findOneByUserNameAndStatus(userName,1);
+		int cout = userEntity.getCommentPlaceEntities().size();
+		return cout;
+	}
+
+	@Override
+	public int coutPlaceLike(String userName) {
+		UserEntity userEntity = userRepository.findOneByUserNameAndStatus(userName,1);
+		int cout = userEntity.getPlaces().size();
+		return cout;
+	}
 }

@@ -7,10 +7,13 @@ import com.laptrinhjavaweb.dto.PlaceDTO;
 import com.laptrinhjavaweb.entity.CategoryEntity;
 import com.laptrinhjavaweb.entity.PlaceEntity;
 
+import com.laptrinhjavaweb.entity.UserEntity;
 import com.laptrinhjavaweb.repository.CategoryRepository;
 import com.laptrinhjavaweb.repository.PlaceRepository;
 
+import com.laptrinhjavaweb.repository.UserRepository;
 import com.laptrinhjavaweb.service.IPlaceService;
+import com.laptrinhjavaweb.util.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -33,6 +36,9 @@ public class PlaceService implements IPlaceService {
 
 	@Autowired
 	ServletContext application;
+
+	@Autowired
+	UserRepository userRepository;
 
 	@Autowired
 	PlaceConverter placeConverter;
@@ -88,6 +94,13 @@ public class PlaceService implements IPlaceService {
 	}
 
 	@Override
+	public Integer coutLike(long id) {
+		PlaceEntity place = placeRepository.findOne(id);
+		int i = place.getUsers().size();
+		return i;
+	}
+
+	@Override
 	@Transactional
 	public PlaceDTO update(PlaceDTO dto) {
 		return  null;
@@ -114,7 +127,56 @@ public class PlaceService implements IPlaceService {
 	}
 
 	@Override
+	@Transactional
+	public void like(long id) {
+		UserEntity user = userRepository.findOneByUserNameAndStatus(SecurityUtils.getPrincipal().getUsername(), 1);
+		PlaceEntity place = placeRepository.findOne(id);
+		user.getPlaces().add(place);
+
+		user = userRepository.save(user);
+	}
+
+	@Override
+	@Transactional
+	public void UnLike(long id) {
+		UserEntity user = userRepository.findOneByUserNameAndStatus(SecurityUtils.getPrincipal().getUsername(), 1);
+		PlaceEntity place = placeRepository.findOne(id);
+		for( int i = 0; i < user.getPlaces().size(); i++ )
+		{
+			PlaceEntity lValue = user.getPlaces().get(i);
+			if(lValue.getId()==id)
+			{
+				user.getPlaces().remove(lValue);
+				i--;
+			}
+		}
+		user = userRepository.save(user);
+	}
+
+	@Override
+	public boolean checkLike(long id)
+	{
+		UserEntity user = userRepository.findOneByUserNameAndStatus(SecurityUtils.getPrincipal().getUsername(), 1);
+		PlaceEntity place = placeRepository.findOne(id);
+
+		for(PlaceEntity item : user.getPlaces()){
+			if(item.getId()==id)
+			{
+				return true;
+			}
+		}
+		return false;
+
+	}
+
+
+
+	@Override
 	public void deletePlace(long id) {
 		placeRepository.delete(id);
 	}
+
+
+
+
 }

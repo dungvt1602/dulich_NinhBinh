@@ -22,4 +22,8 @@ public interface IUserService {
    UserDTO changeAvatar(String file);
 
    void delete(long id);
+
+   int coutComment(String userName);
+
+   int coutPlaceLike(String userName);
 }
