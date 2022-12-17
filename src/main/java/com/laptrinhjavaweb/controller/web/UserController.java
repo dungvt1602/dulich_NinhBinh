@@ -106,7 +106,13 @@ public class UserController {
         return mav;
     }
 
+    @RequestMapping(value = "/edit_profile", method = RequestMethod.GET)
+    public ModelAndView editProfile() {
 
+        System.out.println("user: " + SecurityUtils.getPrincipal().getUsername());
+        ModelAndView mav = new ModelAndView("web/edit_profile");
+        return mav;
+    }
 
 }
 

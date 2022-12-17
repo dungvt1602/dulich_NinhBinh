@@ -85,10 +85,7 @@
                     authenticated as <security:authentication property="principal.username" />
                 </security:authorize>
              </h2>
-            <p>Ngày sinh: 10 tháng 12 năm 2001</p>
-            <p>Địa chỉ: Thôn cành lá, xã cành cây, huyện gió mây, tỉnh đồi núi</p>
-            <p>Địa chỉ emai: abc@gmail.com</p>
-            <p>Số điện thoại: 0123456789</p>
+            <p>Trạng thái tài khoản: Đang hoạt động</p>
             <p>Số lượng địa điểm đã yêu thích: 10</p>
             <p>Số lượng địa điểm đã check-in: 8</p>
             <p> </p>

@@ -17,7 +17,7 @@
     <title>Trang chủ</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar" style="color: black">
     <div class="container">
         <a class="navbar-brand" href="<c:url value="/trang-chu"/>">BINH DINH - VIET NAM</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-menu" aria-controls="probootstrap-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,6 +47,7 @@
     </ul>
 
 </nav>
+
 <section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/user_profile/images_and_videos/Background_profile.jpg"/>');" data-stellar-background-ratio="0.5" id="section-home">
     <div class="overlay"></div>
     <div class="container">
@@ -65,17 +66,6 @@
 </section>
 <!-- END section -->
 
-<section class="probootstrap_section">
-    <div class="container">
-        <div class="row text-center mb-5 probootstrap-animate">
-            <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Thông tin cá nhân:</h2>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END section -->
-
 <section class="probootstrap-section-half d-md-flex" id="section-about" style="padding-bottom: 10%">
     <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>); border-radius: 50%; "></div>
     <div class="probootstrap-text">
@@ -85,15 +75,41 @@
                     authenticated as <security:authentication property="principal.username" />
                 </security:authorize>
             </h2>
-            <p>Ngày sinh: 10 tháng 12 năm 2001</p>
-            <p>Địa chỉ: Thôn cành lá, xã cành cây, huyện gió mây, tỉnh đồi núi</p>
-            <p>Địa chỉ emai: abc@gmail.com</p>
-            <p>Số điện thoại: 0123456789</p>
-            <p>Số lượng địa điểm đã yêu thích: 10</p>
-            <p>Số lượng địa điểm đã check-in: 8</p>
-            <p> </p>
-            <p><a href="#" class="btn btn-primary">Lưu thông tin cá nhân</a></p>
-            <p><a href="#" class="btn btn-primary">Thay đổi ảnh đại diện</a></p>
+            <form action="j_spring_security_check" class="probootstrap-form" id="formLogin" method="post">
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="j_username">Tên người dùng:</label>
+                                <label for="j_username" style="width: 100%;">
+                                    <input type="text" class="form-control" id="j_username" name="j_username" placeholder=<%=SecurityUtils.getPrincipal().getFullName()%>>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="account_status">Trạng thái tài khoản:</label>
+                                <label for="account_status" style="width: 100%;">
+                                    <select id="account_status" name="select" class="form-control">
+                                        <option selected disabled>Trạng thái tài khoản</option>
+                                        <option value="1">Hoạt động</option>
+                                        <option value="0">Khóa tài khoản</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md">
+                            <button type="submit" class="btn btn-primary btn-block" >Cập nhật</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </section>
@@ -117,6 +133,7 @@
                     </p>
                 </div>
                 <span class="d-block text-right tm-color-primary">June 21, 2020</span>
+                <button type="submit" class="btn btn-primary btn-block" >Xóa bình luận</button>
             </div>
             <div class="tm-comment-reply tm-mb-45">
                 <hr>
@@ -131,6 +148,7 @@
                     </p>
                 </div>
                 <span class="d-block text-right tm-color-primary">June 21, 2020</span>
+                <button type="submit" class="btn btn-primary btn-block" >Xóa bình luận</button>
             </div>
         </div>
     </div>

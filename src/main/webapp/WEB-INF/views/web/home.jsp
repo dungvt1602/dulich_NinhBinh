@@ -84,7 +84,7 @@
     <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
             <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Những địa danh nổi tiếng</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Những địa danh được yêu thích nhất</h2>
             </div>
         </div>
     </div>
@@ -92,23 +92,27 @@
 
 
 <section class="probootstrap-section-half d-md-flex" id="section-about">
-    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_1.jpg"/>)"></div>
+    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>)"></div>
     <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
             <h2 class="heading mb-4">${model1.title}</h2>
             <p>${model1.shortDescription}</p>
-            <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
+            <p>Số lượt yêu thích: 205</p>
+            <p>Số lượt bình luận: 121</p>
+            <p><a href="#" class="btn btn-primary">Xem chi tiết</a></p>
         </div>
     </div>
 </section>
 
 <section class="probootstrap-section-half d-md-flex">
-    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_3.jpg"/>)"></div>
+    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/ThapDoi.png"/>)"></div>
     <div class="probootstrap-text order-1">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
             <h2 class="heading mb-4">${model2.title}</h2>
             <p>${model2.shortDescription}</p>
-            <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
+            <p>Số lượt yêu thích: 205</p>
+            <p>Số lượt bình luận: 121</p>
+            <p><a href="#" class="btn btn-primary">Xem thêm chi tiết</a></p>
         </div>
     </div>
 </section>
@@ -120,7 +124,15 @@
             <div class="col-md-12 text-center mb-5 probootstrap-animate">
                 <h2 class="display-4 border-bottom probootstrap-section-heading">Lịch sử phát triển</h2>
                 <blockquote class="">
-                    <p class="lead mb-4"><em>Bình Định có một mạch nguồn văn hóa rất xa xưa từ nền văn hóa Sa Huỳnh – Truông Xe. Trải qua hàng nghìn năm dựng nước và giữ nước, văn hóa Bình Định vừa lan tỏa, vừa tiếp nhận những giá trị của nền văn hóa khác để bồi đắp, làm phong phú cho mình.</em></p>
+                    <p class="lead mb-4"><em>Tháng 7 năm 1471, vua Lê cho lập phủ Hoài Nhơn gồm 3 huyện là: Bồng Sơn, Phù Ly và Tuy Viễn. Từ đó người Việt bắt đầu tiến vào sinh sống trên vùng đất Bình Định ngày nay. Năm 1490 (chưa đầy 20 năm sau), theo Thiên nam dư hạ tập cho biết: dưới thời Hồng Đức, Phủ Hoài Nhơn có 19 tổng và 100 xã.
+
+                        Năm 1570, Nguyễn Hoàng, người được vua Lê cử trấn nhậm hai xứ Thuận Hóa và Quảng Nam lúc bấy giờ có cả phủ Hoài Nhơn.
+
+                        Năm 1602, chúa Nguyễn Hoàng cho đổi phủ Hoài Nhơn thành phủ Quy Nhơn.
+
+                        Năm 1651, dưới thời Nguyễn Phúc Tần, chúa cho đổi phủ Hoài Nhơn thành phủ Quy Ninh. Năm 1702, chúa Nguyễn Phúc Khoát cho lấy lại tên cũ là Quy Nhơn và vẫn được gọi suốt thời kỳ Tây Sơn. Năm 1744, chúa Nguyễn Phúc Khoát đặt các đạo làm dinh, nhưng cấp phủ vẫn giữ nguyên. Phủ Quy Nhơn vẫn thuộc về dinh Quảng Nam, đặt các chức tuần phủ và khám lý để cai trị. Phủ lỵ được dời ra phía Bắc thành Đồ Bàn, đóng tại thôn Châu Thành (nay thuộc xã Nhơn Thành, An Nhơn).
+
+                        Từ thời các chúa Nguyễn, ở đàng Trong nói chung, Bình Định nói riêng đã có sự phân hóa giàu nghèo, địa vị khác nhau và các tầng lớp trong xã hội. Đặc biệt vào đầu thế kỷ XVII, vấn đề trên càng trở nên mâu thuẫn sâu sắc. Cho đến trước cuộc khởi nghĩa nông dân Tây Sơn 1771, ở Bình Định đã nổ ra nhiều cuộc khởi nghĩa nông dân, trong đó tiêu biểu là cuộc khởi nghĩa của Chàng Lía: cướp của nhà giàu, chia cho dân nghèo, trừng phạt quan lại hống hách bức hiếp dân. Nhưng tồn tại chẳng được bao lâu, cuộc khởi nghĩa của Lía bị thất bại.</em></p>
                 </blockquote>
             </div>
         </div>
@@ -132,27 +144,27 @@
     <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
             <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Những địa danh khác</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Những địa điểm được bình luận nhiều nhất</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
 
                 <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_1.jpg"/>)">
+                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>)">
                     </div>
                     <div class="media-body">
-                        <h5 class="mb-3">01. Tháp đôi</h5>
-                        <p>Tháp được xây dựng vào khoảng cuối thế kỷ 11 – đầu thế kỷ 13. Đây là thời kỳ vương quốc Chăm Pa gặp nhiều biến động.</p>
+                        <h5 class="mb-3">01. Bãi tắm Hoàng Hậu</h5>
+                        <p>Bãi biển Hoàng Hậu nằm trong Ghềnh Ráng. Từ đỉnh Ghềnh Ráng có thể phóng tầm mắt nhìn rộng cả bốn bề.</p>
                     </div>
                 </div>
 
                 <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_2.jpg"/>)">
+                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/ThapDoi.png"/>)">
                     </div>
                     <div class="media-body">
-                        <h5 class="mb-3">02. Ghềnh Ráng</h5>
-                        <p>Là tác phẩm thiên tạo với quần thể sơn thạch chạy sát biển, nơi những dãy đá núi nhấp nhô, chập trùng tạo thành hang,... </p>
+                        <h5 class="mb-3">02. Tháp đôi</h5>
+                        <p>Tháp có cấu trúc độc đáo gồm hai tháp nằm liền kề nhau như cặp vợ chồng quấn quýt.</p>
                     </div>
                 </div>
 
@@ -160,23 +172,21 @@
             <div class="col-md-6">
 
                 <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_4.jpg"/>)">
+                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/ThapDuongLong.jpg"/>)">
                     </div>
                     <div class="media-body">
                         <h5 class="mb-3">03. Tháp Dương Long</h5>
-                        <p>Trên đất Bình Định đã có nhiều công trình kiến trúc Champa được xây dựng, nhiều tác phẩm điêu khắc được khắc tạc,...</p>
+                        <p>Ở xã Tây Bình, huyện Tây Sơn, cách TP.Quy Nhơn khoảng 50km.</p>
                     </div>
                 </div>
-
                 <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_3.jpg"/>)">
+                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/GhenhRangTienSa.jpg"/>)">
                     </div>
                     <div class="media-body">
-                        <h5 class="mb-3">04. Mũi Vi Rồng</h5>
-                        <p>Khi được quan sát từ xa hay nhìn từ trên cao, Mũi Vi Rồng hiện ra là một tảng đá vươn mình ra biển hùng dũng.</p>
+                        <h5 class="mb-3">04. Ghềnh Ráng - Tiên Sa</h5>
+                        <p>Nói tới khu du lịch Ghềnh Ráng Bình Định bạn sẽ biết thêm về một sự tích được lưu truyền cho đến tận bây giờ về địa điểm này.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
