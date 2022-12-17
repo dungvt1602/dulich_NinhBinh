@@ -84,7 +84,7 @@
     <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
             <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Những địa danh nổi tiếng</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Top 2 địa danh được yêu thích nhất:</h2>
             </div>
         </div>
     </div>
@@ -92,7 +92,7 @@
 
 
 <section class="probootstrap-section-half d-md-flex" id="section-about">
-    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_1.jpg"/>)"></div>
+    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${model1.thumbnail}"/>)"></div>
     <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
             <h2 class="heading mb-4">${model1.title}</h2>
@@ -106,7 +106,7 @@
 </section>
 
 <section class="probootstrap-section-half d-md-flex">
-    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_3.jpg"/>)"></div>
+    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${model1.thumbnail}"/>)"></div>
     <div class="probootstrap-text order-1">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
             <h2 class="heading mb-4">${model2.title}</h2>
@@ -142,48 +142,23 @@
             </div>
         </div>
         <div class="row">
+        <c:forEach var="item" items="${lists}" begin="0" end="3">
             <div class="col-md-6">
-
-                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_1.jpg"/>)">
+                <c:url value="/place_detail" var="redirect">
+                    <c:param name="place_id" value="${item.id}"/>
+                </c:url>
+                <a href="${redirect}" class="probootstrap-thumbnail">
+                    <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
+                        <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/${item.thumbnail}"/>)">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="mb-3">${item.id}: ${item.title}</h5>
+                            <p>${item.shortDescription}</p>
+                        </div>
                     </div>
-                    <div class="media-body">
-                        <h5 class="mb-3">01. Tháp đôi</h5>
-                        <p>Tháp được xây dựng vào khoảng cuối thế kỷ 11 – đầu thế kỷ 13. Đây là thời kỳ vương quốc Chăm Pa gặp nhiều biến động.</p>
-                    </div>
-                </div>
-
-                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_2.jpg"/>)">
-                    </div>
-                    <div class="media-body">
-                        <h5 class="mb-3">02. Ghềnh Ráng</h5>
-                        <p>Là tác phẩm thiên tạo với quần thể sơn thạch chạy sát biển, nơi những dãy đá núi nhấp nhô, chập trùng tạo thành hang,... </p>
-                    </div>
-                </div>
-
+                </a>
             </div>
-            <div class="col-md-6">
-
-                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_4.jpg"/>)">
-                    </div>
-                    <div class="media-body">
-                        <h5 class="mb-3">03. Tháp Dương Long</h5>
-                        <p>Trên đất Bình Định đã có nhiều công trình kiến trúc Champa được xây dựng, nhiều tác phẩm điêu khắc được khắc tạc,...</p>
-                    </div>
-                </div>
-
-                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                    <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/img_3.jpg"/>)">
-                    </div>
-                    <div class="media-body">
-                        <h5 class="mb-3">04. Mũi Vi Rồng</h5>
-                        <p>Khi được quan sát từ xa hay nhìn từ trên cao, Mũi Vi Rồng hiện ra là một tảng đá vươn mình ra biển hùng dũng.</p>
-                    </div>
-                </div>
-
-            </div>
+        </c:forEach>
         </div>
     </div>
 </section>

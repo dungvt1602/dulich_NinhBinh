@@ -39,12 +39,14 @@ public class HomeController {
 		String image = "p2.jpg";
 		ModelAndView mav = new ModelAndView("web/home");
 		List<PlaceDTO> models = placeService.findNewPlace();
+		List<PlaceEntity> lists = placeRepository.findAll();
 		PlaceDTO dto1 = models.get(0);
 		PlaceDTO dto2 = models.get(1);
 		mav.addObject("model1" , dto1);
 		mav.addObject("model2" , dto2);
 
 		mav.addObject("test" , image);
+		mav.addObject("lists" , lists);
 		return mav;
 	}
 	

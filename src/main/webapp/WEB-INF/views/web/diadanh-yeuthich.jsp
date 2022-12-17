@@ -53,7 +53,7 @@
     <div class="container">
         <div class="row align-items-center text-center">
             <div class="col-md">
-                <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Địa điểm được yêu thích nhất</h2>
+                <h2 class="heading mb-2 display-4 font-light probootstrap-animate">ĐỊA ĐIỂM DU LỊCH Ở BÌNH ĐỊNH</h2>
 
                 <p class="lead mb-5 probootstrap-animate">
 
@@ -72,7 +72,7 @@
     <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
             <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Địa điểm nhiều du khách tham quan nhất</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Các địa điểm ở Bình Định</h2>
             </div>
         </div>
         <div class="row mb-4">
@@ -82,7 +82,7 @@
                     <c:param name="place_id" value="${item.id}"/>
                 </c:url>
                 <a href="${redirect}" class="probootstrap-thumbnail">
-                    <img src="<c:url value="/template/web/assets/images/${item.title}" />" alt="Free Template by ProBootstrap.com" class="img-fluid">
+                    <img src="<c:url value="/template/web/assets/images/${item.thumbnail}" />" alt="${item.title}" class="img-fluid">
                     <div class="probootstrap-text">
                         <h3>${item.title}</h3>
                     </div>
@@ -96,7 +96,7 @@
             <c:forEach var="item" items="${lists}" begin="4" end="8">
             <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
                 <a href="#" class="probootstrap-thumbnail">
-                    <img src="<c:url value="/template/web/assets/images/${item.thumbnail}" />" alt="Free Template by ProBootstrap.com" class="img-fluid">
+                    <img src="<c:url value="/template/web/assets/images/${item.thumbnail}" />" alt="${item.title}" class="img-fluid">
                     <div class="probootstrap-text">
                         <h3>${item.title}</h3>
                     </div>
@@ -106,33 +106,13 @@
         </div>
 
         <div class="row justify-content-center probootstrap-animate">
-            <div class="col-md-3"><a href="https://themewagon.com/theme_tag/free/" target="_blank" class="btn btn-primary">Xem thêm các địa danh khác</a></div>
+            <div class="col-md-3"><a href="<c:url value="/event"/>" target="_blank" class="btn btn-primary">Xem thêm Địa điểm</a></div>
         </div>
 
     </div>
 </section>
+<!-- END section -->
 
-<section class="probootstrap_section" id="section-feature-testimonial">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-12 text-center mb-5 probootstrap-animate">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Tại sao bạn phải đến bình định</h2>
-                <blockquote class="">
-                    <p class="lead mb-4"><em>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</em></p>
-                    <p class="probootstrap-author">
-                        <a href="https://probootstrap.com/" target="_blank">
-                            <img src="assets/images/person_1.jpg" alt="Free Template by ProBootstrap.com" class="rounded-circle">
-                            <span class="probootstrap-name">James Smith</span>
-                            <span class="probootstrap-title">Chief Executive Officer</span>
-                        </a>
-                    </p>
-                </blockquote>
-
-            </div>
-        </div>
-
-    </div>
-</section>
 
 </body>
 </html>

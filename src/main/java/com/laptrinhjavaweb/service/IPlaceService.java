@@ -36,7 +36,4 @@ public interface IPlaceService {
     List<PlaceDTO> findAllPlace();
 
 
-
-
-
 }

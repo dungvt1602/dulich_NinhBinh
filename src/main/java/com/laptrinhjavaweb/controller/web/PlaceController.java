@@ -3,7 +3,9 @@ package com.laptrinhjavaweb.controller.web;
 
 import com.laptrinhjavaweb.dto.CommentDTO;
 import com.laptrinhjavaweb.dto.PlaceDTO;
+import com.laptrinhjavaweb.entity.PlaceEntity;
 import com.laptrinhjavaweb.entity.UserEntity;
+import com.laptrinhjavaweb.repository.PlaceRepository;
 import com.laptrinhjavaweb.repository.UserRepository;
 import com.laptrinhjavaweb.service.ICommentService;
 import com.laptrinhjavaweb.service.IPlaceService;
@@ -42,6 +44,9 @@ public class PlaceController {
 	@Autowired
 	UserRepository userRepository;
 
+	@Autowired
+	PlaceRepository placeRepository;
+
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	public String submit(@RequestParam("files") MultipartFile multipartFile ,
 						 HttpServletRequest request ,ModelMap model) {
@@ -65,6 +70,7 @@ public class PlaceController {
 		PlaceDTO placeDTO = placeService.findbyID(id);
 
 		List<CommentDTO> comments = new ArrayList<>();
+		List<PlaceEntity> lists = placeRepository.findAll();
 		comments = commentService.findAllCommentPlacebyIdPlace(id);
 		CommentDTO comment= new CommentDTO();
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -91,6 +97,7 @@ public class PlaceController {
 		int cout = (int) placeService.coutLike(id);
 
 		mav.addObject("model" , placeDTO);
+		mav.addObject("lists" , lists);
 		mav.addObject("like" , cout);
 		mav.addObject("comments" ,comments);
 		mav.addObject("cout_comment" , comments.size());
