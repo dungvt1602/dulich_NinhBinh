@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletContext;
 import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 
 @Component
@@ -18,11 +20,12 @@ public class CommentConverter {
 
     public CommentDTO toDTO(CommentPlaceEntity entity)
     {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
         CommentDTO newDTO = new CommentDTO();
         newDTO.setContent(entity.getContent());
         newDTO.setId(entity.getId());
         newDTO.setThumbnail(entity.getThumbnail());
-        newDTO.setCreateDate((Timestamp) entity.getCreatedDate());
+        newDTO.setCreateDate(dateFormat.format(entity.getCreatedDate()));
         newDTO.setUserName(entity.getUserEntity().getFullName());
         return newDTO;
     }

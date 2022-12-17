@@ -8,9 +8,4 @@ import java.util.List;
 
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
 	UserEntity findOneByUserNameAndStatus(String name, int status);
-
-
-
-
-
 }

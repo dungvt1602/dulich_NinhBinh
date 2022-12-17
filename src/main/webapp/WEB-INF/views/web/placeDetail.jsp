@@ -135,14 +135,14 @@
             <div class="tm-comment-reply tm-mb-45">
                 <div class="tm-comment">
                     <figure class="tm-comment-figure">
-                        <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg}"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
+                        <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
                         <figcaption class="tm-color-primary text-center">${item.userName}</figcaption>
                     </figure>
                     <p>
                         ${item.content}
                     </p>
                 </div>
-                <span class="d-block text-right tm-color-primary">${item.createdDate}</span>
+                <span class="d-block text-right tm-color-primary">${item.createDate}</span>
             </div>
             </for:forEach>
             <securtity:authorize access="isAnonymous()">

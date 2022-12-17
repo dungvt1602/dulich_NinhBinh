@@ -17,16 +17,15 @@ public class CommentDTO extends AbstractDTO<CommentDTO> {
 
     private String userName;
 
-    private Timestamp createDate;
+    private String createDate;
 
-    public void setCreateDate(Timestamp createDate) {
-        this.createDate = createDate;
-    }
-
-    public Timestamp getCreateDate() {
+    public String getCreateDate() {
         return createDate;
     }
 
+    public void setCreateDate(String createDate) {
+        this.createDate = createDate;
+    }
 
     public String getUserAvatar() {
         return userAvatar;
