@@ -16,6 +16,7 @@
 <html>
 <head>
     <title>Trang chủ</title>
+    <link href="<c:url value="/template/login/image_user.css"/> " , rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
@@ -78,7 +79,16 @@
 <!-- END section -->
 
 <section class="probootstrap-section-half d-md-flex" id="section-about" style="padding-bottom: 10%">
-    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>); border-radius: 50%; "></div>
+    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>); border-radius: 50%; ">
+        <c:url value="/edit_user" var="edit_image"/>
+        <form:form action="${edit_image}" role="form"  method="post" enctype="multipart/form-data">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile" name="files">
+            <label class="custom-file-label" for="customFile">Chọn ảnh</label>
+        </div>
+            <button type="submit" id="buttonFile" hidden>Submit</button>
+        </form:form>
+    </div>
     <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
             <h2 class="heading mb-4">Tên: <%=SecurityUtils.getPrincipal().getFullName()%>
@@ -98,7 +108,8 @@
             <p>Số lượng địa điểm đã check-in bình luận: ${coutComment}</p>
             <p> </p>
             <p><a href="<c:url value="/edit_profile"/>" class="btn btn-primary">Sửa thông tin cá nhân</a></p>
-            <p><a href="#" class="btn btn-primary">Thay đổi ảnh đại diện</a></p>
+            <label class="btn btn-primary" for="buttonFile">Thay đổi ảnh đại diện</label>
+
         </div>
     </div>
 </section>
@@ -172,5 +183,13 @@
         </div>
     </div>
 </section>
+
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
 </body>
 </html>

@@ -5,9 +5,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.laptrinhjavaweb.dto.PlaceDTO;
 import com.laptrinhjavaweb.dto.UserDTO;
+import com.laptrinhjavaweb.entity.PlaceEntity;
+import com.laptrinhjavaweb.repository.PlaceRepository;
 import com.laptrinhjavaweb.service.IPlaceService;
 import com.laptrinhjavaweb.util.MessageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -27,6 +30,9 @@ public class HomeController {
 
 	@Autowired
 	IPlaceService placeService;
+
+	@Autowired
+	PlaceRepository placeRepository;
 
 	@RequestMapping(value = "/trang-chu", method = RequestMethod.GET)
 	public ModelAndView homePage() {
@@ -88,8 +94,11 @@ public class HomeController {
 
 	@RequestMapping(value = "/diadanh" , method = RequestMethod.GET)
 	public ModelAndView diadiem(){
-		ModelAndView nav = new ModelAndView("web/diadanh-yeuthich");
-		return nav;
+		ModelAndView mav = new ModelAndView("web/diadanh-yeuthich");
+		List<PlaceEntity> placeEntities = placeRepository.findAll();
+		mav.addObject("lists" , placeEntities);
+
+		return mav;
 	}
 
 	@RequestMapping(value = "/event" , method = RequestMethod.GET)

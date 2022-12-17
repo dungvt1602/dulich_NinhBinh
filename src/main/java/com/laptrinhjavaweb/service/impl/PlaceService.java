@@ -176,7 +176,10 @@ public class PlaceService implements IPlaceService {
 		placeRepository.delete(id);
 	}
 
-
+	@Override
+	public List<PlaceDTO> findAllPlace() {
+		return null;
+	}
 
 
 }

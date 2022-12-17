@@ -83,31 +83,28 @@ public class UserController {
 
     @RequestMapping(value = "/edit_user", method = RequestMethod.POST)
     public ModelAndView editUser(@RequestParam(value = "files" , required = false) MultipartFile multipartFile ,
-                           @ModelAttribute("model") UserDTO userDTO ,
+                           @ModelAttribute("model2") UserDTO userDTO ,
                            HttpServletRequest request , ModelMap model) {
 
-        UserDTO result = new UserDTO();
-        ModelAndView mav = new ModelAndView("web/user_profile");
+        ModelAndView mav = new ModelAndView("redirect:/user_profile");
         if (multipartFile != null) {
             try {
 
                 String fileName = multipartFile.getOriginalFilename();
                 File file = new File("D:/Year 4/HK1/TLCN/spring-mvc-spring-security/src/main/webapp/template/web/assets/images", fileName);
                 multipartFile.transferTo(file);
-                result = userService.changeAvatar(fileName);
+                UserDTO result = userService.changeAvatar(fileName);
 
             } catch (Exception e) {
                 e.printStackTrace();
                 model.addAttribute("message", "upload failed");
             }
         }
-        if (userDTO != null) {
+        if (userDTO.getFullName() != null) {
 
-            result = userService.saveUserByUser(userDTO);
+            UserDTO result = userService.saveUserByUser(userDTO);
 
         }
-        mav.addObject("model" , result);
-
         return mav;
     }
 

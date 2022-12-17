@@ -123,7 +123,7 @@ public class CustomUserDetailsService  implements UserDetailsService , IUserServ
 	@Override
 	@Transactional
 	public UserDTO changeAvatar(String file) {
-		UserEntity oldEntity = userRepository.findOneByUserNameAndStatus(SecurityUtils.getPrincipal2().getUserName(), 1);
+		UserEntity oldEntity = userRepository.findOneByUserNameAndStatus(SecurityUtils.getPrincipal().getUsername(), 1);
 		oldEntity.setAvatar(file);
 		oldEntity = userRepository.save(oldEntity);
 

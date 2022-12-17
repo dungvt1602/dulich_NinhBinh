@@ -33,6 +33,8 @@ public interface IPlaceService {
 
     void deletePlace(long id);
 
+    List<PlaceDTO> findAllPlace();
+
 
 
 

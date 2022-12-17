@@ -59,7 +59,7 @@
 
 
                 </p>
-                <a href="google.com" target="_blank" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">Tìm hiểu tại đây</a>
+                <a href="#section" target="_blank" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">Tìm hiểu tại đây</a>
                 </p>
             </div>
         </div>
@@ -76,66 +76,37 @@
             </div>
         </div>
         <div class="row mb-4">
-            <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                <a href="<c:url value="/place_detail"/>" class="probootstrap-thumbnail">
-                    <img src="assets/images/img_1.jpg" alt="Free Template by ProBootstrap.com" class="img-fluid">
+            <c:forEach var="item" items="${lists}" begin="0" end="3">
+            <div class="col-lg-3 col-md-6 probootstrap-animate mb-3" id="section">
+                <c:url value="/place_detail" var="redirect">
+                    <c:param name="place_id" value="${item.id}"/>
+                </c:url>
+                <a href="${redirect}" class="probootstrap-thumbnail">
+                    <img src="<c:url value="/template/web/assets/images/${item.title}" />" alt="Free Template by ProBootstrap.com" class="img-fluid">
                     <div class="probootstrap-text">
-                        <h3>Buena</h3>
+                        <h3>${item.title}</h3>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                <a href="#" class="probootstrap-thumbnail">
-                    <img src="assets/images/img_2.jpg" alt="Free Template by ProBootstrap.com" class="img-fluid">
-                    <h3>Road</h3>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                <a href="#" class="probootstrap-thumbnail">
-                    <img src="assets/images/img_3.jpg" alt="Free Template by ProBootstrap.com" class="img-fluid">
-                    <h3>Australia</h3>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                <a href="#" class="probootstrap-thumbnail">
-                    <img src="assets/images/img_4.jpg" alt="Free Template by ProBootstrap.com" class="img-fluid">
-                    <h3>Japan</h3>
-                </a>
-            </div>
+            </c:forEach>
         </div>
 
 
         <div class="row">
+            <c:forEach var="item" items="${lists}" begin="4" end="8">
             <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
                 <a href="#" class="probootstrap-thumbnail">
-                    <img src="assets/images/img_5.jpg" alt="Free Template by ProBootstrap.com" class="img-fluid">
+                    <img src="<c:url value="/template/web/assets/images/${item.thumbnail}" />" alt="Free Template by ProBootstrap.com" class="img-fluid">
                     <div class="probootstrap-text">
-                        <h3>Paris</h3>
+                        <h3>${item.title}</h3>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                <a href="#" class="probootstrap-thumbnail">
-                    <img src="assets/images/img_2.jpg" alt="Free Template by ProBootstrap.com" class="img-fluid">
-                    <h3>Brazil</h3>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                <a href="#" class="probootstrap-thumbnail">
-                    <img src="assets/images/img_3.jpg" alt="Free Template by ProBootstrap.com" class="img-fluid">
-                    <h3>Australia</h3>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                <a href="#" class="probootstrap-thumbnail">
-                    <img src="assets/images/img_4.jpg" alt="Free Template by ProBootstrap.com" class="img-fluid">
-                    <h3>Japan</h3>
-                </a>
-            </div>
+            </c:forEach>
         </div>
 
         <div class="row justify-content-center probootstrap-animate">
-            <div class="col-md-3"><a href="https://themewagon.com/theme_tag/free/" target="_blank" class="btn btn-primary">More Templates Here</a></div>
+            <div class="col-md-3"><a href="https://themewagon.com/theme_tag/free/" target="_blank" class="btn btn-primary">Xem thêm các địa danh khác</a></div>
         </div>
 
     </div>
@@ -145,7 +116,7 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-12 text-center mb-5 probootstrap-animate">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Why we Love Places</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Tại sao bạn phải đến bình định</h2>
                 <blockquote class="">
                     <p class="lead mb-4"><em>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</em></p>
                     <p class="probootstrap-author">
