@@ -80,6 +80,8 @@
     </div>
 </section>
 <!-- END section -->
+
+<!-- BEGIN section -->
 <section class="probootstrap_section">
     <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
@@ -89,7 +91,7 @@
         </div>
     </div>
 </section>
-
+<!-- END section -->
 
 <section class="probootstrap-section-half d-md-flex" id="section-about">
     <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${model1.thumbnail}"/>)"></div>

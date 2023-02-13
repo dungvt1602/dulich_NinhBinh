@@ -51,14 +51,8 @@
     <div class="container">
         <div class="row align-items-center text-center">
             <div class="col-md">
-                <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Khách sạn phổ biến nhất</h2>
+                <h2 class="heading mb-2 display-4 font-light probootstrap-animate">TOP 5 KHÁCH SẠN ĐƯỢC YÊU THÍCH NHẤT</h2>
                 <p class="lead mb-5 probootstrap-animate">
-
-
-                </p>
-                <a href="https://quynhon.maiaresorts.com/vi/biet-thu/" target="_blank" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">Khách sạn cao cấp 5 sao</a>
-                <a href="https://www.trivago.vn/" target="_blank" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">Khách sạn bình dân</a>
-                </p>
             </div>
         </div>
     </div>
@@ -66,17 +60,29 @@
 </section>
 <!-- END section -->
 
+<!-- BEGIN section -->
+<section class="probootstrap_section">
+    <div class="container">
+        <div class="row text-center mb-5 probootstrap-animate">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">FLEUR DE LYS HOTEL</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END section -->
 
-
-
-<section class="probootstrap-section-half d-md-flex">
+<!-- BEGIN section -->
+<section class="probootstrap-section-half d-md-flex" >
     <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_3.jpg"/>)"></div>
-    <div class="probootstrap-text order-1">
-        <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
-            <h2 class="heading mb-4">Chọn khách sạn</h2>
-
-            <p>Chọn khách sạn phù hợp giúp bạn thuận tiện đi lợi trong việc thư giãn , và quản lí được chi phí.</p>
-            <p><a href="#" class="btn btn-primary">Tìm khách sạn ngay</a></p>
+    <div class="probootstrap-text">
+        <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
+            <h2 class="heading mb-4">FLEUR DE LYS HOTEL</h2>
+            <p>Địa chỉ: Số 16 Nguyễn Huệ, Phường Lê Lợi, Thành phố Quy Nhơn, tỉnh Bình Định</p>
+            <p>Loại phòng: Phòng đơn, Phòng đôi, Phòng gia đình</p>
+            <p>Tiêu chuẩn: 3 sao</p>
+            <p>Dịch vụ: Bể bơi, Bữa sáng miễn phí, Spa, Nhà hàng.</p>
+            <p><a href="<c:url value="/chitietkhachsan"/>" class="btn btn-primary">Xem chi tiết và đặt phòng</a></p>
         </div>
     </div>
 </section>
@@ -87,7 +93,7 @@
     <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
             <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Những khách sạn phổ biến được đánh giá</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Một số khách sạn khác</h2>
             </div>
         </div>
 
@@ -96,7 +102,7 @@
                 <div class="owl-carousel js-owl-carousel">
                     <a class="probootstrap-slide" href="#">
                         <span class="flaticon-teatro-de-la-caridad"></span>
-                        <em>Teatro de la Caridad</em>
+                        <em>FLEUR DE LYS HOTEL</em>
                     </a>
                     <a class="probootstrap-slide" href="#">
                         <span class="flaticon-royal-museum-of-the-armed-forces"></span>

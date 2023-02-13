@@ -121,7 +121,11 @@ public class HomeController {
 		return nav;
 	}
 
-
+	@RequestMapping(value = "/chitietkhachsan" , method = RequestMethod.GET)
+	public ModelAndView hotelDetail(){
+		ModelAndView nav = new ModelAndView("web/hotelDetail");
+		return nav;
+	}
 
 
 
