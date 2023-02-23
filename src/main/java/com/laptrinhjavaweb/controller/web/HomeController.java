@@ -42,6 +42,7 @@ public class HomeController {
 		List<PlaceEntity> lists = placeRepository.findAll();
 		PlaceDTO dto1 = models.get(0);
 		PlaceDTO dto2 = models.get(1);
+
 		mav.addObject("model1" , dto1);
 		mav.addObject("model2" , dto2);
 
@@ -127,6 +128,10 @@ public class HomeController {
 		return nav;
 	}
 
-
+	@RequestMapping(value = "/thanhToan" , method = RequestMethod.GET)
+	public ModelAndView thanhToan(){
+		ModelAndView nav = new ModelAndView("web/thanhToan");
+		return nav;
+	}
 
 }

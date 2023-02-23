@@ -26,6 +26,9 @@ insert into place(createdby, createddate, modifiedby, modifieddate, diachi, cont
 values(NULL, NULL, 'admin', NULL, NULL, 'Khánh thành dự án Tổ hợp không gian khoa học', 'Khánh thành dự án Tổ hợp không gian khoa học', 'KhanhThanh1.jpg', 'Khánh thành dự án Tổ hợp không gian khoa học', 'KhanhThanh1_nen.jpg', '1');
 insert into place(createdby, createddate, modifiedby, modifieddate, diachi, content, shortdescription, thumbnail, title, video, category_id)
 values(NULL, NULL, 'admin', NULL, NULL, 'Lễ hội đường phố Quy Nhơn', 'Lễ hội đường phố Quy Nhơn', 'LeHoiDuongPho1.jpg', 'Lễ hội đường phố Quy Nhơn', 'LeHoiDuongPho1_nen.jpg', '1');
+insert into place(createdby, createddate, modifiedby, modifieddate, diachi, content, shortdescription, thumbnail, title, video, category_id)
+values(NULL, NULL,'admin', NULL, NULL, 'Nằm trong địa phận của Ghềnh Ráng một địa danh tham quan du lịch kì thú của Bình Định, cách thành phố Quy Nhơn khoảng 3km về phía Đông Nam.', 'Bãi tắm Hoàng  Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp  nên thơ, với địa thế thuận  lợi, gần  các khu nghỉ dưỡng resort nên nó đã trở thành một trong những  địa  điểm  thu hút khách du lịch trong và ngoài nước đến.', 'Bãi tắm Hoàng  Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp  nên thơ, với địa thế thuận  lợi, gần  các khu nghỉ dưỡng resort nên nó đã trở thành một trong những  địa  điểm  thu hút khách du lịch trong và ngoài nước đến.', 'BaiTamHoangHau.jpg', 'Bãi tắm Hoàng Hậu', 'BaiTamHoangHau_nen.jpg', '2'
+
 
 
 

@@ -86,40 +86,86 @@
     <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
             <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Top 2 địa danh được yêu thích nhất:</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Top 5 địa danh được yêu thích nhất:</h2>
             </div>
         </div>
     </div>
 </section>
 <!-- END section -->
 
-<section class="probootstrap-section-half d-md-flex" id="section-about">
-    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${model1.thumbnail}"/>)"></div>
+<!-- BEGIN section: TOP 5 LOVED PLACE -->
+<c:forEach var="item" items="${lists}" begin="0" end="4">
+    <c:url value="/place_detail" var="redirect">
+        <c:param name="place_id" value="${item.id}"/>
+    </c:url>
+    <section class="probootstrap-section-half d-md-flex" id="section-about" style="border: #a9d57c solid 1px">
+        <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${item.thumbnail}"/>)"></div>
+        <div class="probootstrap-text">
+            <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
+                <h2 class="heading mb-4">${item.title}</h2>
+                <p>${item.shortDescription}</p>
+                <c:url value="/place_detail" var="detail1">
+                    <c:param name="place_id" value="${item.id}"/>
+                </c:url>
+                <p>Lượt yêu thích: </p>
+                <p><a href="${detail1}" class="btn btn-primary">Xem thêm</a></p>
+            </div>
+        </div>
+        <div>
+            <hr class="rule">
+        </div>
+    </section>
+</c:forEach>
+<!-- END section: TOP 5 LOVED PLACE -->
+
+<!-- BEGIN section -->
+<section class="probootstrap_section" >
+    <div class="container">
+        <div class="row text-center mb-5 probootstrap-animate">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Top 5 sự kiện nổi bật sắp diễn ra:</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END section -->
+
+<!-- BEGIN section: TOP 5 NEW EVENT -->
+<c:forEach var="item" items="${lists}" begin="0" end="4">
+    <c:url value="/place_detail" var="redirect">
+        <c:param name="place_id" value="${item.id}"/>
+    </c:url>
+    <section class="probootstrap-section-half d-md-flex" style="border: #a9d57c solid 1px">
+        <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${item.thumbnail}"/>)"></div>
+        <div class="probootstrap-text order-1">
+            <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
+                <h2 class="heading mb-4">${item.title}</h2>
+                <p>${item.shortDescription}</p>
+                <c:url value="/place_detail" var="detail">
+                    <c:param name="place_id" value="${item.id}"/>
+                </c:url>
+                <p><a href="${detail}" class="btn btn-primary">Xem thêm</a></p>
+            </div>
+        </div>
+    </section>
+</c:forEach>
+<!-- END section: TOP 5 NEW EVENT -->
+
+<!--
+<section class="probootstrap-section-half d-md-flex">
+    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${model3.thumbnail}"/>)"></div>
     <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
-            <h2 class="heading mb-4">${model1.title}</h2>
-            <p>${model1.shortDescription}</p>
-            <c:url value="/place_detail" var="detail1">
-                <c:param name="place_id" value="${model1.id}"/>
+            <h2 class="heading mb-4">${model3.title}</h2>
+            <p>${model3.shortDescription}</p>
+            <c:url value="/place_detail" var="detail3">
+                <c:param name="place_id" value="${model3.id}"/>
             </c:url>
-            <p><a href="${detail1}" class="btn btn-primary">Xem thêm</a></p>
+            <p><a href="${detail3}" class="btn btn-primary">Xem thêm</a></p>
         </div>
     </div>
 </section>
-
-<section class="probootstrap-section-half d-md-flex">
-    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${model1.thumbnail}"/>)"></div>
-    <div class="probootstrap-text order-1">
-        <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
-            <h2 class="heading mb-4">${model2.title}</h2>
-            <p>${model2.shortDescription}</p>
-            <c:url value="/place_detail" var="detail2">
-                <c:param name="place_id" value="${model2.id}"/>
-            </c:url>
-            <p><a href="${detail2}" class="btn btn-primary">Xem thêm</a></p>
-        </div>
-    </div>
-</section>
+-->
 <!-- END section -->
 
 <section class="probootstrap_section" id="section-feature-testimonial1">

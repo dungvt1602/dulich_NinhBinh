@@ -86,31 +86,19 @@
       <p>Địa chỉ: Số 16 Nguyễn Huệ, Phường Lê Lợi, Thành phố Quy Nhơn, tỉnh Bình Định</p>
       <p>Tiêu chuẩn: 3 sao</p>
       <p>Dịch vụ: Bể bơi, Bữa sáng miễn phí, Spa, Nhà hàng.</p>
-      <p> Phòng đơn: </p>
-      <div class="sel sel--black-panther">
-        <select name="select-profession" id="select-profession">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </div>
+
+      <hr class="rule">
+      <p>Số phòng đơn còn: 3</p>
+      <p>Giá phòng: 1 000 000 VND / phòng</p>
 
       <hr class="rule">
 
-      <p> Phòng đôi: </p>
-      <div class="sel sel--superman">
-        <select name="select-superpower" id="select-superpower">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </div>
+      <p>Số phòng đôi còn: 3</p>
+      <p>Giá phòng: 1 000 000 VND / phòng</p>
 
       <hr class="rule">
 
-      <p><a href="<c:url value="#"/>" class="btn btn-primary">Đặt phòng</a></p>
+      <p><a href="<c:url value="/thanhToan"/>" class="btn btn-primary">Đặt phòng</a></p>
       <securtity:authorize access="isAnonymous()">
 
       </securtity:authorize>

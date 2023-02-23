@@ -76,27 +76,13 @@
             </div>
         </div>
         <div class="row mb-4">
-            <c:forEach var="item" items="${lists}" begin="0" end="3">
+            <c:forEach var="item" items="${lists}" begin="0" end="8">
             <div class="col-lg-3 col-md-6 probootstrap-animate mb-3" id="section">
                 <c:url value="/place_detail" var="redirect">
                     <c:param name="place_id" value="${item.id}"/>
                 </c:url>
                 <a href="${redirect}" class="probootstrap-thumbnail">
-                    <img src="<c:url value="/template/web/assets/images/${item.thumbnail}" />" alt="${item.title}" class="img-fluid">
-                    <div class="probootstrap-text">
-                        <h3>${item.title}</h3>
-                    </div>
-                </a>
-            </div>
-            </c:forEach>
-        </div>
-
-
-        <div class="row">
-            <c:forEach var="item" items="${lists}" begin="4" end="8">
-            <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
-                <a href="#" class="probootstrap-thumbnail">
-                    <img src="<c:url value="/template/web/assets/images/${item.thumbnail}" />" alt="${item.title}" class="img-fluid">
+                    <img src="<c:url value="/template/web/assets/images/${item.thumbnail}" />" height="200px" width="250px" alt="${item.title}" class="img-fluid">
                     <div class="probootstrap-text">
                         <h3>${item.title}</h3>
                     </div>
