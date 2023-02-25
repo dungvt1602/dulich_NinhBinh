@@ -15,6 +15,7 @@ import com.laptrinhjavaweb.repository.UserRepository;
 import com.laptrinhjavaweb.service.IPlaceService;
 import com.laptrinhjavaweb.util.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -179,6 +180,15 @@ public class PlaceService implements IPlaceService {
 	@Override
 	public List<PlaceDTO> findAllPlace() {
 		return null;
+	}
+
+
+	//Câu lệch top 5 địa danh yêu thích nhất
+	@Override
+	public List<PlaceEntity> findTopPlace(Pageable pageable) {
+		 pageable = new PageRequest(0,5);
+		List<PlaceEntity> topPlaces = placeRepository.findTopPlacesWithMostUsers(pageable);
+		return topPlaces;
 	}
 
 

@@ -4,6 +4,7 @@ import java.util.List;
 
 
 import com.laptrinhjavaweb.dto.PlaceDTO;
+import com.laptrinhjavaweb.entity.PlaceEntity;
 import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -34,6 +35,8 @@ public interface IPlaceService {
     void deletePlace(long id);
 
     List<PlaceDTO> findAllPlace();
+
+    List<PlaceEntity> findTopPlace(Pageable pageable);
 
 
 }
