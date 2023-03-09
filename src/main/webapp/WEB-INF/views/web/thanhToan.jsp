@@ -11,9 +11,6 @@
 <%@ taglib prefix="for" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import= "com.laptrinhjavaweb.util.SecurityUtils" %>
 <%@include file="/common/taglib.jsp"%>
-
-
-
 <html>
 <head>
     <title>Title</title>
@@ -23,6 +20,9 @@
     .normal { font-style: normal; }
     .italic { font-style: italic;}
     .oblique { font-style: oblique;}
+    input{
+        background-color: rgb(232, 240, 254);
+    }
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
     <div class="container">
@@ -80,52 +80,44 @@
 <!-- BEGIN section -->
 <section class="probootstrap-text" >
     <div class="probootstrap-inner" style="padding-left: 10%">
+        <form >
+            <!-- Custom name -->
+            <h5>Tên khách hàng: </h5>
+            <input type="text" name="name" placeholder="Nguyen Van A" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px;">
 
-        <!-- Custom name -->
-        <h5>Tên khách hàng: </h5>
-        <p style=" border: white ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px;"> Nguyễn Văn A</p>
+            <!-- Custom gender -->
+            <h5 style="margin-top: 2%">Giới tính: </h5>
+            <input type="radio" name="gender" value="male" checked style=" margin-left: 2%; padding-left: 2%; height: 30px"> Nam
+            <input type="radio" name="gender" value="female" style=" margin-left: 30%; padding-left: 25%; height: 30px"> Nữ <br>
 
-        <!-- Custom gender -->
-        <h5>Giới tính: </h5>
-        <p style=" border: white ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px;"> Nam</p>
+            <!-- Custom address -->
+            <h5 style="margin-top: 2%">Địa chỉ: </h5>
+            <input type="text" name="address" placeholder="Thôn cành lá, xã cành cây, huyện gió mây, tỉnh đồi núi" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px;">
 
-        <!-- Custom gender -->
-        <h5>Giới tính: </h5>
-        <p style=" border: white ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px;"> Nam</p>
+            <!-- Phone number -->
+            <h5 style="margin-top: 2%">Số điện thoại: </h5>
+            <input type="number" name="phoneNumber" placeholder="0123 456 789" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px;">
 
-        <p>Địa chỉ: Số 16 Nguyễn Huệ, Phường Lê Lợi, Thành phố Quy Nhơn, tỉnh Bình Định</p>
-        <p>Tiêu chuẩn: 3 sao</p>
-        <p>Dịch vụ: Bể bơi, Bữa sáng miễn phí, Spa, Nhà hàng.</p>
+            <!-- Email -->
+            <h5 style="margin-top: 2%">Địa chỉ email: </h5>
+            <input type="email" name="email" placeholder="Aloalo@gmail.com" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px; ">
 
-            <hr class="rule">
-            <p>Số phòng đơn còn: 3</p>
-            <p>Giá phòng: 1 000 000 VND / phòng</p>
+            <!-- Personal ID -->
+            <h5 style="margin-top: 2%">Số CMND: </h5>
+            <input type="number" name="personalID" placeholder="0123456789" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px; ">
 
-            <hr class="rule">
+            <!-- Số lượng phòng đặt -->
+            <h5 style="margin-top: 2%">Số phòng đơn: </h5>
+            <input type="number" name="singleRoom" min="1" max="3" placeholder="1" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px; ">
+            <h5 style="margin-top: 2%">Số phòng đôi: </h5>
+            <input type="number" name="doubleRoom" min="1" max="3" placeholder="1" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px; "> <br>
 
-            <p>Số phòng đôi còn: 3</p>
-            <p>Giá phòng: 1 000 000 VND / phòng</p>
-
-            <hr class="rule">
-
-            <p><a href="<c:url value="#"/>" class="btn btn-primary">Đặt phòng</a></p>
-            <securtity:authorize access="isAnonymous()">
-
-            </securtity:authorize>
-            <securtity:authorize access="isAuthenticated()">
-                <c:url value="/place_detail" var="redirect">
-                    <c:param name="place_id" value="${model.id}"/>
-                    <c:param name="yeu_thich" value="like"/>
-                </c:url>
-                <c:if test="${check_like == 1}">
-                    <p><a href="${redirect}" class="btn btn-primary"> ♥ Bỏ yêu thích</a></p>
-                </c:if>
-                <c:if test="${check_like == 0}">
-                    <p><a href="${redirect}" class="btn btn-primary"> ♥ Yêu thích</a></p>
-                </c:if>
-            </securtity:authorize>
-        </div>
-    </section>
+            <!-- Button Submit -->
+            <div style="text-align: center">
+                <input type="submit" value="Gửi" class="btn btn-primary" style="margin-top: 2%; width: 10%; height: 5%; background-color: #00CA4C">
+            </div>
+        </form>
+    </div>
 </section>
 <!-- END section -->
 
