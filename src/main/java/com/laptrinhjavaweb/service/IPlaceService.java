@@ -36,7 +36,7 @@ public interface IPlaceService {
 
     List<PlaceDTO> findAllPlace();
 
-    List<PlaceEntity> findTopPlace(Pageable pageable);
+    // List<PlaceEntity> findTopPlace(Pageable pageable);
 
 
 }

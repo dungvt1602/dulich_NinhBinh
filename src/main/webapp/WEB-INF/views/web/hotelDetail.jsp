@@ -54,7 +54,7 @@
   </ul>
 
 </nav>
-<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/${model.video}"/>');" data-stellar-background-ratio="0.5" id="section-home">
+<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/FleurDeLys_nen.png"/>');" data-stellar-background-ratio="0.5" id="section-home">
   <div class="overlay"></div>
   <div class="container">
     <div class="row align-items-center">
@@ -77,17 +77,45 @@
 </section>
 <!-- END section -->
 
-<!-- BEGIN section -->
+<!-- BEGIN section Introduce -->
 <section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px">
-  <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_3.jpg"/>)"></div>
+  <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys.png"/>)"></div>
   <div class="probootstrap-text order-1">
     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
       <h2 class="heading mb-4">FLEUR DE LYS HOTEL</h2>
+      <p>Fleur de Lys Hospitality là đơn vị quản lý vận hành theo tiêu chuẩn 4 sao quốc tế sở hữu danh mục gồm nhiều nhà hàng, khách sạn, khu nghỉ dưỡng cao cấp khắp cả nước. Với hình ảnh hoa lys quý phái, biểu tượng cho sự thanh cao, tinh khiết và tràn đầy sức sống, cũng là triết lý của chúng tôi về những giá trị dịch vụ tiện nghi tinh tế gần gũi nhất dành riêng cho Quý Khách hàng.</p>
       <p>Địa chỉ: Số 16 Nguyễn Huệ, Phường Lê Lợi, Thành phố Quy Nhơn, tỉnh Bình Định</p>
-      <p>Tiêu chuẩn: 3 sao</p>
+      <p>Tiêu chuẩn: 4 sao</p>
       <p>Dịch vụ: Bể bơi, Bữa sáng miễn phí, Spa, Nhà hàng.</p>
+    </div>
+  </div>
+</section>
+<!-- END section -->
 
+<!-- BEGIN section Service01 -->
+<section class="probootstrap-section-half d-md-flex" id="section-about">
+  <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys_Pool.png"/>)"></div>
+  <div class="probootstrap-text">
+    <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
+      <h2>Bể bơi</h2>
+      <p>Hồ bơi ngoài trời với độ sâu 1,5m. </p>
+      <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
+      <p>Bên cạnh bể bơi có quầy bar phục vụ đồ uống</p>
       <hr class="rule">
+    </div>
+  </div>
+</section>
+<!-- END section -->
+
+<!-- BEGIN section Introduce -->
+<section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px">
+  <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys.png"/>)"></div>
+  <div class="probootstrap-text order-1">
+    <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
+      <h2>Spa</h2>
+      <p>Hệ thống liệu trình thư giãn tại spa của resort được thiết kế công phu và đa dạng với nhiều liệu trình từ nhẹ nhàng thư giãn đến vận động cơ bắp để du khách lựa chọn. Với những kỹ thuật viên nhiều năm kinh nghiệm, những lọ tinh dầu cao cấp phối hợp với nền nhạc du dương êm dịu, mọi mệt mỏi của bạn sẽ tan biến trong chốc lát.</p>
+      <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
+
       <p>Số phòng đơn còn: 3</p>
       <p>Giá phòng: 1 000 000 VND / phòng</p>
 
@@ -99,21 +127,6 @@
       <hr class="rule">
 
       <p><a href="<c:url value="/thanhToan"/>" class="btn btn-primary">Đặt phòng</a></p>
-      <securtity:authorize access="isAnonymous()">
-
-      </securtity:authorize>
-      <securtity:authorize access="isAuthenticated()">
-        <c:url value="/place_detail" var="redirect">
-          <c:param name="place_id" value="${model.id}"/>
-          <c:param name="yeu_thich" value="like"/>
-        </c:url>
-        <c:if test="${check_like == 1}">
-          <p><a href="${redirect}" class="btn btn-primary"> ♥ Bỏ yêu thích</a></p>
-        </c:if>
-        <c:if test="${check_like == 0}">
-          <p><a href="${redirect}" class="btn btn-primary"> ♥ Yêu thích</a></p>
-        </c:if>
-      </securtity:authorize>
     </div>
   </div>
 </section>

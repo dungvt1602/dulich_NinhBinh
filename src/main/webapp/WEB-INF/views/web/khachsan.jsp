@@ -46,7 +46,7 @@
 </nav>
 
 
-<section class="probootstrap-cover overflow-hidden relative"  style="background-image: url('<c:url value="/template/web/assets/images/bg_1.jpg"/>');" data-stellar-background-ratio="0.5" id="section-home">
+<section class="probootstrap-cover overflow-hidden relative"  style="background-image: url('<c:url value="/template/web/assets/images/bg_ks.png"/>');" data-stellar-background-ratio="0.5" id="section-home">
     <div class="overlay"></div>
     <div class="container">
         <div class="row align-items-center text-center">
@@ -74,7 +74,7 @@
 
 <!-- BEGIN section -->
 <section class="probootstrap-section-half d-md-flex" >
-    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/img_3.jpg"/>)"></div>
+    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys.png"/>)"></div>
     <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
             <h2 class="heading mb-4">FLEUR DE LYS HOTEL</h2>

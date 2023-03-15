@@ -20,9 +20,6 @@
     .normal { font-style: normal; }
     .italic { font-style: italic;}
     .oblique { font-style: oblique;}
-    input{
-        background-color: rgb(232, 240, 254);
-    }
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
     <div class="container">
@@ -54,7 +51,7 @@
     </ul>
 
 </nav>
-<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/${model.video}"/>');" data-stellar-background-ratio="0.5" id="section-home">
+<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/bg_ks.png"/>');" data-stellar-background-ratio="0.5" id="section-home">
     <div class="overlay"></div>
     <div class="container">
         <div class="row align-items-center">
@@ -83,7 +80,7 @@
         <form >
             <!-- Custom name -->
             <h5>Tên khách hàng: </h5>
-            <input type="text" name="name" placeholder="Nguyen Van A" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px;">
+            <input type="text" name="name" placeholder="Nguyen Van A" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px">
 
             <!-- Custom gender -->
             <h5 style="margin-top: 2%">Giới tính: </h5>
@@ -92,29 +89,29 @@
 
             <!-- Custom address -->
             <h5 style="margin-top: 2%">Địa chỉ: </h5>
-            <input type="text" name="address" placeholder="Thôn cành lá, xã cành cây, huyện gió mây, tỉnh đồi núi" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px;">
+            <input type="text" name="address" placeholder="Thôn cành lá, xã cành cây, huyện gió mây, tỉnh đồi núi" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px;">
 
             <!-- Phone number -->
             <h5 style="margin-top: 2%">Số điện thoại: </h5>
-            <input type="number" name="phoneNumber" placeholder="0123 456 789" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px;">
+            <input type="number" name="phoneNumber" placeholder="0123 456 789" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px;">
 
             <!-- Email -->
             <h5 style="margin-top: 2%">Địa chỉ email: </h5>
-            <input type="email" name="email" placeholder="Aloalo@gmail.com" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px; ">
+            <input type="email" name="email" placeholder="Aloalo@gmail.com" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px; ">
 
             <!-- Personal ID -->
             <h5 style="margin-top: 2%">Số CMND: </h5>
-            <input type="number" name="personalID" placeholder="0123456789" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px; ">
+            <input type="number" name="personalID" placeholder="0123456789" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px; ">
 
             <!-- Số lượng phòng đặt -->
             <h5 style="margin-top: 2%">Số phòng đơn: </h5>
-            <input type="number" name="singleRoom" min="1" max="3" placeholder="1" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px; ">
+            <input type="number" name="singleRoom" min="1" max="3" placeholder="1" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px; ">
             <h5 style="margin-top: 2%">Số phòng đôi: </h5>
-            <input type="number" name="doubleRoom" min="1" max="3" placeholder="1" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 30px; "> <br>
+            <input type="number" name="doubleRoom" min="1" max="3" placeholder="1" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px; "> <br>
 
             <!-- Button Submit -->
             <div style="text-align: center">
-                <input type="submit" value="Gửi" class="btn btn-primary" style="margin-top: 2%; width: 10%; height: 5%; background-color: #00CA4C">
+                <input type="submit" value="Gửi" class="btn btn-primary" style="margin-top: 2%; padding-left: 2%; margin-left: 2%; margin-right: 2%; width: 10%; height: 5%; background-color: #00CA4C">
             </div>
         </form>
     </div>

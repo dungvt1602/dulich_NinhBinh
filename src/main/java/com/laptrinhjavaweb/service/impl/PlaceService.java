@@ -184,12 +184,12 @@ public class PlaceService implements IPlaceService {
 
 
 	//Câu lệch top 5 địa danh yêu thích nhất
-	@Override
-	public List<PlaceEntity> findTopPlace(Pageable pageable) {
-		 pageable = new PageRequest(0,5);
-		List<PlaceEntity> topPlaces = placeRepository.findTopPlacesWithMostUsers(pageable);
-		return topPlaces;
-	}
+//	@Override
+//	public List<PlaceEntity> findTopPlace(Pageable pageable) {
+//		 pageable = new PageRequest(0,5);
+//		List<PlaceEntity> topPlaces = placeRepository.findTopPlacesWithMostUsers(pageable);
+//		return topPlaces;
+//	}
 
 
 }
