@@ -107,13 +107,26 @@
 </section>
 <!-- END section -->
 
-<!-- BEGIN section Introduce -->
-<section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px">
+<!-- BEGIN section Service02 -->
+<section class="probootstrap-section-half d-md-flex">
   <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys.png"/>)"></div>
   <div class="probootstrap-text order-1">
     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
       <h2>Spa</h2>
       <p>Hệ thống liệu trình thư giãn tại spa của resort được thiết kế công phu và đa dạng với nhiều liệu trình từ nhẹ nhàng thư giãn đến vận động cơ bắp để du khách lựa chọn. Với những kỹ thuật viên nhiều năm kinh nghiệm, những lọ tinh dầu cao cấp phối hợp với nền nhạc du dương êm dịu, mọi mệt mỏi của bạn sẽ tan biến trong chốc lát.</p>
+      <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
+    </div>
+  </div>
+</section>
+<!-- END section -->
+
+<!-- BEGIN section Service03 -->
+<section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px">
+  <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys_Pool.png"/>)"></div>
+  <div class="probootstrap-text">
+    <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
+      <h2>Nhà hàng</h2>
+      <p>Tại nhà hàng La Maison (La Maison Restaurant) của Khách sạn Fleur De Lys Quy Nhơn, bạn sẽ được trải nghiệm những món ngon đậm chất địa phương, những bữa tiệc hải sản tươi xanh màu biển hay những tinh hoa ẩm thực quốc tế trong khung cảnh vừa hiện đại vừa ấm cúng.</p>
       <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
 
       <p>Số phòng đơn còn: 3</p>
@@ -127,6 +140,22 @@
       <hr class="rule">
 
       <p><a href="<c:url value="/thanhToan"/>" class="btn btn-primary">Đặt phòng</a></p>
+      <hr class="rule">
+    </div>
+  </div>
+
+</section>
+<!-- END section -->
+
+<!-- BEGIN section Room Information -->
+<section class="probootstrap-section-half d-md-flex">
+  <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys_SingleRoom.png"/>)"></div>
+  <div class="probootstrap-text order-1">
+    <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
+      <h2>Phòng đơn</h2>
+      <p>Có bữa sáng buffer miễn phí tại nhà hàng.</p>
+      <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
+      <p>Số phòng còn lại: 03</p>
     </div>
   </div>
 </section>
