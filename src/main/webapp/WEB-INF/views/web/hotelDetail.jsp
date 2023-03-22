@@ -87,6 +87,8 @@
       <p>Địa chỉ: Số 16 Nguyễn Huệ, Phường Lê Lợi, Thành phố Quy Nhơn, tỉnh Bình Định</p>
       <p>Tiêu chuẩn: 4 sao</p>
       <p>Dịch vụ: Bể bơi, Bữa sáng miễn phí, Spa, Nhà hàng.</p>
+      <p><a href="<c:url value="/thanhToan"/>" class="btn btn-primary">Đặt phòng</a></p>
+      <hr class="rule">
     </div>
   </div>
 </section>
@@ -128,38 +130,11 @@
       <h2>Nhà hàng</h2>
       <p>Tại nhà hàng La Maison (La Maison Restaurant) của Khách sạn Fleur De Lys Quy Nhơn, bạn sẽ được trải nghiệm những món ngon đậm chất địa phương, những bữa tiệc hải sản tươi xanh màu biển hay những tinh hoa ẩm thực quốc tế trong khung cảnh vừa hiện đại vừa ấm cúng.</p>
       <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
-
-      <p>Số phòng đơn còn: 3</p>
-      <p>Giá phòng: 1 000 000 VND / phòng</p>
-
-      <hr class="rule">
-
-      <p>Số phòng đôi còn: 3</p>
-      <p>Giá phòng: 1 000 000 VND / phòng</p>
-
-      <hr class="rule">
-
-      <p><a href="<c:url value="/thanhToan"/>" class="btn btn-primary">Đặt phòng</a></p>
-      <hr class="rule">
-    </div>
-  </div>
-
-</section>
-<!-- END section -->
-
-<!-- BEGIN section Room Information -->
-<section class="probootstrap-section-half d-md-flex">
-  <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys_SingleRoom.png"/>)"></div>
-  <div class="probootstrap-text order-1">
-    <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
-      <h2>Phòng đơn</h2>
-      <p>Có bữa sáng buffer miễn phí tại nhà hàng.</p>
-      <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
-      <p>Số phòng còn lại: 03</p>
     </div>
   </div>
 </section>
 <!-- END section -->
+
 
 <section >
   <div class="container-fluid">

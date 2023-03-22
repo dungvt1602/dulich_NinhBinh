@@ -36,6 +36,11 @@ public class UserEntity extends BaseEntity {
 			columnNames = {"userid", "placeid"})} )
 	private List<PlaceEntity> places = new ArrayList<>();
 
+	@OneToMany(mappedBy = "userEntity")
+	private List<HotelOrderEntity> orderEntities = new ArrayList<>();
+
+
+
 	public String getAvatar() {
 		return avatar;
 	}

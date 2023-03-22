@@ -14,6 +14,17 @@ INSERT INTO user_role(userid,roleid) VALUES (1,1);
 INSERT INTO user_role(userid,roleid) VALUES (2,2);
 INSERT INTO user_role(userid,roleid) VALUES (3,2);
 
+insert into category(id, createdby, createddate, modifiedby, modifieddate, code, name)
+values('1', NULL, NULL, NULL, NULL, 'su-kien-mien-phi', 'Sự kiện miễn phí');
+insert into category(id, createdby, createddate, modifiedby, modifieddate, code, name)
+values('2', NULL, NULL, NULL, NULL, 'dia-diem', 'Địa điểm');
+insert into category(id, createdby, createddate, modifiedby, modifieddate, code, name)
+values('3', NULL, NULL, NULL, NULL, 'khach-san', 'Khách sạn');
+insert into category(id, createdby, createddate, modifiedby, modifieddate, code, name)
+values('4', NULL, NULL, NULL, NULL, 'am-thuc', 'Ẩm thực');
+insert into category(id, createdby, createddate, modifiedby, modifieddate, code, name)
+values('5', NULL, NULL, NULL, NULL, 'su-kien-co-phi', 'Sự kiện có phí');
+
 insert into place(createdby, createddate, modifiedby, modifieddate, diachi, content, shortdescription, thumbnail, title, video, category_id)
 values(NULL, NULL, 'admin', NULL, 'Nằm trong địa phận của Ghềnh Ráng một địa danh tham quan du lịch kì thú của Bình Định, cách thành phố Quy Nhơn khoảng 3km về phía Đông Nam.', 'Bãi tắm Hoàng  Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp  nên thơ, với địa thế thuận  lợi, gần  các khu nghỉ dưỡng resort nên nó đã trở thành một trong những  địa  điểm  thu hút khách du lịch trong và ngoài nước đến.', 'Bãi tắm Hoàng  Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp  nên thơ, với địa thế thuận  lợi, gần  các khu nghỉ dưỡng resort nên nó đã trở thành một trong những  địa  điểm  thu hút khách du lịch trong và ngoài nước đến.', 'BaiTamHoangHau.jpg', 'Bãi tắm Hoàng Hậu', 'BaiTamHoangHau_nen.jpg', '2');
 insert into place(createdby, createddate, modifiedby, modifieddate, diachi, content, shortdescription, thumbnail, title, video, category_id)
@@ -29,16 +40,7 @@ values(NULL, NULL, 'admin', NULL, NULL, 'Lễ hội đường phố Quy Nhơn', 
 insert into place(createdby, createddate, modifiedby, modifieddate, diachi, content, shortdescription, thumbnail, title, video, category_id)
 values(NULL, NULL, 'admin', NULL, NULL, 'Nằm trong địa phận của Ghềnh Ráng một địa danh tham quan du lịch kì thú của Bình Định, cách thành phố Quy Nhơn khoảng 3km về phía Đông Nam.', 'Bãi tắm Hoàng  Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp  nên thơ, với địa thế thuận  lợi, gần  các khu nghỉ dưỡng resort nên nó đã trở thành một trong những  địa  điểm  thu hút khách du lịch trong và ngoài nước đến.', 'Bãi tắm Hoàng  Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp  nên thơ, với địa thế thuận  lợi, gần  các khu nghỉ dưỡng resort nên nó đã trở thành một trong những  địa  điểm  thu hút khách du lịch trong và ngoài nước đến.', 'BaiTamHoangHau.jpg', 'Bãi tắm Hoàng Hậu', 'BaiTamHoangHau_nen.jpg', '2');
 
-insert into category(id, createdby, createddate, modifiedby, modifieddate, code, name)
-values('1', NULL, NULL, NULL, NULL, 'su-kien-mien-phi', 'Sự kiện miễn phí');
-insert into category(id, createdby, createddate, modifiedby, modifieddate, code, name)
-values('2', NULL, NULL, NULL, NULL, 'dia-diem', 'Địa điểm');
-insert into category(id, createdby, createddate, modifiedby, modifieddate, code, name)
-values('3', NULL, NULL, NULL, NULL, 'khach-san', 'Khách sạn');
-insert into category(id, createdby, createddate, modifiedby, modifieddate, code, name)
-values('4', NULL, NULL, NULL, NULL, 'am-thuc', 'Ẩm thực');
-insert into category(id, createdby, createddate, modifiedby, modifieddate, code, name)
-values('5', NULL, NULL, NULL, NULL, 'su-kien-co-phi', 'Sự kiện có phí');
+
 
 
 
