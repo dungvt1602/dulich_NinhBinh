@@ -12,16 +12,21 @@ import java.util.Map;
 
 @Configuration
 public class PayPalConfig {
-    @Value("${paypal.client.app}")
-    private String clientId;
-    @Value("${paypal.client.secret}")
-    private String clientSecret;
-    @Value("${paypal.mode}")
-    private String mode;
+//    @Value("${paypal.client.app}")
+//    private String clientId;
+//    @Value("${paypal.client.secret}")
+//    private String clientSecret;
+//    @Value("${paypal.mode}")
+//    private String mode;
+
+    private String clientId = "AW_9tFBJprSgj5AtHo3YjliLrrjhv6GsQYbOyCGmScELOzM2tLNOMdo6HDDuZTIweWRdMC8x0EA2EShH";
+    private String clientSecret= "EPSJx-xlJSETeZpsssnDgMYLSz3BuDSMlIYru7kNDe1PoD2RKnrfO757xdPI7tqUXnuFWNqSbm3ar-KW";
+    private String mode = "sandbox";
     @Bean
     public Map<String, String> paypalSdkConfig(){
         Map<String, String> sdkConfig = new HashMap<>();
         sdkConfig.put("mode", mode);
+        System.out.println("Hello from " + mode);
         return sdkConfig;
     }
     @Bean

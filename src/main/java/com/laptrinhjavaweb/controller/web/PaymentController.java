@@ -24,10 +24,12 @@ public class PaymentController {
 
     @Autowired
     private PaypalService paypalService;
-    @GetMapping("/")
-    public String index(){
-        return "web/home";
+
+    @GetMapping("/payment")
+    public String payment(){
+        return "web/payment_demo";
     }
+
     @PostMapping("/pay")
     public String pay(HttpServletRequest request,@RequestParam("price") double price ){
         String cancelUrl = PaypalUtils.getBaseURL(request) + "/" + URL_PAYPAL_CANCEL;
@@ -49,7 +51,7 @@ public class PaymentController {
         } catch (PayPalRESTException e) {
             log.error(e.getMessage());
         }
-        return "redirect:/";
+        return "redirect:/home";
     }
     @GetMapping(URL_PAYPAL_CANCEL)
     public String cancelPay(){
@@ -65,6 +67,6 @@ public class PaymentController {
         } catch (PayPalRESTException e) {
             log.error(e.getMessage());
         }
-        return "redirect:/";
+        return "redirect:/home";
     }
 }

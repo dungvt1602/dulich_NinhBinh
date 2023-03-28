@@ -38,6 +38,14 @@
 		  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="268435456" />
 	</bean>
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:paypal.properties</value>
+			</list>
+		</property>
+	</bean>
 	
 	<mvc:resources mapping="/template/**" location="/template/" />
 	

@@ -1,11 +1,10 @@
 <%--
   Created by IntelliJ IDEA.
   User: admin
-  Date: 3/26/2023
-  Time: 9:12 AM
+  Date: 3/27/2023
+  Time: 4:13 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
 <%@ taglib prefix="securtity" uri="http://www.springframework.org/security/tags" %>
@@ -17,7 +16,11 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Canceled by user</h1>
-    <a href="<c:url value="/trang-chu" /> " >Go Home</a>
+<c:url value="/pay"/>
+<form action="<c:url value="/pay"/> " method="POST">
+    <input type="text" value="5" name="price" />
+    <button type="submit"> Payment with Paypal </button>
+    <input type="submit" value="Login">
+</form>
 </body>
 </html>
