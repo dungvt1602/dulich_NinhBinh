@@ -13,7 +13,8 @@ public interface PlaceRepository extends JpaRepository<PlaceEntity, Long> {
     @Query(value = "SELECT * FROM place ORDER BY modifieddate DESC LIMIT 2" , nativeQuery = true)
     List<PlaceEntity> findNewPlace();
 
-//    @Query(value = "SELECT p FROM Place p JOIN p.users u GROUP BY p.id ORDER BY COUNT(u) DESC" , nativeQuery = true)
-//    List<PlaceEntity> findTopPlacesWithMostUsers(Pageable pageable);
-	
+    @Query(value = "SELECT p FROM PlaceEntity  p JOIN p.users u GROUP BY p.id ORDER BY COUNT(u) DESC")
+    List<PlaceEntity> findTop5PlacesByNumberOfUsers();
+
+
 }

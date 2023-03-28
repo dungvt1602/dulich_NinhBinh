@@ -38,5 +38,8 @@ public interface IPlaceService {
 
     // List<PlaceEntity> findTopPlace(Pageable pageable);
 
+    List<PlaceEntity> findTop5PlacesByNumberOfUsers();
+
+
 
 }
