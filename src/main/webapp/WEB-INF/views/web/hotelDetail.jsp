@@ -102,7 +102,7 @@
       <h2>Bể bơi</h2>
       <p>Hồ bơi ngoài trời với độ sâu 1,5m. </p>
       <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
-      <p>Bên cạnh bể bơi có quầy bar phục vụ đồ uống</p>
+      <p>Bên cạnh bể bơi có quầy bar phục vụ đồ uống.</p>
       <hr class="rule">
     </div>
   </div>

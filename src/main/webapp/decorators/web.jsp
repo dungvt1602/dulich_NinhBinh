@@ -15,9 +15,9 @@
 <head>
 
     <title><dec:title default="Trang chủ" /></title>
+    <link rel="stylesheet" href="<c:url value="/template/web/assets/forHomePage/css/core-style.css"/>">
+    <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="shortcut icon" type="image/png" href="<c:url value="/template/web/assets/images/favicon.png"/>"/>
-
-    <link href="<c:url value="/template/web/assets/payment/payment.css"/>", rel="stylesheet">
 
     <link href="<c:url value="/template/web/assets/placeDetail/all.min.css"/>", rel="stylesheet">
     <link href="<c:url value="/template/web/assets/placeDetail/bootstrap.min.css"/>", rel="stylesheet">

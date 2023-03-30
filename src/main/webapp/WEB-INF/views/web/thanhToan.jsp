@@ -77,7 +77,7 @@
 <!-- BEGIN section -->
 <section class="probootstrap-text" >
     <div class="probootstrap-inner" style="padding-left: 10%">
-        <form method="post" action="https://sandbox.vnpayment.vn/paymentv2/vpcpay.html">
+        <form method="get" action="https://sandbox.vnpayment.vn/paymentv2/vpcpay.html">
             <!-- VNP Vesion -->
             <input type="hidden" name="vnp_Version" value="2.0.0"/>
 
@@ -91,16 +91,16 @@
             <input type="hidden" name="vnp_Amount" value="1000000"/>
 
             <!-- Information -->
-            <input type="hidden" name="vnp_OrderInfo" value="Dat phong Khach san"/>
+            <input type="hidden" name="vnp_OrderInfo" value="Dat_phong_khach_san"/>
 
             <!-- Trang trả về sau khi thanh toán -->
-            <input type="hidden" name="vnp_ReturnUrl" value="YOUR_RETURN_URL"/>
+            <input type="hidden" name="vnp_ReturnUrl" value="#"/>
 
             <!-- Mã tham chiếu của giao dịch tại hệ thống của merchant. Mã này là duy nhất dùng để phân biệt các đơn hàng gửi sang VNPAY. Không được trùng lặp trong ngày. Ví dụ: 23554 -->
-            <input type="hidden" name="vnp_TxnRef" value="YOUR_TXN_REF"/>
+            <input type="hidden" name="vnp_TxnRef" value="#"/>
 
             <!-- Địa chỉ IP của khách hàng thực hiện giao dịch. Ví dụ: 13.160.92.202 -->
-            <input type="hidden" name="vnp_IpAddr" value="YOUR_IP_ADDR"/>
+            <input type="hidden" name="vnp_IpAddr" value="13.160.92.202"/>
 
             <!-- Custom name -->
             <h5>Tên khách hàng: </h5>
