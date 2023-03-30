@@ -40,6 +40,7 @@ public class HomeController {
 		ModelAndView mav = new ModelAndView("web/home");
 		List<PlaceDTO> models = placeService.findNewPlace();
 		List<PlaceEntity> lists = placeRepository.findAll();
+		List<PlaceEntity> top5 = placeRepository.findTop5PlacesByNumberOfUsers();
 		PlaceDTO dto1 = models.get(0);
 		PlaceDTO dto2 = models.get(1);
 

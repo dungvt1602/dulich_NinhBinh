@@ -182,6 +182,12 @@ public class PlaceService implements IPlaceService {
 		return null;
 	}
 
+	@Override
+	public List<PlaceEntity> findTop5PlacesByNumberOfUsers() {
+
+		return placeRepository.findTop5PlacesByNumberOfUsers();
+	}
+
 
 	//Câu lệch top 5 địa danh yêu thích nhất
 //	@Override
