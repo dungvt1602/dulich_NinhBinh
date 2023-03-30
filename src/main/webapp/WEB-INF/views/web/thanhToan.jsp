@@ -78,29 +78,16 @@
 <section class="probootstrap-text" >
     <div class="probootstrap-inner" style="padding-left: 10%">
         <form method="post" action="https://sandbox.vnpayment.vn/paymentv2/vpcpay.html">
-            <!-- VNP Vesion -->
-            <input type="hidden" name="vnp_Version" value="2.0.0"/>
 
-            <!-- VNP Command -->
-            <input type="hidden" name="vnp_Command" value="pay"/>
-
-            <!-- TmnCode -->
-            <input type="hidden" name="vnp_TmnCode" value="GT1IZTWQ"/>
 
             <!-- Amount -->
-            <input type="hidden" name="vnp_Amount" value="1000000"/>
 
-            <!-- Information -->
-            <input type="hidden" name="vnp_OrderInfo" value="Dat phong Khach san"/>
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate"><br><br>
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate"><br><br>
 
-            <!-- Trang trả về sau khi thanh toán -->
-            <input type="hidden" name="vnp_ReturnUrl" value="YOUR_RETURN_URL"/>
 
-            <!-- Mã tham chiếu của giao dịch tại hệ thống của merchant. Mã này là duy nhất dùng để phân biệt các đơn hàng gửi sang VNPAY. Không được trùng lặp trong ngày. Ví dụ: 23554 -->
-            <input type="hidden" name="vnp_TxnRef" value="YOUR_TXN_REF"/>
-
-            <!-- Địa chỉ IP của khách hàng thực hiện giao dịch. Ví dụ: 13.160.92.202 -->
-            <input type="hidden" name="vnp_IpAddr" value="YOUR_IP_ADDR"/>
 
             <!-- Custom name -->
             <h5>Tên khách hàng: </h5>
@@ -162,22 +149,7 @@
                     <span class="d-block text-right tm-color-primary">${item.createDate}</span>
                 </div>
             </for:forEach>
-            <securtity:authorize access="isAnonymous()">
-                <h2 class="tm-color-primary tm-post-title mb-4">Bạn cần đăng nhập để bình luận</h2>
-            </securtity:authorize>
-            <securtity:authorize access="isAuthenticated()">
-                <c:url value="/place_detail" var="post"/>
-                <form:form action="${post}" class="mb-5" modelAttribute="comment" method="POST">
-                    <h2 class="tm-color-primary tm-post-title mb-4">Your comment</h2>
-                    <div class="mb-4">
-                        <form:textarea path="content" class="form-control"  rows="6"/>
-                    </div>
-                    <input type="hidden" id="placeid" name="placeid" value="${model.id}">
-                    <div class="text-right">
-                        <button class="tm-btn tm-btn-primary tm-btn-small">Bình luận</button>
-                    </div>
-                </form:form>
-            </securtity:authorize>
+
         </div>
     </div>
 </section>

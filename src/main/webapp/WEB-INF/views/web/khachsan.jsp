@@ -59,13 +59,14 @@
 
 </section>
 <!-- END section -->
+<c:forEach var="item" items="${list}">
 
 <!-- BEGIN section -->
 <section class="probootstrap_section">
     <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
             <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">FLEUR DE LYS HOTEL</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">${item.name}</h2>
             </div>
         </div>
     </div>
@@ -74,20 +75,23 @@
 
 <!-- BEGIN section -->
 <section class="probootstrap-section-half d-md-flex" >
-    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys.png"/>)"></div>
+    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${item.thumbnail}"/>)"></div>
     <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
-            <h2 class="heading mb-4">FLEUR DE LYS HOTEL</h2>
-            <p>Địa chỉ: Số 16 Nguyễn Huệ, Phường Lê Lợi, Thành phố Quy Nhơn, tỉnh Bình Định</p>
+            <h2 class="heading mb-4">${item.name}</h2>
+            <p>Địa chỉ: ${item.address}</p>
             <p>Loại phòng: Phòng đơn, Phòng đôi, Phòng gia đình</p>
             <p>Tiêu chuẩn: 3 sao</p>
             <p>Dịch vụ: Bể bơi, Bữa sáng miễn phí, Spa, Nhà hàng.</p>
-            <p><a href="<c:url value="/chitietkhachsan"/>" class="btn btn-primary">Xem chi tiết và đặt phòng</a></p>
+
+            <p><a href="<c:url value='/chitietkhachsan'>
+                            <c:param name='id' value='${item.id}'/>
+                        </c:url>" class="btn btn-primary">Xem chi tiết và đặt phòng</a></p>
         </div>
     </div>
 </section>
 <!-- END section -->
-
+</c:forEach>
 
 <section class="probootstrap_section">
     <div class="container">

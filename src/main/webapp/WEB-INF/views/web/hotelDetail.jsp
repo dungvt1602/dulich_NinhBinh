@@ -54,7 +54,7 @@
   </ul>
 
 </nav>
-<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/FleurDeLys_nen.png"/>');" data-stellar-background-ratio="0.5" id="section-home">
+<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/${hotel.thumbnail}"/>');" data-stellar-background-ratio="0.5" id="section-home">
   <div class="overlay"></div>
   <div class="container">
     <div class="row align-items-center">
@@ -70,7 +70,7 @@
   <div class="container">
     <div class="row text-center mb-5 probootstrap-animate">
       <div class="col-md-12">
-        <h2 class="display-4 border-bottom probootstrap-section-heading">FLEUR DE LYS HOTEL</h2>
+        <h2 class="display-4 border-bottom probootstrap-section-heading">${hotel.name}</h2>
       </div>
     </div>
   </div>
@@ -79,12 +79,12 @@
 
 <!-- BEGIN section Introduce -->
 <section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px">
-  <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys.png"/>)"></div>
+  <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${hotel.thumbnail}"/>)"></div>
   <div class="probootstrap-text order-1">
     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
-      <h2 class="heading mb-4">FLEUR DE LYS HOTEL</h2>
-      <p>Fleur de Lys Hospitality là đơn vị quản lý vận hành theo tiêu chuẩn 4 sao quốc tế sở hữu danh mục gồm nhiều nhà hàng, khách sạn, khu nghỉ dưỡng cao cấp khắp cả nước. Với hình ảnh hoa lys quý phái, biểu tượng cho sự thanh cao, tinh khiết và tràn đầy sức sống, cũng là triết lý của chúng tôi về những giá trị dịch vụ tiện nghi tinh tế gần gũi nhất dành riêng cho Quý Khách hàng.</p>
-      <p>Địa chỉ: Số 16 Nguyễn Huệ, Phường Lê Lợi, Thành phố Quy Nhơn, tỉnh Bình Định</p>
+      <h2 class="heading mb-4">${hotel.name}</h2>
+      <p>${hotel.shortDescription}</p>
+      <p>Địa chỉ: ${hotel.address}</p>
       <p>Tiêu chuẩn: 4 sao</p>
       <p>Dịch vụ: Bể bơi, Bữa sáng miễn phí, Spa, Nhà hàng.</p>
       <p><a href="<c:url value="/thanhToan"/>" class="btn btn-primary">Đặt phòng</a></p>
@@ -96,13 +96,11 @@
 
 <!-- BEGIN section Service01 -->
 <section class="probootstrap-section-half d-md-flex" id="section-about">
-  <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys_Pool.png"/>)"></div>
+  <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${hotel.thumbnail02}"/>)"></div>
   <div class="probootstrap-text">
     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
       <h2>Bể bơi</h2>
-      <p>Hồ bơi ngoài trời với độ sâu 1,5m. </p>
-      <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
-      <p>Bên cạnh bể bơi có quầy bar phục vụ đồ uống</p>
+      <p>${hotel.shortDescription02}</p>
       <hr class="rule">
     </div>
   </div>
@@ -111,11 +109,11 @@
 
 <!-- BEGIN section Service02 -->
 <section class="probootstrap-section-half d-md-flex">
-  <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys.png"/>)"></div>
+  <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${hotel.thumbnail}"/>)"></div>
   <div class="probootstrap-text order-1">
     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
       <h2>Spa</h2>
-      <p>Hệ thống liệu trình thư giãn tại spa của resort được thiết kế công phu và đa dạng với nhiều liệu trình từ nhẹ nhàng thư giãn đến vận động cơ bắp để du khách lựa chọn. Với những kỹ thuật viên nhiều năm kinh nghiệm, những lọ tinh dầu cao cấp phối hợp với nền nhạc du dương êm dịu, mọi mệt mỏi của bạn sẽ tan biến trong chốc lát.</p>
+      <p>${hotel.shortDescription03}</p>
       <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
     </div>
   </div>
@@ -124,11 +122,11 @@
 
 <!-- BEGIN section Service03 -->
 <section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px">
-  <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/FleurDeLys_Pool.png"/>)"></div>
+  <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${hotel.thumbnail}"/>)"></div>
   <div class="probootstrap-text">
     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
       <h2>Nhà hàng</h2>
-      <p>Tại nhà hàng La Maison (La Maison Restaurant) của Khách sạn Fleur De Lys Quy Nhơn, bạn sẽ được trải nghiệm những món ngon đậm chất địa phương, những bữa tiệc hải sản tươi xanh màu biển hay những tinh hoa ẩm thực quốc tế trong khung cảnh vừa hiện đại vừa ấm cúng.</p>
+      <p>${hotel.shortDescription04}</p>
       <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
     </div>
   </div>
