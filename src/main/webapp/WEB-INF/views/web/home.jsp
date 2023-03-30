@@ -9,21 +9,41 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
 <%@ taglib prefix="securtity" uri="http://www.springframework.org/security/tags" %>
 <%@ page import= "com.laptrinhjavaweb.util.SecurityUtils" %>
-
-
 <html>
 <head>
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="<c:url value="/template/web/assets/css/bootstrap/bootstrap.min.css"/> ">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="<c:url value="/template/web/assets/css/style.css"/>">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="<c:url value="/template/web/assets/css/responsive.css"/>">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="<c:url value="/template/web/assets/css/jquery.mCustomScrollbar.min.css"/>">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <title>Trang chủ</title>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
     <div class="container">
         <a class="navbar-brand" href="<c:url value="/trang-chu"/>">BINH DINH - VIET NAM</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-menu" aria-controls="probootstrap-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span><i class="ion-navicon"></i></span>
         </button>
+        <div style="width: 10%">
+            <form class="navbar-form navbar-left web-sh">
+                <div class="form">
+                    <input type="text" class="form-control" placeholder="Search place ...">
+                </div>
+            </form>
+        </div>
         <div class="collapse navbar-collapse" id="probootstrap-menu">
             <ul class="navbar-nav ml-auto">
+
                 <li class="nav-item active"><a class="nav-link" href="<c:url value="/trang-chu"/>">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="<c:url value="/diadanh"/>">Địa danh</a></li>
                 <li class="nav-item"><a class="nav-link" href="<c:url value="/event"/>">Sự kiện</a></li>
@@ -46,37 +66,276 @@
     </ul>
 
 </nav>
+
+<!-- BEGIN section -->
 <section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/bg_1.jpg"/>');" data-stellar-background-ratio="0.5" id="section-home">
     <div class="overlay"></div>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md">
                 <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Bình Định có núi Vọng Phu Có Đầm Thị Nại có Cù Lao xanh.</h2>
-                <p class="lead mb-5 probootstrap-animate">
-                </p>
-                <a href="<c:url value="/diadanh"/>" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">Khám phá du địa diểm du lịch ngay tại đây</a>
-                </p>
             </div>
-
         </div>
     </div>
-
 </section>
 <!-- END section -->
 
-<section class="probootstrap_section" id="section-feature-testimonial">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-12 text-center mb-5 probootstrap-animate">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Sơ lược về Bình Định</h2>
-                <blockquote class="">
-                    <p class="lead mb-4"><em>Bình Định là tỉnh thuộc vùng Duyên hải Nam Trung bộ Việt Nam, có tổng diện tích tự nhiên 6.025km2, Bắc giáp tỉnh Quảng Ngãi, Nam giáp tỉnh Phú Yên, Tây giáp tỉnh Gia Lai, Đông giáp Biển Đông, cách Thủ đô Hà Nội 1.065km, cách Thành phố Hồ Chí Minh 686km, cách Thành phố Đà Nẵng 300km, cách Cửa khẩu Quốc tế Bờ Y (tỉnh Kon Tum) qua Lào 300km. Là 1 trong 5 tỉnh của Vùng kinh tế trọng điểm Miền Trung (cùng với Thừa Thiên Huế, Đà Nẵng, Quảng Nam, Quảng Ngãi).</em></p>
-                    <p class="lead mb-4"><em>Nhiệt độ không khí trung bình năm: ở khu vực miền núi biến đổi 20,1 - 26,1°C; tại vùng duyên hải là 27°C. Độ ẩm tuyệt đối trung bình tháng trong năm: tại khu vực miền núi là 22,5 - 27,9% và độ ẩm tương đối 79 - 92%; tại vùng duyên hải độ ẩm tuyệt đối trung bình là 27,9% và độ ẩm tương đối 79%. Tổng lượng mưa trung bình năm là 1.751mm, cực đại là 2.658mm, cực tiểu là 1.131mm. Mùa mưa bắt đầu từ tháng 9 - 12; mùa khô kéo dài từ tháng 1 - 8.</em></p>
-                </blockquote>
-
+<!-- BEGIN section top 5 place  -->
+<section style="padding-top: 5%">
+    <div class="row text-center mb-5 probootstrap-animate">
+        <div class="col-md-12">
+            <h2 class="display-4 border-bottom probootstrap-section-heading">Top 5 địa danh được yêu thích nhất:</h2>
+        </div>
+    </div>
+    <div id="my_slider" class="carousel slide" data-ride="carousel" style="background-color: #e1e8dc; padding-top: 3%; padding-bottom: 3%; border-radius: 10px">
+        <div class="carousel-inner" style="width: 70%; margin-left: 15%">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; padding-bottom: 2%; background-color: #e1e8dc">
+                            <h1 class="banner_taital">Bãi Tắm Hoàng Hậu</h1>
+                            <p> Bãi tắm Hoàng Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp nên thơ, với địa thế thuận lợi, gần các khu nghỉ dưỡng resort nên nó đã trở thành một trong những địa điểm thu hút khách du lịch trong và ngoài nước đến. Đây được coi là một trong những điểm đến hàng đầu ở Bình Định. Đây là bãi tắm tuyệt đẹp và còn giữ nguyên được vẻ đẹp hoang sơ hùng vĩ của mình.</p>
+                            <p> Lượt yêu thích: </p>
+                            <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDoi.png"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #e1e8dc; padding-bottom: 2%">
+                            <h1 class="banner_taital">Tháp Đôi</h1>
+                            <p> Trải qua nhiều biến cố lịch sử thăng trầm, tháp đã bị phá hủy nặng nề. Tuy nhiên, từ năm 1990 đến năm 1997, Tháp Đôi ở Quy Nhơn đã được trùng tu. Tôn tạo bởi những người thợ lành nghề. Cùng với sự giúp đỡ của các nhà khoa học, khảo cổ học trong nước, các chuyên gia đến từ Ba La. Và sự đầu tư của Nhà nước nên địa điểm này lấy lại được dáng vẻ gần như ban đầu. </p>
+                            <p> Lượt yêu thích: 15</p>
+                            <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDuongLong.jpg"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #e1e8dc; padding-bottom: 2%">
+                            <h1 class="banner_taital">Tháp Dương Long</h1>
+                            <p> Ở xã Tây Bình, huyện Tây Sơn, cách TP.Quy Nhơn khoảng 50km, được xây dựng vào cuối thế ki XII, đây là thời kỳ phát triển rực rỡ nhất của nền văn hóa Champa. Cụm tháp này gồm ba tháp: Tháp giữa cao 42m, tháp Nam cao 36m và tháp Bắc cao 34m. Phần thân của các tháp xây bằng gạch, các góc được ghép bởi những tảng đá lớn chạm trổ công phu. </p>
+                            <p> Lượt yêu thích: 6</p>
+                            <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div>
+            <a class="carousel-control-prev btn btn-primary" href="#my_slider" role="button" data-slide="prev" style=" width: 10%; margin-top: 15%; height: 15%; margin-left: 2%"><h4> < Prev </h4></a>
+        </div>
+        <div>
+            <a class="carousel-control-next btn btn-primary" href="#my_slider" role="button" data-slide="next" style="width: 10%; margin-top: 15%; height: 15%; margin-right: 2%"><h4> Next > </h4> </a>
+        </div>
+    </div>
+</section>
+<!-- END section -->
 
+<!-- BEGIN section top 5 event  -->
+<section style="padding-top: 5%">
+    <div class="row text-center mb-5 probootstrap-animate">
+        <div class="col-md-12">
+            <h2 class="display-4 border-bottom probootstrap-section-heading">Top 5 sự kiện được quan tâm nhiều nhất:</h2>
+        </div>
+    </div>
+    <div id="my_slider_event" class="carousel slide" data-ride="carousel" style="background-color: #e3dde7; padding-top: 3%; padding-bottom: 3%; border-radius: 10px">
+        <div class="carousel-inner" style="width: 70%; margin-left: 15%">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; padding-bottom: 2%; background-color: #e3dde7">
+                            <h1 class="banner_taital">Bãi Tắm Hoàng Hậu</h1>
+                            <p> Bãi tắm Hoàng Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp nên thơ, với địa thế thuận lợi, gần các khu nghỉ dưỡng resort nên nó đã trở thành một trong những địa điểm thu hút khách du lịch trong và ngoài nước đến. Đây được coi là một trong những điểm đến hàng đầu ở Bình Định. Đây là bãi tắm tuyệt đẹp và còn giữ nguyên được vẻ đẹp hoang sơ hùng vĩ của mình.</p>
+                            <p> Lượt yêu thích: </p>
+                            <p><a href="#" class="btn btn-primary" style="background-color: #9b57cb ; border-color: #9b57cb">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDoi.png"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #e3dde7; padding-bottom: 2%">
+                            <h1 class="banner_taital">Tháp Đôi</h1>
+                            <p> Trải qua nhiều biến cố lịch sử thăng trầm, tháp đã bị phá hủy nặng nề. Tuy nhiên, từ năm 1990 đến năm 1997, Tháp Đôi ở Quy Nhơn đã được trùng tu. Tôn tạo bởi những người thợ lành nghề. Cùng với sự giúp đỡ của các nhà khoa học, khảo cổ học trong nước, các chuyên gia đến từ Ba La. Và sự đầu tư của Nhà nước nên địa điểm này lấy lại được dáng vẻ gần như ban đầu. </p>
+                            <p> Lượt yêu thích: 15</p>
+                            <p><a href="#" class="btn btn-primary" style="background-color: #9b57cb; border-color: #9b57cb">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDuongLong.jpg"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #e3dde7; padding-bottom: 2%">
+                            <h1 class="banner_taital">Tháp Dương Long</h1>
+                            <p> Ở xã Tây Bình, huyện Tây Sơn, cách TP.Quy Nhơn khoảng 50km, được xây dựng vào cuối thế ki XII, đây là thời kỳ phát triển rực rỡ nhất của nền văn hóa Champa. Cụm tháp này gồm ba tháp: Tháp giữa cao 42m, tháp Nam cao 36m và tháp Bắc cao 34m. Phần thân của các tháp xây bằng gạch, các góc được ghép bởi những tảng đá lớn chạm trổ công phu. </p>
+                            <p> Lượt yêu thích: 6</p>
+                            <p><a href="#" class="btn btn-primary" style="background-color: #9b57cb; border-color: #9b57cb">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a class="carousel-control-prev btn btn-primary" href="#my_slider_event" role="button" data-slide="prev" style=" width: 10%; margin-top: 15%; height: 15%; margin-left: 2%; background-color: #a572c9; border-color: #a572c9"><h4> < Prev </h4></a>
+        </div>
+        <div>
+            <a class="carousel-control-next btn btn-primary" href="#my_slider_event" role="button" data-slide="next" style="width: 10%; margin-top: 15%; height: 15%; margin-right: 2%; background-color: #a572c9; border-color: #a572c9"><h4> Next > </h4> </a>
+        </div>
+    </div>
+</section>
+<!-- END section -->
+
+<!-- BEGIN section top 5 food  -->
+<section style="padding-top: 5%">
+    <div class="row text-center mb-5 probootstrap-animate">
+        <div class="col-md-12">
+            <h2 class="display-4 border-bottom probootstrap-section-heading">Top 5 món ăn được yêu thích nhất:</h2>
+        </div>
+    </div>
+    <div id="my_slider_food" class="carousel slide" data-ride="carousel" style="background-color: #e5dbd9; padding-top: 3%; padding-bottom: 3%; border-radius: 10px">
+        <div class="carousel-inner" style="width: 70%; margin-left: 15%">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; padding-bottom: 2%; background-color: #e5dbd9">
+                            <h1 class="banner_taital">Bãi Tắm Hoàng Hậu</h1>
+                            <p> Bãi tắm Hoàng Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp nên thơ, với địa thế thuận lợi, gần các khu nghỉ dưỡng resort nên nó đã trở thành một trong những địa điểm thu hút khách du lịch trong và ngoài nước đến. Đây được coi là một trong những điểm đến hàng đầu ở Bình Định. Đây là bãi tắm tuyệt đẹp và còn giữ nguyên được vẻ đẹp hoang sơ hùng vĩ của mình.</p>
+                            <p> Lượt yêu thích: </p>
+                            <p><a href="#" class="btn btn-primary" style="background-color: #f6957d ; border-color: #f6957d">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDoi.png"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #e5dbd9; padding-bottom: 2%">
+                            <h1 class="banner_taital">Tháp Đôi</h1>
+                            <p> Trải qua nhiều biến cố lịch sử thăng trầm, tháp đã bị phá hủy nặng nề. Tuy nhiên, từ năm 1990 đến năm 1997, Tháp Đôi ở Quy Nhơn đã được trùng tu. Tôn tạo bởi những người thợ lành nghề. Cùng với sự giúp đỡ của các nhà khoa học, khảo cổ học trong nước, các chuyên gia đến từ Ba La. Và sự đầu tư của Nhà nước nên địa điểm này lấy lại được dáng vẻ gần như ban đầu. </p>
+                            <p> Lượt yêu thích: 15</p>
+                            <p><a href="#" class="btn btn-primary" style="background-color: #f6957d; border-color: #f6957d">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDuongLong.jpg"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #e5dbd9; padding-bottom: 2%">
+                            <h1 class="banner_taital">Tháp Dương Long</h1>
+                            <p> Ở xã Tây Bình, huyện Tây Sơn, cách TP.Quy Nhơn khoảng 50km, được xây dựng vào cuối thế ki XII, đây là thời kỳ phát triển rực rỡ nhất của nền văn hóa Champa. Cụm tháp này gồm ba tháp: Tháp giữa cao 42m, tháp Nam cao 36m và tháp Bắc cao 34m. Phần thân của các tháp xây bằng gạch, các góc được ghép bởi những tảng đá lớn chạm trổ công phu. </p>
+                            <p> Lượt yêu thích: 6</p>
+                            <p><a href="#" class="btn btn-primary" style="background-color: #f6957d; border-color: #f6957d">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a class="carousel-control-prev btn btn-primary" href="#my_slider_food" role="button" data-slide="prev" style=" width: 10%; margin-top: 15%; height: 15%; margin-left: 2%; background-color: #f37859; border-color: #f37859"><h4> < Prev </h4></a>
+        </div>
+        <div>
+            <a class="carousel-control-next btn btn-primary" href="#my_slider_food" role="button" data-slide="next" style="width: 10%; margin-top: 15%; height: 15%; margin-right: 2%; background-color: #f37859; border-color: #f37859"><h4> Next > </h4> </a>
+        </div>
+    </div>
+</section>
+<!-- END section -->
+
+<!-- BEGIN section top 5 hotel  -->
+<section style="padding-top: 5%">
+    <div class="row text-center mb-5 probootstrap-animate">
+        <div class="col-md-12">
+            <h2 class="display-4 border-bottom probootstrap-section-heading">Top 5 khách sạn được yêu thích nhất:</h2>
+        </div>
+    </div>
+    <div id="my_slider_hotel" class="carousel slide" data-ride="carousel" style="background-color: #eaf4f6; padding-top: 3%; padding-bottom: 3%; border-radius: 10px">
+        <div class="carousel-inner" style="width: 70%; margin-left: 15%">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; padding-bottom: 2%; background-color: #eaf4f6">
+                            <h1 class="banner_taital">Bãi Tắm Hoàng Hậu</h1>
+                            <p> Bãi tắm Hoàng Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp nên thơ, với địa thế thuận lợi, gần các khu nghỉ dưỡng resort nên nó đã trở thành một trong những địa điểm thu hút khách du lịch trong và ngoài nước đến. Đây được coi là một trong những điểm đến hàng đầu ở Bình Định. Đây là bãi tắm tuyệt đẹp và còn giữ nguyên được vẻ đẹp hoang sơ hùng vĩ của mình.</p>
+                            <p> Lượt yêu thích: </p>
+                            <p><a href="#" class="btn btn-primary" style="background-color: #83e2f9 ; border-color: #83e2f9">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDoi.png"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #eaf4f6; padding-bottom: 2%">
+                            <h1 class="banner_taital">Tháp Đôi</h1>
+                            <p> Trải qua nhiều biến cố lịch sử thăng trầm, tháp đã bị phá hủy nặng nề. Tuy nhiên, từ năm 1990 đến năm 1997, Tháp Đôi ở Quy Nhơn đã được trùng tu. Tôn tạo bởi những người thợ lành nghề. Cùng với sự giúp đỡ của các nhà khoa học, khảo cổ học trong nước, các chuyên gia đến từ Ba La. Và sự đầu tư của Nhà nước nên địa điểm này lấy lại được dáng vẻ gần như ban đầu. </p>
+                            <p> Lượt yêu thích: 15</p>
+                            <p><a href="#" class="btn btn-primary" style="background-color: #83e2f9; border-color: #83e2f9">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="probootstrap-section-half d-md-flex">
+                        <div class="probootstrap-image probootstrap-animate">
+                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDuongLong.jpg"/>" style="width:100%; border-radius: 5px"></div>
+                        </div>
+                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #eaf4f6; padding-bottom: 2%">
+                            <h1 class="banner_taital">Tháp Dương Long</h1>
+                            <p> Ở xã Tây Bình, huyện Tây Sơn, cách TP.Quy Nhơn khoảng 50km, được xây dựng vào cuối thế ki XII, đây là thời kỳ phát triển rực rỡ nhất của nền văn hóa Champa. Cụm tháp này gồm ba tháp: Tháp giữa cao 42m, tháp Nam cao 36m và tháp Bắc cao 34m. Phần thân của các tháp xây bằng gạch, các góc được ghép bởi những tảng đá lớn chạm trổ công phu. </p>
+                            <p> Lượt yêu thích: 6</p>
+                            <p><a href="#" class="btn btn-primary" style="background-color: #83e2f9; border-color: #83e2f9">Xem thêm</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a class="carousel-control-prev btn btn-primary" href="#my_slider_hotel" role="button" data-slide="prev" style=" width: 10%; margin-top: 15%; height: 15%; margin-left: 2%; background-color: #5ed7f6; border-color: #5ed7f6"><h4> < Prev </h4></a>
+        </div>
+        <div>
+            <a class="carousel-control-next btn btn-primary" href="#my_slider_hotel" role="button" data-slide="next" style="width: 10%; margin-top: 15%; height: 15%; margin-right: 2%; background-color: #5ed7f6; border-color: #5ed7f6"><h4> Next > </h4> </a>
+        </div>
     </div>
 </section>
 <!-- END section -->
