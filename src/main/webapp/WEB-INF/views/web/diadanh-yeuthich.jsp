@@ -47,24 +47,16 @@
 </nav>
 <!-- END nav -->
 
-
+<!-- Begin section -->
 <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url('<c:url value="/template/web/assets/images/bg_1.jpg"/>');" data-stellar-background-ratio="0.5" id="section-home">
     <div class="overlay"></div>
     <div class="container">
         <div class="row align-items-center text-center">
             <div class="col-md">
                 <h2 class="heading mb-2 display-4 font-light probootstrap-animate">ĐỊA ĐIỂM DU LỊCH Ở BÌNH ĐỊNH</h2>
-
-                <p class="lead mb-5 probootstrap-animate">
-
-
-                </p>
-                <a href="#section" target="_blank" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">Tìm hiểu tại đây</a>
-                </p>
             </div>
         </div>
     </div>
-
 </section>
 <!-- END section -->
 
@@ -72,21 +64,24 @@
     <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
             <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Các địa điểm ở Bình Định</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Các địa điểm du lịch ở Bình Định</h2>
             </div>
         </div>
-        <div class="row mb-4">
+        <div class="row">
             <c:forEach var="item" items="${lists}" begin="0" end="8">
-            <div class="col-lg-3 col-md-6 probootstrap-animate mb-3" id="section">
                 <c:url value="/place_detail" var="redirect">
                     <c:param name="place_id" value="${item.id}"/>
                 </c:url>
-                <a href="${redirect}" class="probootstrap-thumbnail">
-                    <img src="<c:url value="/template/web/assets/images/${item.thumbnail}" />" height="200px" width="250px" alt="${item.title}" class="img-fluid">
-                    <div class="probootstrap-text">
-                        <h3>${item.title}</h3>
-                    </div>
+            <div class="probootstrap-animate d-md-flex" id="section" style="margin-bottom: 5%">
+                <a href="${redirect}" class="probootstrap-thumbnail" style="width: 30%;">
+                    <img src="<c:url value="/template/web/assets/images/${item.thumbnail}" />" height="100%" width="100%" alt="${item.title}" class="img-fluid" style="border-radius: 5px">
                 </a>
+                <div class="probootstrap-text" style="padding-left: 3%; width: 70%; padding-bottom: 2%; background-color: #e0eae1; border-radius: 5px; margin-left: 1%; margin-bottom: 1%; padding-top: 2%">
+                    <h1 class="banner_taital">${item.title}</h1>
+                    <p>${item.shortDescription}</p>
+                    <p> Lượt yêu thích: 15</p>
+                    <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
+                </div>
             </div>
             </c:forEach>
         </div>
@@ -94,10 +89,29 @@
         <div class="row justify-content-center probootstrap-animate">
             <div class="col-md-3"><a href="<c:url value="/event"/>" target="_blank" class="btn btn-primary">Xem thêm Địa điểm</a></div>
         </div>
-
     </div>
 </section>
 <!-- END section -->
+
+<section class="probootstrap_section">
+    <div class="container">
+        <div class="row text-center mb-5 probootstrap-animate">
+            <div class="box">
+                <a href="" class="probootstrap-thumbnail">
+                    <img class="img-fluid" style="height: 50%; width: 50%" src="<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>" alt="">
+                    <div class="detail-box">
+                        <h6 class="probootstrap-text">
+                            Bãi tắm Hoàng Hậu
+                        </h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <a href="" class="brand-btn">
+            See More
+        </a>
+    </div>
+</section>
 
 
 </body>

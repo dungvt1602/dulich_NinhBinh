@@ -13,6 +13,7 @@
 <head>
     <title>Sự kiện</title>
 </head>
+
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
     <div class="container">
@@ -45,35 +46,56 @@
 
 </nav>
 
-
 <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url('https://noitoiseden.com/wp-content/uploads/2018/09/anh-thien-nhien-full-hd-2k-4k.jpg');" data-stellar-background-ratio="0.5" id="section-home">
     <div class="overlay"></div>
     <div class="container">
         <div class="row align-items-center text-center">
             <div class="col-md">
                 <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Những sự kiện nổi bật hằng tuần</h2>
-
-                <p class="lead mb-5 probootstrap-animate">
-
-
-                </p>
+                <p class="lead mb-5 probootstrap-animate"></p>
                 <a href="https://themewagon.com/theme_tag/free/" target="_blank" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">Tìm hiểu tại đây</a>
                 </p>
             </div>
         </div>
     </div>
-
 </section>
 <!-- END section -->
+
+<!-- Categories Section Begin -->
+<section class="probootstrap_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 p-0">
+                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate" style="border-radius: 5px; background-color: #e3dde7">
+                    <div class="probootstrap-media-image" style="background-image: url(https://scontent.iocvnpt.com/resources/portal//Images/BDH/adminbdh/hinhsukien/unnamed_443811906.jpg); border-radius: 5px"></div>
+                    <div class="media-body">
+                        <h5 class="mb-3">Chương trình “Đêm võ đài Bình Định” năm 2022</h5>
+                        <p>ĐÊM VÕ ĐÀI BÌNH ĐỊNH - HÀNH TRÌNH CỦA MỘT THƯƠNG HIỆU Năm 2016 được sự cho phép của UBND tỉnh Bình Định, Sở Văn hóa và Thể thao tổ chức chương trình Đêm Võ đài xứ Nẫu, nhằm xây dựng, làm nổi bật hình ảnh các võ</p>
+                        <p><a href="#" class="btn btn-primary" style="background-color: #9b57cb ; border-color: #9b57cb">Xem thêm</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate" style="border-radius: 5px; background-color: #e3dde7">
+                    <div class="probootstrap-media-image" style="background-image: url(https://scontent.iocvnpt.com/resources/portal//Images/BDH/adminbdh/hinhsukien/marathon/8_1613982901_500x300_510217100.jpg); border-radius: 5px"></div>
+                    <div class="media-body">
+                        <h5 class="mb-3">VnExpress Marathon tại Quy Nhơn năm nay</h5>
+                        <p>Hiện nay, vận động viên có thể đăng ký hai cự ly 21km và 42km, mức giá lần lượt là 950.000 đồng và 1,1 triệu đồng. Đây là cơ hội cuối cùng để những người yêu chạy bộ có thể đăng ký tham gia sự kiện thể thao sôi động này.</p>
+                        <p><a href="#" class="btn btn-primary" style="background-color: #9b57cb ; border-color: #9b57cb">Xem thêm</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Categories Section End -->
 
 <section class="probootstrap_section" id="section-city-guides">
     <div class="container">
         <div class="row mb-3">
             <div class="col-md-6">
-
                 <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                    <div class="probootstrap-media-image" style="background-image: url(https://scontent.iocvnpt.com/resources/portal//Images/BDH/adminbdh/hinhsukien/unnamed_443811906.jpg)">
-                    </div>
+                    <div class="probootstrap-media-image" style="background-image: url(https://scontent.iocvnpt.com/resources/portal//Images/BDH/adminbdh/hinhsukien/unnamed_443811906.jpg)"></div>
                     <div class="media-body">
                         <h5 class="mb-3">01.
                             Chương trình “Đêm võ đài Bình Định” năm 2022</h5>
@@ -87,7 +109,7 @@
                     </div>
                     <div class="media-body">
                         <h5 class="mb-3">02. VnExpress Marathon Quy Nhon 2022</h5>
-                        <p>VM Quy Nhơn 2022 sẽ diễn ra vào ngày 12/6, đánh dấu sự trở lại của VnExpress Marathon tại thành phố Quy Nhơn sau một năm tạm hoãn do Covid-19. Trở lại trong năm thứ 3 tổ chức tại đây, giải sẽ mang đến cho các runner một cun </p>
+                        <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
                     </div>
                 </div>
 
