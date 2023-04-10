@@ -111,4 +111,11 @@ public class UserEntity extends BaseEntity {
 	}
 
 
+	public List<HotelOrderEntity> getOrderEntities() {
+		return orderEntities;
+	}
+
+	public void setOrderEntities(List<HotelOrderEntity> orderEntities) {
+		this.orderEntities = orderEntities;
+	}
 }

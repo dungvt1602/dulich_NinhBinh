@@ -77,30 +77,21 @@
 <!-- BEGIN section -->
 <section class="probootstrap-text" >
     <div class="probootstrap-inner" style="padding-left: 10%">
-        <form method="post" action="https://sandbox.vnpayment.vn/paymentv2/vpcpay.html">
-
+        <form name="myForm" method="post" action="<c:url value="/pay"/>" onsubmit="return validateForm()">
 
             <!-- Amount -->
 
             <label for="startDate">Start Date:</label>
-            <input type="date" id="startDate" name="startDate"><br><br>
+            <input type="date" id="startDate" name="startDate" readonly><br><br>
             <label for="endDate">End Date:</label>
             <input type="date" id="endDate" name="endDate"><br><br>
 
 
 
-            <!-- Custom name -->
-            <h5>Tên khách hàng: </h5>
-            <input type="text" name="name" placeholder="Nguyen Van A" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px">
-
             <!-- Custom gender -->
             <h5 style="margin-top: 2%">Giới tính: </h5>
             <input type="radio" name="gender" value="male" checked style=" margin-left: 2%; padding-left: 2%; height: 30px"> Nam
             <input type="radio" name="gender" value="female" style=" margin-left: 30%; padding-left: 25%; height: 30px"> Nữ <br>
-
-            <!-- Custom address -->
-            <h5 style="margin-top: 2%">Địa chỉ: </h5>
-            <input type="text" name="address" placeholder="Thôn cành lá, xã cành cây, huyện gió mây, tỉnh đồi núi" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px;">
 
             <!-- Phone number -->
             <h5 style="margin-top: 2%">Số điện thoại: </h5>
@@ -114,12 +105,14 @@
             <h5 style="margin-top: 2%">Số CMND: </h5>
             <input type="number" name="personalID" placeholder="0123456789" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px; ">
 
-            <!-- Số lượng phòng đặt -->
-            <h5 style="margin-top: 2%">Số phòng đơn: </h5>
-            <input type="number" name="singleRoom" min="1" max="3" placeholder="1" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px; ">
-            <h5 style="margin-top: 2%">Số phòng đôi: </h5>
-            <input type="number" name="doubleRoom" min="1" max="3" placeholder="1" style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px; "> <br>
+            <h5 style="margin-top: 2%">Giá mỗi phòng: </h5>
+            <input type="number" name="price" placeholder="${hotel.price}" value="${hotel.price}" readonly style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px; ">
 
+            <!-- Số lượng phòng đặt -->
+            <h5 style="margin-top: 2%">Số phòng (số lượng phòng còn ${hotel.numberOfRoom}) : </h5>
+            <input type="number" name="numberRoom" min="1" max="${hotel.numberOfRoom}" placeholder="1"  value="1"  style=" border: #7f2b39 ; width: 80%; padding-left: 2%; margin-left: 2%; height: 50px; ">
+
+            <input type="hidden" name="hotelId" value="${hotel.id}" />
             <!-- Button Submit -->
             <div style="text-align: center">
                 <input type="submit" value="Gửi" class="btn btn-primary" style="margin-top: 2%; padding-left: 2%; margin-left: 2%; margin-right: 2%; width: 10%; height: 5%; background-color: #00CA4C">
@@ -129,30 +122,7 @@
 </section>
 <!-- END section -->
 
-<section >
-    <div class="container-fluid">
-        <!-- Comments -->
-        <div>
-            <h2 class="tm-color-primary tm-post-title">Comments</h2>
-            <for:forEach var="item" items="${comments}">
-                <hr class="tm-hr-primary tm-mb-45">
-                <div class="tm-comment-reply tm-mb-45">
-                    <div class="tm-comment">
-                        <figure class="tm-comment-figure">
-                            <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
-                            <figcaption class="tm-color-primary text-center">${item.userName}</figcaption>
-                        </figure>
-                        <p>
-                                ${item.content}
-                        </p>
-                    </div>
-                    <span class="d-block text-right tm-color-primary">${item.createDate}</span>
-                </div>
-            </for:forEach>
 
-        </div>
-    </div>
-</section>
 
 <section class="probootstrap_section bg-light">
     <div class="container">
@@ -201,5 +171,41 @@
         </div>
     </div>
 </section>
+
+<script>
+
+    // Lấy ngày hiện tại
+    var today = new Date().toISOString().split('T')[0];
+
+    // Thiết lập giá trị của trường ngày bắt đầu
+    document.getElementById("startDate").value = today;
+
+
+
+    function validateForm() {
+        var x = document.forms["myForm"]["numberRoom"].value;
+        var sdt = document.forms["myForm"]["phoneNumber"].value;
+        var endDate  = document.forms['myForm']['endDate'].value;
+        var number = parseInt(${hotel.numberOfRoom});
+        if(number === 0)
+        {
+            alert("Đã hết phòng");
+            return false;
+        }
+        if (x > ${hotel.numberOfRoom}) {
+            alert("Số phòng đặt không được quá ${hotel.numberOfRoom}.");
+            return false;
+        }
+        if (sdt === null || sdt ==="") {
+            alert("khách hàng chưa nhập số điện thoại.");
+            return false;
+        }
+
+        if (endDate === null || endDate ==="") {
+            alert("khách hàng chưa nhập ngày trả phòng");
+            return false;
+        }
+    }
+</script>
 </body>
 </html>

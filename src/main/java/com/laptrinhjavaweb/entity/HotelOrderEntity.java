@@ -1,5 +1,7 @@
 package com.laptrinhjavaweb.entity;
 
+import com.laptrinhjavaweb.util.LocalDateConverter;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
@@ -26,10 +28,15 @@ public class HotelOrderEntity extends BaseEntity {
     @Column(name ="sum_price")
     private long sumPrice;
 
-    @Column(name = "start_date" , columnDefinition = "DATE")
+    @Column(name="sdt")
+    private String sdt;
+
+    @Column(name = "start_date" )
+    @Convert(converter = LocalDateConverter.class)
     private LocalDate startDate;
 
-    @Column(name = "end_date" , columnDefinition = "DATE")
+    @Column(name = "end_date" )
+    @Convert(converter = LocalDateConverter.class)
     private LocalDate endDate;
 
     @Column(name = "bill_state")
@@ -108,5 +115,13 @@ public class HotelOrderEntity extends BaseEntity {
 
     public void setBillExpired(String billExpired) {
         this.billExpired = billExpired;
+    }
+
+    public String getSdt() {
+        return sdt;
+    }
+
+    public void setSdt(String sdt) {
+        this.sdt = sdt;
     }
 }

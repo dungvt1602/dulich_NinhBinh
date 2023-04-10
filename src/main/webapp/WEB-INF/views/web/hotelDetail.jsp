@@ -87,7 +87,14 @@
       <p>Địa chỉ: ${hotel.address}</p>
       <p>Tiêu chuẩn: 4 sao</p>
       <p>Dịch vụ: Bể bơi, Bữa sáng miễn phí, Spa, Nhà hàng.</p>
-      <p><a href="<c:url value="/thanhToan"/>" class="btn btn-primary">Đặt phòng</a></p>
+      <securtity:authorize access="isAnonymous()">
+        <h2 class="tm-color-primary tm-post-title mb-4">Bạn cần đăng nhập để đặt phòng</h2>
+      </securtity:authorize>
+      <securtity:authorize access="isAuthenticated()">
+      <p><a href="<c:url value='/thanhToan'>
+                            <c:param name='id' value='${hotel.id}'/>
+                        </c:url>" class="btn btn-primary">Đặt phòng</a></p>
+      </securtity:authorize>
       <hr class="rule">
     </div>
   </div>
@@ -134,45 +141,45 @@
 <!-- END section -->
 
 
-<section >
-  <div class="container-fluid">
-    <!-- Comments -->
-    <div>
-      <h2 class="tm-color-primary tm-post-title">Comments</h2>
-      <for:forEach var="item" items="${comments}">
-        <hr class="tm-hr-primary tm-mb-45">
-        <div class="tm-comment-reply tm-mb-45">
-          <div class="tm-comment">
-            <figure class="tm-comment-figure">
-              <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
-              <figcaption class="tm-color-primary text-center">${item.userName}</figcaption>
-            </figure>
-            <p>
-                ${item.content}
-            </p>
-          </div>
-          <span class="d-block text-right tm-color-primary">${item.createDate}</span>
-        </div>
-      </for:forEach>
-      <securtity:authorize access="isAnonymous()">
-        <h2 class="tm-color-primary tm-post-title mb-4">Bạn cần đăng nhập để bình luận</h2>
-      </securtity:authorize>
-      <securtity:authorize access="isAuthenticated()">
-        <c:url value="/place_detail" var="post"/>
-        <form:form action="${post}" class="mb-5" modelAttribute="comment" method="POST">
-          <h2 class="tm-color-primary tm-post-title mb-4">Your comment</h2>
-          <div class="mb-4">
-            <form:textarea path="content" class="form-control"  rows="6"/>
-          </div>
-          <input type="hidden" id="placeid" name="placeid" value="${model.id}">
-          <div class="text-right">
-            <button class="tm-btn tm-btn-primary tm-btn-small">Bình luận</button>
-          </div>
-        </form:form>
-      </securtity:authorize>
-    </div>
-  </div>
-</section>
+<%--<section >--%>
+<%--  <div class="container-fluid">--%>
+<%--    <!-- Comments -->--%>
+<%--    <div>--%>
+<%--      <h2 class="tm-color-primary tm-post-title">Comments</h2>--%>
+<%--      <for:forEach var="item" items="${comments}">--%>
+<%--        <hr class="tm-hr-primary tm-mb-45">--%>
+<%--        <div class="tm-comment-reply tm-mb-45">--%>
+<%--          <div class="tm-comment">--%>
+<%--            <figure class="tm-comment-figure">--%>
+<%--              <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">--%>
+<%--              <figcaption class="tm-color-primary text-center">${item.userName}</figcaption>--%>
+<%--            </figure>--%>
+<%--            <p>--%>
+<%--                ${item.content}--%>
+<%--            </p>--%>
+<%--          </div>--%>
+<%--          <span class="d-block text-right tm-color-primary">${item.createDate}</span>--%>
+<%--        </div>--%>
+<%--      </for:forEach>--%>
+<%--      <securtity:authorize access="isAnonymous()">--%>
+<%--        <h2 class="tm-color-primary tm-post-title mb-4">Bạn cần đăng nhập để bình luận</h2>--%>
+<%--      </securtity:authorize>--%>
+<%--      <securtity:authorize access="isAuthenticated()">--%>
+<%--        <c:url value="/place_detail" var="post"/>--%>
+<%--        <form:form action="${post}" class="mb-5" modelAttribute="comment" method="POST">--%>
+<%--          <h2 class="tm-color-primary tm-post-title mb-4">Your comment</h2>--%>
+<%--          <div class="mb-4">--%>
+<%--            <form:textarea path="content" class="form-control"  rows="6"/>--%>
+<%--          </div>--%>
+<%--          <input type="hidden" id="placeid" name="placeid" value="${model.id}">--%>
+<%--          <div class="text-right">--%>
+<%--            <button class="tm-btn tm-btn-primary tm-btn-small">Bình luận</button>--%>
+<%--          </div>--%>
+<%--        </form:form>--%>
+<%--      </securtity:authorize>--%>
+<%--    </div>--%>
+<%--  </div>--%>
+<%--</section>--%>
 
 <section class="probootstrap_section bg-light">
   <div class="container">

@@ -17,6 +17,7 @@ import org.springframework.security.web.authentication.logout.SecurityContextLog
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -119,10 +120,6 @@ public class HomeController {
 
 
 
-	@RequestMapping(value = "/thanhToan" , method = RequestMethod.GET)
-	public ModelAndView thanhToan(){
-		ModelAndView nav = new ModelAndView("web/thanhToan");
-		return nav;
-	}
+
 
 }

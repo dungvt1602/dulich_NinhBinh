@@ -166,4 +166,12 @@ public class HotelEntity extends BaseEntity {
     public void setOrderedRoom(long orderedRoom) {
         this.orderedRoom = orderedRoom;
     }
+
+    public List<HotelOrderEntity> getOrderEntities() {
+        return orderEntities;
+    }
+
+    public void setOrderEntities(List<HotelOrderEntity> orderEntities) {
+        this.orderEntities = orderEntities;
+    }
 }
