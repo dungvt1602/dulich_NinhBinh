@@ -5,6 +5,7 @@ import com.laptrinhjavaweb.entity.HotelOrderEntity;
 import com.laptrinhjavaweb.service.IHotelOrderService;
 import com.laptrinhjavaweb.service.impl.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -21,7 +22,7 @@ public class BillScheduler {
     private HotelService hotelService;
 
 
-    @Scheduled(cron = "0 0 0 * * ?") // Chạy vào mỗi đêm lúc 12 giờ đêm
+    @Scheduled(cron="0 * * * * ?") // Chạy vào mỗi giờ
     public void deleteExpiredInvoices() {
         LocalDate today = LocalDate.now();
         List<HotelOrderEntity> expiredBill = billService.danhsachHoaDonHetHan(today);

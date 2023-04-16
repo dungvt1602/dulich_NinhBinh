@@ -27,6 +27,7 @@ import com.paypal.base.rest.PayPalRESTException;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Controller
 public class PaymentController {
@@ -59,6 +60,9 @@ public class PaymentController {
         ModelAndView mav = new ModelAndView("web/thanhToan");
 
         HotelEntity hotel = hotelService.findHotelById(hotel_id);
+
+//        LocalDate today = LocalDate.now();
+//        List<HotelOrderEntity> expiredBill = billService.danhsachHoaDonHetHan(today);
         mav.addObject("hotel" ,hotel);
 
         return mav;
