@@ -48,9 +48,9 @@
 
 							<div class="col-md">
 								<div class="form-group">
-									<label for="userName">Tài khoản</label>
+									<label for="userName">Tài khoản (Tên tài khoản phải có ít nhất 6 kí tự)</label>
 									<label for="userName" style="width: 100%;">
-										<form:input  path="userName" class="form-control" placeholder="Nhập tên tài khoản đăng ký"
+										<form:input  path="userName"  class="form-control" placeholder="Nhập tên tài khoản đăng ký"
 													 required="required" minlength="3" maxlength="100"/>
 									</label>
 								</div>
@@ -59,7 +59,7 @@
 
 						<div class="col-md">
 							<div class="form-group">
-								<label for="password">Mật khẩu</label>
+								<label for="password">Mật khẩu (Mật khẩu phải có ít nhất 4 kí tự)</label>
 								<label for="password" style="width: 100%;">
 									<form:password path="password" id="password" class="form-control" placeholder="Nhập Password"
 												   required="required"
@@ -107,11 +107,39 @@
 	$('#btnAddOrUpdateNew').click(function (e) {
 		e.preventDefault();
 		var data = {};
+		var fullName = document.getElementById("fullName").value
+		var matkhau = document.getElementById("password").value
+
+		var matkhau1 = document.getElementById("password2").value
+
+		var userName = document.getElementById("userName").value
+
 		var formData = $('#formSubmit').serializeArray();
 		$.each(formData, function (i, v) {
 			data[""+v.name+""] = v.value;
 		});
-		addNew(data)
+		if (fullName === "" || fullName === null) {
+			alert("Vui lòng nhập tên người dùng");
+			fullName.focus();
+			return false;
+		}
+		if (matkhau === "" || matkhau === null || matkhau < 4) {
+			alert("Vui lòng nhập mật khẩu");
+			matkhau.focus();
+			return false;
+		}
+		if (matkhau1 === "" || matkhau1 === null || matkhau1 !== matkhau) {
+			alert("Bạn để trống trường nhập lại mật khẩu");
+			matkhau1.focus();
+			return false;
+		}
+
+		if (userName === "" || userName === null || userName.length <= 5 ) {
+			alert("Vui lòng nhập lại tài khoản");
+			userName.focus();
+			return false;
+		}
+
 	});
 
 	function addNew(data) {
@@ -130,21 +158,7 @@
 		});
 	}
 
-	<%--function updateNew(data) {--%>
-	<%--	$.ajax({--%>
-	<%--		url: '${userAPI}',--%>
-	<%--		type: 'PUT',--%>
-	<%--		contentType: 'application/json',--%>
-	<%--		data: JSON.stringify(data),--%>
-	<%--		dataType: 'json',--%>
-	<%--		success: function (result) {--%>
-	<%--			window.location.href = "${editNewURL}?id="+result.id+"&message=update_success";--%>
-	<%--		},--%>
-	<%--		error: function (error) {--%>
-	<%--			window.location.href = "${editNewURL}?id="+result.id+"&message=error_system";--%>
-	<%--		}--%>
-	<%--	});--%>
-	<%--}--%>
+
 </script>
 
 
