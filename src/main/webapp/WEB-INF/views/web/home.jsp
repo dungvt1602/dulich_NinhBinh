@@ -35,9 +35,9 @@
             <span><i class="ion-navicon"></i></span>
         </button>
         <div style="width: 10%">
-            <form class="navbar-form navbar-left web-sh">
+            <form action="<c:url value="/search" />" class="navbar-form navbar-left web-sh" method="get">
                 <div class="form">
-                    <input type="text" class="form-control" placeholder="Search place ...">
+                    <input type="text" name="keyword" class="form-control" placeholder="Search place ...">
                 </div>
             </form>
         </div>

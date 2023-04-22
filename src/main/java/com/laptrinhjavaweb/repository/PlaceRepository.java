@@ -16,5 +16,6 @@ public interface PlaceRepository extends JpaRepository<PlaceEntity, Long> {
     @Query(value = "SELECT p FROM PlaceEntity  p JOIN p.users u GROUP BY p.id ORDER BY COUNT(u) DESC")
     List<PlaceEntity> findTop5PlacesByNumberOfUsers();
 
+    List<PlaceEntity> findByTitleContainingIgnoreCase(String keyword);
 
 }

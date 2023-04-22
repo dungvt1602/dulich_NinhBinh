@@ -40,6 +40,8 @@ public interface IPlaceService {
 
     List<PlaceEntity> findTop5PlacesByNumberOfUsers();
 
+    List<PlaceEntity> searchPlace(String keyword);
+
 
 
 }

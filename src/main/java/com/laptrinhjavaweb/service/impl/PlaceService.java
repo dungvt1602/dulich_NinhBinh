@@ -188,6 +188,11 @@ public class PlaceService implements IPlaceService {
 		return placeRepository.findTop5PlacesByNumberOfUsers();
 	}
 
+	@Override
+	public List<PlaceEntity> searchPlace(String keyword) {
+		return placeRepository.findByTitleContainingIgnoreCase(keyword);
+	}
+
 
 	//Câu lệch top 5 địa danh yêu thích nhất
 //	@Override
