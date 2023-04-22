@@ -140,6 +140,8 @@
 			return false;
 		}
 
+		addNew(data)
+
 	});
 
 	function addNew(data) {
