@@ -50,7 +50,7 @@ public class JPAConfig {
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql://localhost:3306/springdata");
 		dataSource.setUsername("root");
-		dataSource.setPassword("2001");
+		dataSource.setPassword("0188");
 		return dataSource;
 	}
 	

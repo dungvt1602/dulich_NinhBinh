@@ -185,7 +185,7 @@ public class PlaceService implements IPlaceService {
 	@Override
 	public List<PlaceEntity> findTop5PlacesByNumberOfUsers() {
 
-		return placeRepository.findTop5PlacesByNumberOfUsers();
+		return placeRepository.findAllOrderByUsersDesc();
 	}
 
 	@Override

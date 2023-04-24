@@ -43,12 +43,23 @@ public class HomeController {
 		ModelAndView mav = new ModelAndView("web/home");
 		List<PlaceDTO> models = placeService.findNewPlace();
 		List<PlaceEntity> lists = placeRepository.findAll();
-		List<PlaceEntity> top5 = placeRepository.findTop5PlacesByNumberOfUsers();
+		List<PlaceEntity> top5 = placeService.findTop5PlacesByNumberOfUsers();
+		//lấy ra các địa danh nhiều người thích nhất
+		PlaceEntity top1 = top5.get(0);
+		PlaceEntity top2 = top5.get(1);
+		PlaceEntity top3 = top5.get(2);
+
+
 		PlaceDTO dto1 = models.get(0);
 		PlaceDTO dto2 = models.get(1);
 
 		mav.addObject("model1" , dto1);
 		mav.addObject("model2" , dto2);
+
+		mav.addObject("top1" , top1);
+		mav.addObject("top2" , top2);
+		mav.addObject("top3" , top3);
+
 
 		mav.addObject("test" , image);
 		mav.addObject("lists" , lists);
