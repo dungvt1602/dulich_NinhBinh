@@ -60,6 +60,209 @@
 </section>
 <!-- END section -->
 
+<!--Begin section Loved place-->
+<section class="shop_section layout_padding">
+    <div class="container">
+        <div class="row text-center mb-5 probootstrap-animate" style="padding-top: 10%">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Top địa danh được yêu thích nhất:</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="box">
+                    <a href="">
+                        <div class="image_1 overlay probootstrap-cover" style="display: block; background-image: url('<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>'); height: 100%; width: 100%; border-radius: 5px; vertical-align: top">
+                            <div style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;"> Bãi tắm Hoàng Hậu </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="box">
+                    <a href="">
+                        <div class="image_1 overlay probootstrap-cover" style="display: block; background-image: url('<c:url value="/template/web/assets/images/ThapDoi.png"/>'); height: 100%; width: 100%; border-radius: 5px; vertical-align: top">
+                            <div style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;"> Tháp Đôi </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="box">
+                    <a href="">
+                        <div class="image_1 overlay probootstrap-cover" style="display: block; background-image: url('<c:url value="/template/web/assets/images/ThapDuongLong.jpg"/>'); height: 100%; width: 100%; border-radius: 5px; vertical-align: top">
+                            <div style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;"> Tháp Dương Long </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="box">
+                    <a href="">
+                        <div class="image_1 overlay probootstrap-cover" style="display: block; background-image: url('<c:url value="/template/web/assets/images/GhenhRangTienSa.jpg"/>'); height: 100%; width: 100%; border-radius: 5px; vertical-align: top; margin-top: 10%;">
+                            <div style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;"> Ghềnh Ráng - Tiên Sa </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="box">
+                    <a href="">
+                        <div class="image_1 overlay probootstrap-cover" style="display: block; background-image: url('<c:url value="/template/web/assets/images/ThapBanhIt.jpg"/>'); height: 100%; width: 100%; border-radius: 5px; vertical-align: top; margin-top: 10%;">
+                            <div style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;"> Tháp Bánh Ít </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6  col-xl-3">
+                <div class="box">
+                    <a href="">
+                        <div class="image_1 overlay probootstrap-cover" style="display: block; background-image: url('<c:url value="/template/web/assets/images/BaiTamQuyNhon.jpg"/>'); height: 100%; width: 100%; border-radius: 5px; vertical-align: top; margin-top: 10%;">
+                            <div style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;"> Bãi tắm Quy Nhơn </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="box">
+                    <a href="">
+                        <div class="image_1 overlay probootstrap-cover" style="display: block; background-image: url('<c:url value="/template/web/assets/images/EoGio.jpg"/>'); height: 100%; width: 100%; border-radius: 5px; vertical-align: top; margin-top: 10%;">
+                            <div style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;"> Eo Gió </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="btn-box" style="padding-top: 5%; padding-bottom: 5%; text-align: center">
+            <a href="#" class="btn btn-primary">Xem thêm</a>
+        </div>
+    </div>
+</section>
+<!--End section Loved place-->
+
+<!--Begin section most comment place-->
+<section>
+    <div style="padding-top: 10%; padding-bottom: 10%">
+        <div class="row text-center mb-5 probootstrap-animate">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Top địa danh được bình luận nhiều nhất:</h2>
+            </div>
+        </div>
+
+        <div class="row" style="padding-left: 10%">
+            <div class="col-md-6" style="padding-right: 2%;">
+                <div class="small-box-c" style="-webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); background: #f8f6ec; padding: 12px; height: 100%">
+                    <div class="small-img-b" style="height: 50%">
+                        <img class="img-responsive" src="<c:url value="/template/web/assets/images/ThapBanhIt.jpg"/>" alt="Hình ảnh Tháp Bánh Ít" style="width: 100%; height: 100%; border-radius: 5px"/>
+                    </div>
+                    <div class="clearfix" style="padding-top: 2%; padding-left: 2%">
+                        <div class="left-ti">
+                            <h4>Tháp Bánh Ít</h4>
+                            <p> Mô tả ngắn </p>
+                            <p> Số lượt bình luận: 143</p>
+                            <a href="#"> Chi tiết </a>
+                        </div>
+                        <div class="prod-btn" style="background: #ffffff; border: 1px solid #f6e37c; border-radius: 2%; display: block; margin-right: 2%; padding: 2%; width: 20%; float: right">
+                            <a href="#" style=" color: red "><i class="fa fa-heart" aria-hidden="true"></i> Yêu thích </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" style="padding-right: 2%">
+                <div class="small-box-c" style="-webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); background: #f8f6ec; padding: 12px; height: 100%">
+                    <div class="small-img-b" style="height: 50%">
+                        <img class="img-responsive" src="<c:url value="/template/web/assets/images/EoGio.jpg"/>" alt="Hình ảnh Eo Gió" style="width: 100%; height: 100%; border-radius: 5px"/>
+                    </div>
+                    <div class="clearfix" style="padding-top: 2%; padding-left: 2%">
+                        <div class="left-ti">
+                            <h4>Eo gió</h4>
+                            <p> Mô tả ngắn </p>
+                            <p> Số lượt bình luận: 52</p>
+                            <a href="#"> Chi tiết </a>
+                        </div>
+                        <div class="prod-btn" style="background: #ffffff; border: 1px solid #f6e37c; border-radius: 2%; display: block; margin-right: 2%; padding: 2%; width: 20%; float: right">
+                            <a href="#" style=" color: red "><i class="fa fa-heart" aria-hidden="true"></i> Yêu thích </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="padding-left: 10%; margin-top: 2%">
+            <div class="col-md-6" style="padding-right: 2%;">
+                <div class="small-box-c" style="-webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); background: #f8f6ec; padding: 12px; height: 100%">
+                    <div class="small-img-b" style="height: 50%">
+                        <img class="img-responsive" src="<c:url value="/template/web/assets/images/ThapDuongLong.jpg"/>" alt="Hình ảnh Tháp Bánh Ít" style="width: 100%; height: 100%; border-radius: 5px"/>
+                    </div>
+                    <div class="clearfix" style="padding-top: 2%; padding-left: 2%">
+                        <div class="left-ti">
+                            <h4>Tháp Dương Long</h4>
+                            <p> Mô tả ngắn </p>
+                            <p> Số lượt bình luận: 143</p>
+                            <a href="#"> Chi tiết </a>
+                        </div>
+                        <div class="prod-btn" style="background: #ffffff; border: 1px solid #f6e37c; border-radius: 2%; display: block; margin-right: 2%; padding: 2%; width: 20%; float: right">
+                            <a href="#" style=" color: red "><i class="fa fa-heart" aria-hidden="true"></i> Yêu thích </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" style="padding-right: 2%">
+                <div class="small-box-c" style="-webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); background: #f8f6ec; padding: 12px; height: 100%">
+                    <div class="small-img-b" style="height: 50%">
+                        <img class="img-responsive" src="<c:url value="/template/web/assets/images/GhenhRangTienSa.jpg"/>" alt="Hình ảnh Eo Gió" style="width: 100%; height: 100%; border-radius: 5px"/>
+                    </div>
+                    <div class="clearfix" style="padding-top: 2%; padding-left: 2%">
+                        <div class="left-ti">
+                            <h4>Ghềnh Ráng - Tiên Sa</h4>
+                            <p> Mô tả ngắn </p>
+                            <p> Số lượt bình luận: 52</p>
+                            <a href="#"> Chi tiết </a>
+                        </div>
+                        <div class="prod-btn" style="background: #ffffff; border: 1px solid #f6e37c; border-radius: 2%; display: block; margin-right: 2%; padding: 2%; width: 20%; float: right">
+                            <a href="#" style=" color: red "><i class="fa fa-heart" aria-hidden="true"></i> Yêu thích </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-box" style="padding-top: 5%; padding-bottom: 5%; text-align: center">
+            <a href="#" class="btn btn-primary">Xem thêm</a>
+        </div>
+    </div>
+</section>
+<!--End section most comment place-->
+
+<section>
+    <div class="computers_section layout_padding">
+        <div class="row text-center mb-5 probootstrap-animate">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Gợi ý địa danh cho bạn:</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="womans_taital" style="text-align: center; padding-bottom: 5%">Bãi tắm Quy Nhơn</h1>
+            <div class="womans_section_2" >
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 15%; background-color: #dcefe3; height: 20%; border-radius: 5px; padding-top: 2%">
+                        <p class="Get_offer_text">Biển Quy Nhơn hiền hòa nhưng cũng đầy “sôi nổi”, có thể ví như một thiếu nữ miền biển, mộc mạc chân chất mà vẫn đầy vui tươi.</p>
+                        <div class="btn-box" style="padding-top: 5%; padding-bottom: 5%; text-align: center">
+                            <a href="#" class="btn btn-primary">Chi tiết</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="image_4"><img style="border-radius: 5px; margin-left: 1%" src="<c:url value="/template/web/assets/images/BaiTamQuyNhon.jpg"/>"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="probootstrap_section" id="section-city-guides">
     <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">

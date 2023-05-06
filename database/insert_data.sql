@@ -45,7 +45,9 @@ INSERT INTO `springdata`.`hotel` (`diachi`, `name`, `numberofroom`, `orderedroom
 UPDATE `springdata`.`hotel` SET `orderedroom` = '0' WHERE (`id` = '1');
 INSERT INTO `springdata`.`hotel` (`diachi`, `name`, `numberofroom`, `orderedroom`, `price`, `shortdescription`) VALUES ('Tổ 3, Khu vực 1, Phường Ghềnh Ráng, tp. Quy Nhơn', 'Mira', '12', '0', '200', 'Tọa lạc tại thành phố Quy Nhơn, cách Bãi Xếp vài bước chân, Mira Bãi Xếp Quy Nhơn - The Hidden Jewel cung cấp chỗ nghỉ với trung tâm thể dục, chỗ đỗ xe riêng miễn phí, khu vườn và sảnh khách chung. Trong số nhiều tiện nghi của chỗ nghỉ này có sân hiên, quầy bar và khu vực bãi biển riêng. Chỗ nghỉ cung cấp dịch vụ lễ tân 24 giờ, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí trong toàn bộ khuôn viên.');
 
-
+INSERT INTO `springdata`.`place` (`content`, `shortdescription`, `thumbnail`, `title`, `category_id`) VALUES ('Raon Hotel', 'Nằm ở thành phố Quy Nhơn, cách Bãi biển Quy Nhơn 600 m, RAON Hotel cung cấp chỗ nghỉ với hồ bơi ngoài trời, chỗ đỗ xe riêng miễn phí và sân hiên. Khách sạn 4 sao này có dịch vụ tiền sảnh và bàn đặt tour.', 'Raon.jpg', 'Raon Hotel', '3');
+INSERT INTO `springdata`.`place` (`content`, `shortdescription`, `thumbnail`, `title`, `category_id`) VALUES ('Kadupul Hotel', 'Tất cả phòng nghỉ tại đây được trang bị máy điều hòa, TV truyền hình cáp màn hình phẳng, tủ lạnh, ấm đun nước, vòi sen, dép và tủ để quần áo. Mỗi phòng đều có phòng tắm riêng, máy sấy tóc và ga trải giường.', 'Kadupul.jpg', 'Kadupul Hotel', '3');
+INSERT INTO `springdata`.`place` (`content`, `shortdescription`, `thumbnail`, `title`) VALUES ('Mira Bãi Xếp', 'Tọa lạc tại Bãi Xép - Phường Ghềnh Ráng - TP Quy Nhơn. Homestay nằm cách biển chỉ 5m, với phong cách thiết kế chủ yếu là Tre, Nứa và các vật liệu đậm chất Mộc đảm bảo sẽ mang lại cho bạn cảm giác thư giãn cũng như hàng loạt không gian sống ảo cực đẹp chỉ có riêng tại Mira Các phòng và suite có kiểu trang trí cổ điển, ánh sáng mặt trời ấm áp và sự hài hòa giữa không gian trong nhà-ngoài trời.', 'MiraHotel.jpg', 'Mira Bãi Xếp');
 
 
 

@@ -61,9 +61,15 @@
 </section>
 <!-- END section -->
 
-<!-- Categories Section Begin -->
+<!-- Loved event Section Begin -->
 <section class="probootstrap_section">
     <div class="container">
+        <div class="row text-center mb-5 probootstrap-animate">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Top sự kiện được yêu thích nhất</h2>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-lg-6 p-0">
                 <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate" style="border-radius: 5px; background-color: #e3dde7">
@@ -86,12 +92,147 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-lg-6 p-0">
+                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate" style="border-radius: 5px; background-color: #e3dde7; height: 100%">
+                    <div class="probootstrap-media-image" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiDuaThuyen.jpg"/>'); border-radius: 5px; height: 100%; width: 50%"></div>
+                    <div class="media-body">
+                        <div style="height: 70%">
+                            <h5 class="mb-3">Lễ hội Đua Thuyền</h5>
+                            <p>Lễ hội này được tổ chức nhằm thể hiện sức mạnh của những ngư dân vùng sông nước, đem lại niềm vui, xóa đi bao nỗi nhọc nhằn của một năm lao động vất vả.</p>
+                        </div>
+                        <div style="display: block; height: 30%">
+                            <a href="#" class="btn btn-primary" style="background-color: #9b57cb ; border-color: #9b57cb; float:bottom;">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate" style="border-radius: 5px; background-color: #e3dde7; height: 100%">
+                    <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiChuaOngNui.jpg"/>'); border-radius: 5px; height: 100%; width: 50%"></div>
+                    <div class="media-body" style="height: 100%">
+                        <div style="height: 70%">
+                            <h5 class="mb-3">Lễ hội Chùa Ông Núi</h5>
+                            <p>Nơi đây không chỉ là di tích lịch sử – văn hóa cấp quốc gia, địa chỉ tâm linh mà còn là chốn thăm quan hữu tình, điểm du lịch hấp dẫn.</p>
+                        </div>
+                        <div style="display: block; height: 30%">
+                            <a href="#" class="btn btn-primary" style="background-color: #9b57cb ; border-color: #9b57cb;">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-<!-- Categories Section End -->
+<!-- Section End -->
+
+<!-- Most comment Section Begin -->
+<section class="probootstrap_section">
+    <div class="container">
+        <div class="row text-center mb-5 probootstrap-animate">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Top sự kiện được bình luận nhiều nhất</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiChuaOngNui.jpg"/>'); border-radius: 5px; height: 100%; width: 100%"></div>
+                    <div class="text" style="padding-top: 2%">
+                        <h5><a href="#" style="height: 100%; text-align: center">Lễ hội Chùa Ông Núi</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/DemVoDai.jpg"/>'); border-radius: 5px; height: 100%; width: 100%"></div>
+                    <div class="text" style="padding-top: 2%">
+                        <h5><a href="#" style="height: 100%; text-align: center">Đêm võ đài - Bình Định</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/VnExpressMarathon.jpg"/>'); border-radius: 5px; height: 100%; width: 100%"></div>
+                    <div class="text" style="padding-top: 2%">
+                        <h5><a href="#" style="height: 100%; text-align: center">VnExpress Marathon</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiCauNgu.jpg"/>'); border-radius: 5px; height: 100%; width: 100%"></div>
+                    <div class="text" style="padding-top: 2%">
+                        <h5><a href="#" style="height: 100%; text-align: center">Lễ hội Cầu Ngư</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiDongDa.jpg"/>'); border-radius: 5px; height: 100%; width: 100%"></div>
+                    <div class="text" style="padding-top: 2%">
+                        <h5><a href="#" style="height: 100%; text-align: center">Lễ hội Đống Đa</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item">
+                    <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiDuongPho1.jpg"/>'); border-radius: 5px; height: 100%; width: 100%"></div>
+                    <div class="text" style="padding-top: 2%">
+                        <h5><a href="#" style="height: 100%; text-align: center">Lễ hội Đường Phố</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Most comment Section End -->
+
+<!-- Recommend Event Section Begin -->
+<section class="probootstrap_section">
+    <div class="container">
+        <div class="row text-center mb-5 probootstrap-animate">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Gợi ý cho bạn</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiDuongPho1.jpg"/>'); border-radius: 5px; height: 100%; width: 100%">
+                    <div class="text-center" style="padding-top: 2%">
+                        <h6><a href="#" style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;">Lễ hội Đường Phố</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiDongDa.jpg"/>'); border-radius: 5px; height: 100%; width: 100%">
+                    <div class="text-center" style="padding-top: 2%">
+                        <h6><a href="#" style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;">Lễ hội Đống Đa</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiCauNgu.jpg"/>'); border-radius: 5px; height: 100%; width: 100%">
+                    <div class="text-center" style="padding-top: 2%">
+                        <h6><a href="#" style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;">Lễ hội Cầu Ngư</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Recommend Event Section End -->
 
 <section class="probootstrap_section" id="section-city-guides">
     <div class="container">
+        <div class="row text-center mb-5 probootstrap-animate">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Top sự kiện được yêu thích nhất</h2>
+            </div>
+        </div>
+
         <div class="row mb-3">
             <div class="col-md-6">
                 <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
@@ -136,9 +277,6 @@
 
             </div>
         </div>
-
-
-
     </div>
 </section>
 

@@ -59,39 +59,141 @@
 
 </section>
 <!-- END section -->
-<c:forEach var="item" items="${list}">
 
 <!-- BEGIN section -->
-<section class="probootstrap_section">
+<section class="probootstrap-section-half d-md-flex" >
     <div class="container">
-        <div class="row text-center mb-5 probootstrap-animate">
+        <div class="row text-center mb-5 probootstrap-animate" style="padding-top: 5%">
             <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">${item.name}</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Top Khách sạn được yêu thích nhất</h2>
+            </div>
+        </div>
+
+        <div class="products-catagories-area clearfix row">
+            <div class="">
+
+                <!-- Single Catagory -->
+                <div class="single-products-catagory clearfix" style="padding-bottom: 5%">
+                    <a href="shop.html">
+                        <img src="<c:url value="/template/web/assets/images/FleurDeLys.png"/>" alt="" style="height: 70%; width: 70%; padding: 2px; border-radius: 5px; margin-left: 15%; margin-right: 5%">
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                            <div class="line"></div>
+                            <h6 style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 40%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center; width: 20%">Top 1</h6>
+                            <h4 class="title" style="padding-top: 2%; text-align: center">Fleur De Lys hotel</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Single Catagory -->
+                <div class="single-products-catagory clearfix" style="padding-bottom: 5%">
+                    <a href="shop.html">
+                        <img src="<c:url value="/template/web/assets/images/Raon.jpg"/>" alt="" style="height: 70%; width: 70%; padding: 2px; border-radius: 5px; margin-left: 15%; margin-right: 5%">
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                            <div class="line"></div>
+                            <h6 style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 40%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center; width: 20%">Top 2</h6>
+                            <h4 class="title" style="padding-top: 2%; text-align: center">Raon Hotel</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Single Catagory -->
+                <div class="single-products-catagory clearfix" style="padding-bottom: 5%">
+                    <a href="shop.html">
+                        <img src="<c:url value="/template/web/assets/images/Kadupul.jpg"/>" alt="" style="height: 70%; width: 70%; padding: 2px; border-radius: 5px; margin-left: 15%; margin-right: 5%">
+                        <!-- Hover Content -->
+                        <div class="hover-content" >
+                            <div class="line"></div>
+                            <h6 style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 40%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center; width: 20%">Top 3</h6>
+                            <h4 class="title" style="padding-top: 2%; text-align: center">Kadupul Hotel</h4>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- END section -->
 
-<!-- BEGIN section -->
-<section class="probootstrap-section-half d-md-flex" >
-    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${item.thumbnail}"/>)"></div>
-    <div class="probootstrap-text">
-        <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
-            <h2 class="heading mb-4">${item.name}</h2>
-            <p>Địa chỉ: ${item.address}</p>
-            <p>Loại phòng: Phòng đơn, Phòng đôi, Phòng gia đình</p>
-            <p>Tiêu chuẩn: 3 sao</p>
-            <p>Dịch vụ: Bể bơi, Bữa sáng miễn phí, Spa, Nhà hàng.</p>
+<!-- Begin section -->
+<section>
+    <div class="container  ">
+        <div class="row text-center mb-5 probootstrap-animate" style="padding-top: 5%">
+            <div class="col-md-12">
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Top Khách sạn được đánh giá nhiều nhất</h2>
+            </div>
+        </div>
 
-            <p><a href="<c:url value='/chitietkhachsan'>
-                            <c:param name='id' value='${item.id}'/>
-                        </c:url>" class="btn btn-primary">Xem chi tiết và đặt phòng</a></p>
+        <div class="row">
+            <div class="col-md-6 col-lg-5 ">
+                <div class="img-box">
+                    <img src="<c:url value="/template/web/assets/images/FleurDeLys.png"/>" alt="" style="border-radius: 5px; height: 100%; width: 100%">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-7">
+                <div class="detail-box" style="margin-top: 5%; margin-left: 10%; padding-top: 5%; padding-bottom: 5%; padding-left: 3%; background-color: #f7f8ef; border-radius: 5px">
+                    <div class="heading_container">
+                        <h2>
+                            Fleur De Lys hotel
+                        </h2>
+                    </div>
+                    <p>
+                        Là khách sạn 4 sao đạt chuẩn quốc tế với 250 phòng có tầm nhìn hướng biển tuyệt đẹp, tại Fleur de Lys Quy Nhơn du khách không chỉ được trải nghiệm những dịch vụ đa dạng, tiện nghi, mà còn được phục vụ bởi những nhân viên chuyên nghiệp, tận tâm nhất.
+                    </p>
+                    <a href="">
+                        Chi tiết
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 3%">
+            <div class="col-md-6 col-lg-7">
+                <div class="detail-box" style="margin-top: 5%; margin-left: 10%; padding-top: 5%; padding-bottom: 5%; padding-left: 3%; background-color: #f7f8ef; border-radius: 5px">
+                    <div class="heading_container">
+                        <h2>
+                            Mira Bãi Xếp - Quy Nhơn
+                        </h2>
+                    </div>
+                    <p>
+                        Tọa lạc tại Bãi Xép - Phường Ghềnh Ráng - TP Quy Nhơn. Homestay nằm cách biển chỉ 5m, với phong cách thiết kế chủ yếu là Tre, Nứa và các vật liệu đậm chất Mộc đảm bảo sẽ mang lại cho bạn cảm giác thư giãn cũng như hàng loạt không gian sống ảo cực đẹp chỉ có riêng tại Mira Các phòng và suite có kiểu trang trí cổ điển, ánh sáng mặt trời ấm áp và sự hài hòa giữa không gian trong nhà-ngoài trời.
+                    </p>
+                    <a href="">
+                        Chi tiết
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 ">
+                <div class="img-box">
+                    <img src="<c:url value="/template/web/assets/images/MiraHotel.jpg"/>" alt="" style="border-radius: 5px; height: 100%; width: 100%">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 3%">
+            <div class="col-md-6 col-lg-5 ">
+                <div class="img-box">
+                    <img src="<c:url value="/template/web/assets/images/Raon.jpg"/>" alt="" style="border-radius: 5px; height: 100%; width: 100%">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-7">
+                <div class="detail-box" style="margin-top: 5%; margin-left: 10%; padding-top: 5%; padding-bottom: 5%; padding-left: 3%; background-color: #f7f8ef; border-radius: 5px">
+                    <div class="heading_container">
+                        <h2>
+                            Raon Hotel
+                        </h2>
+                    </div>
+                    <p>
+                        Nằm ở thành phố Quy Nhơn, cách Bãi biển Quy Nhơn 600 m, RAON Hotel cung cấp chỗ nghỉ với hồ bơi ngoài trời, chỗ đỗ xe riêng miễn phí và sân hiên. Khách sạn 4 sao này có dịch vụ tiền sảnh và bàn đặt tour.
+                    </p>
+                    <a href="">
+                        Chi tiết
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <!-- END section -->
-</c:forEach>
 
 <section class="probootstrap_section">
     <div class="container">

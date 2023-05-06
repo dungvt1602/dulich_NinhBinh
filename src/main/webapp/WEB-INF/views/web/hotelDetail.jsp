@@ -77,7 +77,7 @@
 </section>
 <!-- END section -->
 
-<!-- BEGIN section Introduce -->
+<!-- BEGIN section Khách sạn được yêu thích nhất -->
 <section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px">
   <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${hotel.thumbnail}"/>)"></div>
   <div class="probootstrap-text order-1">
