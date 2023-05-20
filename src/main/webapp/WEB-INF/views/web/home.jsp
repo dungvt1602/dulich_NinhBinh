@@ -24,7 +24,11 @@
     <link rel="stylesheet" href="<c:url value="/template/web/assets/css/jquery.mCustomScrollbar.min.css"/>">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@700&display=swap" rel="stylesheet">
     <title>Trang chủ</title>
+    <!-- Thêm font -->
 </head>
 <body>
 
@@ -68,12 +72,13 @@
 </nav>
 
 <!-- BEGIN section -->
-<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/bg_1.jpg"/>');" data-stellar-background-ratio="0.5" id="section-home">
+<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/DamThiNai.jpg"/>'); height: 100%; width: 100%;" data-stellar-background-ratio="0.5" id="section-home">
     <div class="overlay"></div>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md">
-                <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Bình Định có núi Vọng Phu Có Đầm Thị Nại có Cù Lao xanh.</h2>
+                <img src="<c:url value="/template/web/assets/images/Text.png"/>" style="padding-right: 10%; padding-left: 10%; height: 100%; width: 100%">
+                <h1 class="probootstrap-animate" style="text-align: center; color: #FFFFFF; padding-top: 5%; font-size: 150%; padding-right: 10%; padding-left: 10%;"> Đừng bao giờ ngần ngại đi xa hơn nữa, vượt qua mọi đại dương, mọi biên giới, mọi quốc gia và mọi đức tin. </h1>
             </div>
         </div>
     </div>
@@ -81,435 +86,165 @@
 <!-- END section -->
 
 <!-- BEGIN section top 5 place  -->
-<section style="padding-top: 5%">
-    <div class="row text-center mb-5 probootstrap-animate">
-        <div class="col-md-12">
-            <h2 class="display-4 border-bottom probootstrap-section-heading">Top 5 địa danh được yêu thích nhất:</h2>
+<section style="padding-top: 5%; padding-bottom: 5%">
+    <div style="width: 100%; height: 100%">
+        <img class="probootstrap-animate" src="<c:url value="/template/web/assets/images/dia_danh.png"/>" style="height: 30%; width: 40%; border-radius: 10%; margin-left: 30%; margin-right: 30%; margin-bottom: 5%">
+    </div>
+    <div class="container">
+        <div style="width: 100%; height: 100%">
+            <div class="row" >
+                <img class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" src="<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>" style="height: 80%; width: 70%; border-radius: 10%;">
+                <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft" style="float: right; background: rgba(255, 255, 255, 85%); margin-left: -20%; vertical-align: center; height: 80%; width: 50%; margin-top: 5%; margin-bottom: 5%; padding: 5%; -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1);">
+                    <h1 style="padding-top: 3%; font-family: 'Font Awesome 5 Brands';text-align: right">Bãi tắm Hoàng Hậu</h1>
+                    <p style="padding-top: 2%; line-height: 1.5; color: #1e1a1a; text-align: right">Bãi tắm Hoàng  Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp  nên thơ, với địa thế thuận  lợi, gần  các khu nghỉ dưỡng resort nên nó đã trở thành một trong những  địa  điểm  thu hút khách du lịch trong và ngoài nước đến.</p>
+                    <p style="text-align: right"> Lượt yêu thích: 15</p>
+                    <p><a href="#" class="btn btn-primary"style="float: right; background-color: #77C1D5; border-color: #77C1D5; border-radius: 50px">Xem thêm</a></p>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="my_slider" class="carousel slide" data-ride="carousel" style="background-color: #e1e8dc; padding-top: 3%; padding-bottom: 3%; border-radius: 10px">
-        <div class="carousel-inner" style="width: 70%; margin-left: 15%">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="probootstrap-section-half d-md-flex">
-                        <div class="probootstrap-image probootstrap-animate">
-                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>" style="width:100%; border-radius: 5px"></div>
-                        </div>
-                        <div class="probootstrap-text" style="padding-left: 2%; padding-bottom: 2%; background-color: #e1e8dc">
-                            <h1 class="banner_taital">Bãi Tắm Hoàng Hậu</h1>
-                            <p> Bãi tắm Hoàng Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp nên thơ, với địa thế thuận lợi, gần các khu nghỉ dưỡng resort nên nó đã trở thành một trong những địa điểm thu hút khách du lịch trong và ngoài nước đến. Đây được coi là một trong những điểm đến hàng đầu ở Bình Định. Đây là bãi tắm tuyệt đẹp và còn giữ nguyên được vẻ đẹp hoang sơ hùng vĩ của mình.</p>
-                            <p> Lượt yêu thích: </p>
-                            <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
-                        </div>
-                    </div>
+    <div class="container" style="margin-top: 5%">
+        <div style="width: 100%; height: 100%">
+            <div class="row" >
+                <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight" style="background: rgba(255, 255, 255, 85%); margin-right: -20%; vertical-align: center; height: 80%; width: 50%; margin-top: 5%; margin-bottom: 5%; padding: 5%; z-index: 1; -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1);">
+                    <h1 style="padding-top: 3%; font-family: 'Font Awesome 5 Brands';">Tháp Đôi</h1>
+                    <p style="padding-top: 2%; line-height: 1.5; color: #1e1a1a">Trải qua nhiều biến cố lịch sử thăng trầm, tháp đã bị phá hủy nặng nề. Tuy nhiên, từ năm 1990 đến năm 1997, Tháp Đôi ở Quy Nhơn đã được trùng tu. Tôn tạo bởi những người thợ lành nghề.</p>
+                    <p> Lượt yêu thích: 15</p>
+                    <p><a href="#" class="btn btn-primary"style="background-color: #77C1D5; border-color: #77C1D5; border-radius: 50px">Xem thêm</a></p>
                 </div>
+                <img class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" src="<c:url value="/template/web/assets/images/ThapDoi.png"/>" style="height: 80%; width: 70%; border-radius: 10%; float: right;">
             </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="probootstrap-section-half d-md-flex">
-                        <div class="probootstrap-image probootstrap-animate">
-                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDoi.png"/>" style="width:100%; border-radius: 5px"></div>
-                        </div>
-                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #e1e8dc; padding-bottom: 2%">
-                            <h1 class="banner_taital">Tháp Đôi</h1>
-                            <p> Trải qua nhiều biến cố lịch sử thăng trầm, tháp đã bị phá hủy nặng nề. Tuy nhiên, từ năm 1990 đến năm 1997, Tháp Đôi ở Quy Nhơn đã được trùng tu. Tôn tạo bởi những người thợ lành nghề. Cùng với sự giúp đỡ của các nhà khoa học, khảo cổ học trong nước, các chuyên gia đến từ Ba La. Và sự đầu tư của Nhà nước nên địa điểm này lấy lại được dáng vẻ gần như ban đầu. </p>
-                            <p> Lượt yêu thích: 15</p>
-                            <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="probootstrap-section-half d-md-flex">
-                        <div class="probootstrap-image probootstrap-animate">
-                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDuongLong.jpg"/>" style="width:100%; border-radius: 5px"></div>
-                        </div>
-                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #e1e8dc; padding-bottom: 2%">
-                            <h1 class="banner_taital">Tháp Dương Long</h1>
-                            <p> Ở xã Tây Bình, huyện Tây Sơn, cách TP.Quy Nhơn khoảng 50km, được xây dựng vào cuối thế ki XII, đây là thời kỳ phát triển rực rỡ nhất của nền văn hóa Champa. Cụm tháp này gồm ba tháp: Tháp giữa cao 42m, tháp Nam cao 36m và tháp Bắc cao 34m. Phần thân của các tháp xây bằng gạch, các góc được ghép bởi những tảng đá lớn chạm trổ công phu. </p>
-                            <p> Lượt yêu thích: 6</p>
-                            <p><a href="#" class="btn btn-primary">Xem thêm</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <a class="carousel-control-prev btn btn-primary" href="#my_slider" role="button" data-slide="prev" style=" width: 10%; margin-top: 15%; height: 15%; margin-left: 2%"><h4> < Prev </h4></a>
-        </div>
-        <div>
-            <a class="carousel-control-next btn btn-primary" href="#my_slider" role="button" data-slide="next" style="width: 10%; margin-top: 15%; height: 15%; margin-right: 2%"><h4> Next > </h4> </a>
         </div>
     </div>
 </section>
 <!-- END section -->
 
-<!-- BEGIN section top 8 Event  -->
-<section class="featured spad" style="padding-top: 5%">
-    <div class="container">
-        <div class="row text-center mb-5 probootstrap-animate">
-            <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Top 8 sự kiện được yêu thích nhất:</h2>
-            </div>
+<!-- BEGIN section Event  -->
+<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/bg-sk.jpg"/>'); height: 100%; width: 100%;" >
+        <div style="width: 100%; height: 100%">
+            <img class="probootstrap-animate" src="<c:url value="/template/web/assets/images/su-kien.png"/>" style="height: 30%; width: 40%; border-radius: 10%; margin: -5% 30% 5%;">
         </div>
+        <div style="background: rgba(0, 0, 0, 50%); margin-left: 5%; margin-right: 5%; padding-bottom: 5%; border-radius: 10%;">
+            <div class="container" style="margin-top: -5%; padding-top: 5%">
+                <div style="width: 100%; height: 100%; margin-left: 7%">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-6 probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft" style="background-color: #FFFFFF; width: 100%; height: 100%; margin: 2%">
+                            <div class="" style="width: 100%; height: 100%; border-radius: 10px">
+                                <img src="<c:url value="/template/web/assets/images/DemVoDai.jpg"/>" style="width:100%; border-radius: 5px; height: 200px; padding: 3% 2% 2%;">
+                            </div>
+                            <a href="#">
+                                <div style="text-align: center; color: black; font-size: 19px; ">
+                                    Đêm Võ Đài - Bình Định
+                                </div>
+                            </a>
+                        </div>
 
-        <div class="row featured__filter">
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                <div class="featured__item">
-                    <div class="image_1"><img src="<c:url value="/template/web/assets/images/DemVoDai.jpg"/>" style="width:100%; border-radius: 5px; height: 200px">
-                        <div class="probootstrap-text">
-                            <a href="#"><h6 style="padding-top: 10px; color: #00CA4C; text-align: center ">Đêm võ đài Bình Định</h6></a>
+                        <div class="col-lg-3 col-md-4 col-sm-6 probootstrap-inner probootstrap-animate" data-animate-effect="fadeIn" style="background-color: #FFFFFF; width: 100%; height: 100%; margin: 2%">
+                            <div class="" style="width: 100%; height: 100%; border-radius: 10px">
+                                <img src="<c:url value="/template/web/assets/images/VnExpressMarathon.jpg"/>" style="width:100%; border-radius: 5px; height: 200px; padding: 3% 2% 2%;">
+                            </div>
+                            <a href="#">
+                                <div style="text-align: center; color: black; font-size: 19px; ">
+                                    VnExpress Marathon
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight" style="background-color: #FFFFFF; width: 100%; height: 100%; margin: 2%">
+                            <div class="" style="width: 100%; height: 100%; border-radius: 10px">
+                                <img src="<c:url value="/template/web/assets/images/LeHoiDuaThuyen.jpg"/>" style="width:100%; border-radius: 5px; height: 200px; padding: 3% 2% 2%;">
+                            </div>
+                            <a href="#">
+                                <div style="text-align: center; color: black; font-size: 19px; ">
+                                    Lễ hội Đua Thuyền
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                <div class="featured__item">
-                    <div class="image_1"><img src="<c:url value="/template/web/assets/images/VnExpressMarathon.jpg"/>" style="width:100%; border-radius: 5px; height: 200px">
-                        <div class="probootstrap-text">
-                            <a href="#"><h6 style="padding-top: 10px; color: #00CA4C; text-align: center ">VnExpress Marathon</h6></a>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-6 probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft" style="background-color: #FFFFFF; width: 100%; height: 100%; margin: 2%">
+                            <div class="" style="width: 100%; height: 100%; border-radius: 10px">
+                                <img src="<c:url value="/template/web/assets/images/LeHoiDuongPho1.jpg"/>" style="width:100%; border-radius: 5px; height: 200px; padding: 3% 2% 2%;">
+                            </div>
+                            <a href="#">
+                                <div style="text-align: center; color: black; font-size: 19px; ">
+                                    Lễ Hội Đường Phố
+                                </div>
+                            </a>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                <div class="featured__item">
-                    <div class="image_1"><img src="<c:url value="/template/web/assets/images/LeHoiDuaThuyen.jpg"/>" style="width:100%; border-radius: 5px; height: 200px">
-                        <div class="probootstrap-text">
-                            <a href="#"><h6 style="padding-top: 10px; color: #00CA4C; text-align: center">Lễ hội Đua Thuyền</h6></a>
+                        <div class="col-lg-3 col-md-4 col-sm-6 probootstrap-inner probootstrap-animate" data-animate-effect="fadeIn" style="background-color: #FFFFFF; width: 100%; height: 100%; margin: 2%">
+                            <div class="" style="width: 100%; height: 100%; border-radius: 10px">
+                                <img src="<c:url value="/template/web/assets/images/LeHoiDongDa.jpg"/>" style="width:100%; border-radius: 5px; height: 200px; padding: 3% 2% 2%;">
+                            </div>
+                            <a href="#">
+                                <div style="text-align: center; color: black; font-size: 19px; ">
+                                    Lễ Hội Đống Đa
+                                </div>
+                            </a>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                <div class="featured__item">
-                    <div class="image_1"><img src="<c:url value="/template/web/assets/images/LeHoiDuongPho1.jpg"/>" style="width:100%; border-radius: 5px; height: 200px">
-                        <div class="probootstrap-text">
-                            <a href="#"><h6 style="padding-top: 10px; color: #00CA4C; text-align: center">Lễ Hội Đường Phố</h6></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                <div class="featured__item">
-                    <div class="image_1"><img src="<c:url value="/template/web/assets/images/LeHoiDongDa.jpg"/>" style="width:100%; border-radius: 5px; height: 200px">
-                        <div class="probootstrap-text">
-                            <a href="#"><h6 style="padding-top: 10px; color: #00CA4C; text-align: center">Lễ Hội Đống Đa</h6></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="featured__item">
-                    <div class="image_1"><img src="<c:url value="/template/web/assets/images/LeHoiCauNgu.jpg"/>" style="width:100%; border-radius: 5px; height: 200px">
-                        <div class="probootstrap-text">
-                            <a href="#"><h6 style="padding-top: 10px; color: #00CA4C; text-align: center">Lễ Hội Cầu Ngư</h6></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="featured__item">
-                    <div class="image_1"><img src="<c:url value="/template/web/assets/images/LeHoiChoGo.jpg"/>" style="width:100%; border-radius: 5px; height: 200px">
-                        <div class="probootstrap-text">
-                            <a href="#"><h6 style="padding-top: 10px; color: #00CA4C; text-align: center">Lễ Hội Chợ Gò</h6></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="featured__item">
-                    <div class="image_1"><img src="<c:url value="/template/web/assets/images/LeHoiChuaOngNui.jpg"/>" style="width:100%; border-radius: 5px; height: 200px">
-                        <div class="probootstrap-text">
-                            <a href="#"><h6 style="padding-top: 10px; color: #00CA4C; text-align: center">Lễ Hội Chùa Ông Núi</h6></a>
+                        <div class="col-lg-3 col-md-4 col-sm-6 probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight" style="background-color: #FFFFFF; width: 100%; height: 100%; margin: 2%">
+                            <div class="" style="width: 100%; height: 100%; border-radius: 10px">
+                                <img src="<c:url value="/template/web/assets/images/LeHoiCauNgu.jpg"/>" style="width:100%; border-radius: 5px; height: 200px; padding: 3% 2% 2%;">
+                            </div>
+                            <a href="#">
+                                <div style="text-align: center; color: black; font-size: 19px; ">
+                                    Lễ Hội Cầu Ngư
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
-<!-- Section End -->
+<!-- End section Event  -->
 
-<!-- Categories Section Begin -->
-<section class="categories">
-    <div class="row text-center mb-5 probootstrap-animate" style="margin-top: 5%">
-        <div class="col-md-12">
-            <h2 class="display-4 border-bottom probootstrap-section-heading">Top 5 khách sạn được yêu thích nhất:</h2>
-        </div>
+<!-- Begin section Hotel  -->
+<section style="padding-bottom: 5%">
+    <div style="width: 100%; height: 100%; padding-top: 5%">
+        <img class="probootstrap-animate" src="<c:url value="/template/web/assets/images/khach-san.png"/>" style="height: 30%; width: 40%; border-radius: 10%; margin-left: 30%; margin-right: 30%; margin-bottom: 5%">
     </div>
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 p-0">
-                <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiChuaOngNui.jpg"/>'); margin-left: 20%; margin-right: 5%; height: 100%; border-radius: 5px; ">
-                    <div class="categories__text" style="padding-left: 5%; background: rgba(0, 0, 0, 50%); height: 100%">
-                        <h1 style="color: #FFFFFF">Women’s fashion</h1>
-                        <p>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore
-                            edolore magna aliquapendisse ultrices gravida.</p>
-                        <a href="#">Chi tiết</a>
-                    </div>
+            <div class="col-lg-3 p-0" style="margin-left: 10%; margin-right: 1%; -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1);">
+                <div class="categories__text probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft" style="height: 50%; background-color: #D5EEFB; padding: 2%; border-top-left-radius: 5px; border-top-right-radius: 5px">
+                    <h1 style="color: #000000; text-align: center">Raon Hotel</h1>
+                    <p>Nằm ở thành phố Quy Nhơn, cách Bãi biển Quy Nhơn 600 m, RAON Hotel cung cấp chỗ nghỉ với hồ bơi ngoài trời, chỗ đỗ xe riêng miễn phí và sân hiên. Khách sạn 4 sao này có dịch vụ tiền sảnh và bàn đặt tour.</p>
+                    <a href="#" style="text-align: center">Chi tiết</a>
                 </div>
+                <div class="image_1 overlay probootstrap-cover probootstrap-inner probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url('<c:url value="/template/web/assets/images/Raon.jpg"/>'); height: 50%; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px"></div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" >
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="padding-bottom: 1%">
-                        <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiChuaOngNui.jpg"/>'); border-radius: 5px; margin-right: 5%; margin-bottom: 5%">
-                            <div class="categories__text" style="padding-left: 5%; background: rgba(0, 0, 0, 50%); height: 100%">
-                                <h4 style="color: #FFFFFF">Men’s fashion</h4>
-                                <p>358 items</p>
-                                <a href="#">Shop now</a>
-                            </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="margin-bottom: 1%">
+                        <div class="image_1 overlay probootstrap-cover probootstrap-inner probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url('<c:url value="/template/web/assets/images/Kadupul.jpg"/>'); border-top-left-radius: 5px; border-bottom-left-radius: 5px; height: 280px"></div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="margin-bottom: 1%">
+                        <div class="categories__text probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight" style="height: 100%; background-color: #D5EEFB; padding: 2%; border-top-right-radius: 5px; border-bottom-right-radius: 5px; height: 280px">
+                            <h1 style="color: #000000; text-align: center">Kadupul Hotel</h1>
+                            <p>Tất cả phòng nghỉ tại đây được trang bị máy điều hòa, TV truyền hình cáp màn hình phẳng, tủ lạnh, ấm đun nước, vòi sen, dép và tủ để quần áo. Mỗi phòng đều có phòng tắm riêng, máy sấy tóc và ga trải giường.</p>
+                            <a href="#">Chi tiết</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="padding-bottom: 1%">
-                        <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiChuaOngNui.jpg"/>'); border-radius: 5px; margin-bottom: 5%">
-                            <div class="categories__text" style="padding-left: 5%; background: rgba(0, 0, 0, 50%); height: 100%">
-                                <h4 style="color: #FFFFFF">Men’s fashion</h4>
-                                <p>358 items</p>
-                                <a href="#">Shop now</a>
-                            </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="">
+                        <div class="categories__text probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight" style="height: 100%; background-color: #D5EEFB; padding: 2%; border-top-left-radius: 5px; border-bottom-left-radius: 5px; height: 280px">
+                            <h1 style="color: #000000; text-align: center">Mira Bãi Xếp</h1>
+                            <p>Tọa lạc tại Bãi Xép - Phường Ghềnh Ráng - TP Quy Nhơn. Homestay nằm cách biển chỉ 5m, với phong cách thiết kế chủ yếu là Tre, Nứa và các vật liệu đậm chất Mộc đảm bảo sẽ mang lại cho bạn cảm giác thư giãn.</p>
+                            <a href="#">Chi tiết</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="padding-top: 1%">
-                        <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiChuaOngNui.jpg"/>'); border-radius: 5px; margin-right: 5%">
-                            <div class="categories__text" style="padding-left: 5%; background: rgba(0, 0, 0, 50%); height: 100%">
-                                <h4 style="color: #FFFFFF">Men’s fashion</h4>
-                                <p>358 items</p>
-                                <a href="#">Shop now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="padding-top: 1%">
-                        <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/LeHoiChuaOngNui.jpg"/>'); border-radius: 5px;">
-                            <div class="categories__text" style="padding-left: 5%; background: rgba(0, 0, 0, 50%); height: 100%">
-                                <h4 style="color: #FFFFFF">Men’s fashion</h4>
-                                <p>358 items</p>
-                                <a href="#">Shop now</a>
-                            </div>
-                        </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="">
+                        <div class="image_1 overlay probootstrap-cover probootstrap-inner probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url('<c:url value="/template/web/assets/images/MiraHotel.jpg"/>'); border-top-right-radius: 5px; border-bottom-right-radius: 5px; height: 280px"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Categories Section End -->
-
-<!-- BEGIN section top 6 food  -->
-<section style="padding-top: 5%">
-    <div class="row text-center mb-5 probootstrap-animate">
-        <div class="col-md-12">
-            <h2 class="display-4 border-bottom probootstrap-section-heading">Top 6 món ăn được yêu thích nhất:</h2>
-        </div>
-    </div>
-
-
-</section>
-<!-- END section -->
-
-<!-- BEGIN section top 5 hotel  -->
-<section style="padding-top: 5%">
-    <div class="row text-center mb-5 probootstrap-animate">
-        <div class="col-md-12">
-            <h2 class="display-4 border-bottom probootstrap-section-heading">Top 5 khách sạn được yêu thích nhất:</h2>
-        </div>
-    </div>
-    <div id="my_slider_hotel" class="carousel slide" data-ride="carousel" style="background-color: #eaf4f6; padding-top: 3%; padding-bottom: 3%; border-radius: 10px">
-        <div class="carousel-inner" style="width: 70%; margin-left: 15%">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="probootstrap-section-half d-md-flex">
-                        <div class="probootstrap-image probootstrap-animate">
-                            <div class="image_1 overlay probootstrap-cover"><img src="<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>" style="width:100%; border-radius: 5px"></div>
-                        </div>
-                        <div class="probootstrap-text" style="padding-left: 2%; padding-bottom: 2%; background-color: #eaf4f6">
-                            <h1 class="banner_taital">Bãi Tắm Hoàng Hậu</h1>
-                            <p> Bãi tắm Hoàng Hậu được thiên nhiên ưu ái ban tặng cho vẻ đẹp nên thơ, với địa thế thuận lợi, gần các khu nghỉ dưỡng resort nên nó đã trở thành một trong những địa điểm thu hút khách du lịch trong và ngoài nước đến. Đây được coi là một trong những điểm đến hàng đầu ở Bình Định. Đây là bãi tắm tuyệt đẹp và còn giữ nguyên được vẻ đẹp hoang sơ hùng vĩ của mình.</p>
-                            <p> Lượt yêu thích: </p>
-                            <p><a href="#" class="btn btn-primary" style="background-color: #83e2f9 ; border-color: #83e2f9">Xem thêm</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="probootstrap-section-half d-md-flex">
-                        <div class="probootstrap-image probootstrap-animate">
-                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDoi.png"/>" style="width:100%; border-radius: 5px"></div>
-                        </div>
-                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #eaf4f6; padding-bottom: 2%">
-                            <h1 class="banner_taital">Tháp Đôi</h1>
-                            <p> Trải qua nhiều biến cố lịch sử thăng trầm, tháp đã bị phá hủy nặng nề. Tuy nhiên, từ năm 1990 đến năm 1997, Tháp Đôi ở Quy Nhơn đã được trùng tu. Tôn tạo bởi những người thợ lành nghề. Cùng với sự giúp đỡ của các nhà khoa học, khảo cổ học trong nước, các chuyên gia đến từ Ba La. Và sự đầu tư của Nhà nước nên địa điểm này lấy lại được dáng vẻ gần như ban đầu. </p>
-                            <p> Lượt yêu thích: 15</p>
-                            <p><a href="#" class="btn btn-primary" style="background-color: #83e2f9; border-color: #83e2f9">Xem thêm</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="probootstrap-section-half d-md-flex">
-                        <div class="probootstrap-image probootstrap-animate">
-                            <div class="image_1"><img src="<c:url value="/template/web/assets/images/ThapDuongLong.jpg"/>" style="width:100%; border-radius: 5px"></div>
-                        </div>
-                        <div class="probootstrap-text" style="padding-left: 2%; background-color: #eaf4f6; padding-bottom: 2%">
-                            <h1 class="banner_taital">Tháp Dương Long</h1>
-                            <p> Ở xã Tây Bình, huyện Tây Sơn, cách TP.Quy Nhơn khoảng 50km, được xây dựng vào cuối thế ki XII, đây là thời kỳ phát triển rực rỡ nhất của nền văn hóa Champa. Cụm tháp này gồm ba tháp: Tháp giữa cao 42m, tháp Nam cao 36m và tháp Bắc cao 34m. Phần thân của các tháp xây bằng gạch, các góc được ghép bởi những tảng đá lớn chạm trổ công phu. </p>
-                            <p> Lượt yêu thích: 6</p>
-                            <p><a href="#" class="btn btn-primary" style="background-color: #83e2f9; border-color: #83e2f9">Xem thêm</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <a class="carousel-control-prev btn btn-primary" href="#my_slider_hotel" role="button" data-slide="prev" style=" width: 10%; margin-top: 15%; height: 15%; margin-left: 2%; background-color: #5ed7f6; border-color: #5ed7f6"><h4> < Prev </h4></a>
-        </div>
-        <div>
-            <a class="carousel-control-next btn btn-primary" href="#my_slider_hotel" role="button" data-slide="next" style="width: 10%; margin-top: 15%; height: 15%; margin-right: 2%; background-color: #5ed7f6; border-color: #5ed7f6"><h4> Next > </h4> </a>
-        </div>
-    </div>
-</section>
-<!-- END section -->
-
-
-<!-- BEGIN section -->
-<section class="probootstrap_section">
-    <div class="container">
-        <div class="row text-center mb-5 probootstrap-animate">
-            <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Top 5 địa danh được yêu thích nhất:</h2>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END section -->
-
-<!-- BEGIN section: TOP 5 LOVED PLACE -->
-<c:forEach var="item" items="${lists}" begin="0" end="4">
-    <c:url value="/place_detail" var="redirect">
-        <c:param name="place_id" value="${item.id}"/>
-    </c:url>
-    <section class="probootstrap-section-half d-md-flex" id="section-about" style="border: #a9d57c solid 1px">
-        <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${item.thumbnail}"/>)"></div>
-        <div class="probootstrap-text">
-            <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
-                <h2 class="heading mb-4">${item.title}</h2>
-                <p>${item.shortDescription}</p>
-                <c:url value="/place_detail" var="detail1">
-                    <c:param name="place_id" value="${item.id}"/>
-                </c:url>
-                <p>Lượt yêu thích: </p>
-                <p><a href="${detail1}" class="btn btn-primary">Xem thêm</a></p>
-            </div>
-        </div>
-        <div>
-            <hr class="rule">
-        </div>
-    </section>
-</c:forEach>
-<!-- END section: TOP 5 LOVED PLACE -->
-
-<!-- BEGIN section -->
-<section class="probootstrap_section" >
-    <div class="container">
-        <div class="row text-center mb-5 probootstrap-animate">
-            <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Top 5 sự kiện nổi bật sắp diễn ra:</h2>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END section -->
-
-<!-- BEGIN section: TOP 5 NEW EVENT -->
-<c:forEach var="item" items="${lists}" begin="0" end="4">
-    <c:url value="/place_detail" var="redirect">
-        <c:param name="place_id" value="${item.id}"/>
-    </c:url>
-    <section class="probootstrap-section-half d-md-flex" style="border: #a9d57c solid 1px">
-        <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${item.thumbnail}"/>)"></div>
-        <div class="probootstrap-text order-1">
-            <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
-                <h2 class="heading mb-4">${item.title}</h2>
-                <p>${item.shortDescription}</p>
-                <c:url value="/place_detail" var="detail">
-                    <c:param name="place_id" value="${item.id}"/>
-                </c:url>
-                <p><a href="${detail}" class="btn btn-primary">Xem thêm</a></p>
-            </div>
-        </div>
-    </section>
-</c:forEach>
-<!-- END section: TOP 5 NEW EVENT -->
-
-<!--
-<section class="probootstrap-section-half d-md-flex">
-    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${model3.thumbnail}"/>)"></div>
-    <div class="probootstrap-text">
-        <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
-            <h2 class="heading mb-4">${model3.title}</h2>
-            <p>${model3.shortDescription}</p>
-            <c:url value="/place_detail" var="detail3">
-                <c:param name="place_id" value="${model3.id}"/>
-            </c:url>
-            <p><a href="${detail3}" class="btn btn-primary">Xem thêm</a></p>
-        </div>
-    </div>
-</section>
--->
-<!-- END section -->
-
-<section class="probootstrap_section" id="section-feature-testimonial1">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-12 text-center mb-5 probootstrap-animate">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Lịch sử phát triển</h2>
-                <blockquote class="">
-                    <p class="lead mb-4"><em>Bình Định có một mạch nguồn văn hóa rất xa xưa từ nền văn hóa Sa Huỳnh – Truông Xe. Trải qua hàng nghìn năm dựng nước và giữ nước, văn hóa Bình Định vừa lan tỏa, vừa tiếp nhận những giá trị của nền văn hóa khác để bồi đắp, làm phong phú cho mình.</em></p>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END section -->
-
-<section class="probootstrap_section bg-light">
-    <div class="container">
-        <div class="row text-center mb-5 probootstrap-animate">
-            <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Những địa danh khác</h2>
-            </div>
-        </div>
-        <div class="row">
-        <c:forEach var="item" items="${lists}" begin="0" end="3">
-            <div class="col-md-6">
-                <c:url value="/place_detail" var="redirect">
-                    <c:param name="place_id" value="${item.id}"/>
-                </c:url>
-                <a href="${redirect}" class="probootstrap-thumbnail">
-                    <div class="media probootstrap-media d-flex align-items-stretch mb-4 probootstrap-animate">
-                        <div class="probootstrap-media-image" style="background-image: url(<c:url value="/template/web/assets/images/${item.thumbnail}"/>)">
-                        </div>
-                        <div class="media-body">
-                            <h5 class="mb-3">${item.id}: ${item.title}</h5>
-                            <p>${item.shortDescription}</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </c:forEach>
-        </div>
-    </div>
-</section>
+<!-- End section Hotel  -->
 </body>
 </html>

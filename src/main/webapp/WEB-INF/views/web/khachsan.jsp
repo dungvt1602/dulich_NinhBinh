@@ -51,64 +51,45 @@
     <div class="container">
         <div class="row align-items-center text-center">
             <div class="col-md">
-                <h2 class="heading mb-2 display-4 font-light probootstrap-animate">TOP 5 KHÁCH SẠN ĐƯỢC YÊU THÍCH NHẤT</h2>
-                <p class="lead mb-5 probootstrap-animate">
+                <h2 class="heading mb-2 display-4 font-light probootstrap-animate" style="font-family: 'Great Vibes'; ">Your Passion is our Satisfaction</h2>
+                <h2 class="heading mb-2 display-4 font-light probootstrap-animate" style="font-family: 'Great Vibes'; ">Đam mê của bạn là sự hài lòng của chúng tôi</h2>
             </div>
         </div>
     </div>
-
 </section>
 <!-- END section -->
 
 <!-- BEGIN section -->
-<section class="probootstrap-section-half d-md-flex" >
+<section class="probootstrap-section-half d-md-flex" style="padding-bottom: 5%">
     <div class="container">
-        <div class="row text-center mb-5 probootstrap-animate" style="padding-top: 5%">
+        <div class="row text-center mb-5 probootstrap-animate" data-animate-effect="fadeIn" style="padding-top: 10%">
             <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Top Khách sạn được yêu thích nhất</h2>
+                <img src="<c:url value="/template/web/assets/images/DuocYeuThichNhat.png"/>" style="height: 100%; width: 60%; margin-left: 20%; margin-right: 20%;">
             </div>
         </div>
 
-        <div class="products-catagories-area clearfix row">
-            <div class="">
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix" style="padding-bottom: 5%">
-                    <a href="shop.html">
-                        <img src="<c:url value="/template/web/assets/images/FleurDeLys.png"/>" alt="" style="height: 70%; width: 70%; padding: 2px; border-radius: 5px; margin-left: 15%; margin-right: 5%">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <h6 style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 40%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center; width: 20%">Top 1</h6>
-                            <h4 class="title" style="padding-top: 2%; text-align: center">Fleur De Lys hotel</h4>
-                        </div>
-                    </a>
+        <div class="container">
+            <div style="width: 100%; height: 100%">
+                <div class="row" >
+                    <img class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" src="<c:url value="/template/web/assets/images/Kadupul.jpg"/>" style="height: 80%; width: 55%; border-radius: 10%; -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); height: 400px;">
+                    <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft" style="float: right; vertical-align: center; height: 80%; width: 40%; margin-top: 5%; margin-bottom: 5%; padding: 5%;-webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); background: #D5EEFB;margin-left: 2%">
+                        <h1 style="padding-top: 3%; font-family: 'Font Awesome 5 Brands';text-align: right">Kadupul Hotel</h1>
+                        <p style="padding-top: 2%; line-height: 1.5; color: #1e1a1a; text-align: right">Tất cả phòng nghỉ tại đây được trang bị máy điều hòa, TV truyền hình cáp màn hình phẳng, tủ lạnh, ấm đun nước, vòi sen, dép và tủ để quần áo. Mỗi phòng đều có phòng tắm riêng, máy sấy tóc và ga trải giường.</p>
+                        <p><a href="#" class="btn btn-primary"style="float: right; background-color: #77C1D5; border-color: #77C1D5; border-radius: 50px">Xem thêm</a></p>
+                    </div>
                 </div>
+            </div>
+        </div>
 
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix" style="padding-bottom: 5%">
-                    <a href="shop.html">
-                        <img src="<c:url value="/template/web/assets/images/Raon.jpg"/>" alt="" style="height: 70%; width: 70%; padding: 2px; border-radius: 5px; margin-left: 15%; margin-right: 5%">
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <div class="line"></div>
-                            <h6 style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 40%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center; width: 20%">Top 2</h6>
-                            <h4 class="title" style="padding-top: 2%; text-align: center">Raon Hotel</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix" style="padding-bottom: 5%">
-                    <a href="shop.html">
-                        <img src="<c:url value="/template/web/assets/images/Kadupul.jpg"/>" alt="" style="height: 70%; width: 70%; padding: 2px; border-radius: 5px; margin-left: 15%; margin-right: 5%">
-                        <!-- Hover Content -->
-                        <div class="hover-content" >
-                            <div class="line"></div>
-                            <h6 style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 40%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center; width: 20%">Top 3</h6>
-                            <h4 class="title" style="padding-top: 2%; text-align: center">Kadupul Hotel</h4>
-                        </div>
-                    </a>
+        <div class="container">
+            <div style="width: 100%; height: 100%">
+                <div class="row" >
+                    <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft" style="float: left; vertical-align: center; height: 80%; width: 40%; margin-top: 5%; margin-bottom: 5%; padding: 5%;-webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); background: #D5EEFB;">
+                        <h1 style="padding-top: 3%; font-family: 'Font Awesome 5 Brands';text-align: right">Mira Bãi Xếp</h1>
+                        <p style="padding-top: 2%; line-height: 1.5; color: #1e1a1a; text-align: right">Tọa lạc tại Bãi Xép - Phường Ghềnh Ráng - TP Quy Nhơn. Homestay nằm cách biển chỉ 5m, với phong cách thiết kế chủ yếu là Tre, Nứa và các vật liệu đậm chất Mộc đảm bảo sẽ mang lại cho bạn cảm giác thư giãn.</p>
+                        <p><a href="#" class="btn btn-primary"style="float: right; background-color: #77C1D5; border-color: #77C1D5; border-radius: 50px">Xem thêm</a></p>
+                    </div>
+                    <img class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" src="<c:url value="/template/web/assets/images/MiraHotel.jpg"/>" style="height: 80%; width: 55%; border-radius: 10%; -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); margin-left: 2%; height: 400px;">
                 </div>
             </div>
         </div>
@@ -116,185 +97,88 @@
 </section>
 <!-- END section -->
 
-<!-- Begin section -->
-<section>
-    <div class="container  ">
-        <div class="row text-center mb-5 probootstrap-animate" style="padding-top: 5%">
-            <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Top Khách sạn được đánh giá nhiều nhất</h2>
-            </div>
+<!-- BEGIN section -->
+<section class="probootstrap-section-half" >
+    <div style="background-image: url('<c:url value="/template/web/assets/images/bg-sk.jpg"/>'); margin-top: 5%; background-size: cover; background-repeat: no-repeat; padding-bottom: 5%">
+        <div style="width: 100%; height: 100%; padding-top: 5%">
+            <img class="probootstrap-animate" src="<c:url value="/template/web/assets/images/DuocBinhLuanNhieuNhat.png"/>" style="height: 30%; width: 40%; border-radius: 10%; margin-left: 30%; margin-right: 30%; margin-bottom: 5%">
         </div>
 
-        <div class="row">
-            <div class="col-md-6 col-lg-5 ">
-                <div class="img-box">
-                    <img src="<c:url value="/template/web/assets/images/FleurDeLys.png"/>" alt="" style="border-radius: 5px; height: 100%; width: 100%">
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-7">
-                <div class="detail-box" style="margin-top: 5%; margin-left: 10%; padding-top: 5%; padding-bottom: 5%; padding-left: 3%; background-color: #f7f8ef; border-radius: 5px">
-                    <div class="heading_container">
-                        <h2>
-                            Fleur De Lys hotel
-                        </h2>
+        <div class="container">
+            <div class="row" style="background: rgba(0, 0, 0, 50%); padding-top: 3%; padding-bottom: 3%">
+                <div class="col-lg-3 p-0" style="margin-left: 10%; margin-right: 1%; -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1);">
+                    <div class="categories__text probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft" style="height: 50%; background-color: white; padding: 2%; border-top-left-radius: 5px; border-top-right-radius: 5px">
+                        <h1 style="color: #000000; text-align: center">Raon Hotel</h1>
+                        <p>Nằm ở thành phố Quy Nhơn, cách Bãi biển Quy Nhơn 600 m, RAON Hotel cung cấp chỗ nghỉ với hồ bơi ngoài trời, chỗ đỗ xe riêng miễn phí và sân hiên. Khách sạn 4 sao này có dịch vụ tiền sảnh và bàn đặt tour.</p>
+                        <a href="#" style="text-align: center">Chi tiết</a>
                     </div>
-                    <p>
-                        Là khách sạn 4 sao đạt chuẩn quốc tế với 250 phòng có tầm nhìn hướng biển tuyệt đẹp, tại Fleur de Lys Quy Nhơn du khách không chỉ được trải nghiệm những dịch vụ đa dạng, tiện nghi, mà còn được phục vụ bởi những nhân viên chuyên nghiệp, tận tâm nhất.
-                    </p>
-                    <a href="">
-                        Chi tiết
-                    </a>
+                    <div class="image_1 overlay probootstrap-cover probootstrap-inner probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url('<c:url value="/template/web/assets/images/Raon.jpg"/>'); height: 50%; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px"></div>
                 </div>
-            </div>
-        </div>
-        <div class="row" style="padding-top: 3%">
-            <div class="col-md-6 col-lg-7">
-                <div class="detail-box" style="margin-top: 5%; margin-left: 10%; padding-top: 5%; padding-bottom: 5%; padding-left: 3%; background-color: #f7f8ef; border-radius: 5px">
-                    <div class="heading_container">
-                        <h2>
-                            Mira Bãi Xếp - Quy Nhơn
-                        </h2>
+                <div class="col-lg-6" >
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="margin-bottom: 1%">
+                            <div class="image_1 overlay probootstrap-cover probootstrap-inner probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url('<c:url value="/template/web/assets/images/Kadupul.jpg"/>'); border-top-left-radius: 5px; border-bottom-left-radius: 5px; height: 280px"></div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="margin-bottom: 1%">
+                            <div class="categories__text probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight" style="height: 100%; background-color: white; padding: 2%; border-top-right-radius: 5px; border-bottom-right-radius: 5px; height: 280px">
+                                <h1 style="color: #000000; text-align: center">Kadupul Hotel</h1>
+                                <p>Tất cả phòng nghỉ tại đây được trang bị máy điều hòa, TV truyền hình cáp màn hình phẳng, tủ lạnh, ấm đun nước, vòi sen, dép và tủ để quần áo. Mỗi phòng đều có phòng tắm riêng, máy sấy tóc và ga trải giường.</p>
+                                <a href="#">Chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="">
+                            <div class="categories__text probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight" style="height: 100%; background-color: white; padding: 2%; border-top-left-radius: 5px; border-bottom-left-radius: 5px; height: 280px">
+                                <h1 style="color: #000000; text-align: center">Mira Bãi Xếp</h1>
+                                <p>Tọa lạc tại Bãi Xép - Phường Ghềnh Ráng - TP Quy Nhơn. Homestay nằm cách biển chỉ 5m, với phong cách thiết kế chủ yếu là Tre, Nứa và các vật liệu đậm chất Mộc đảm bảo sẽ mang lại cho bạn cảm giác thư giãn.</p>
+                                <a href="#">Chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0" style="">
+                            <div class="image_1 overlay probootstrap-cover probootstrap-inner probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url('<c:url value="/template/web/assets/images/MiraHotel.jpg"/>'); border-top-right-radius: 5px; border-bottom-right-radius: 5px; height: 280px"></div>
+                        </div>
                     </div>
-                    <p>
-                        Tọa lạc tại Bãi Xép - Phường Ghềnh Ráng - TP Quy Nhơn. Homestay nằm cách biển chỉ 5m, với phong cách thiết kế chủ yếu là Tre, Nứa và các vật liệu đậm chất Mộc đảm bảo sẽ mang lại cho bạn cảm giác thư giãn cũng như hàng loạt không gian sống ảo cực đẹp chỉ có riêng tại Mira Các phòng và suite có kiểu trang trí cổ điển, ánh sáng mặt trời ấm áp và sự hài hòa giữa không gian trong nhà-ngoài trời.
-                    </p>
-                    <a href="">
-                        Chi tiết
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-5 ">
-                <div class="img-box">
-                    <img src="<c:url value="/template/web/assets/images/MiraHotel.jpg"/>" alt="" style="border-radius: 5px; height: 100%; width: 100%">
-                </div>
-            </div>
-        </div>
-        <div class="row" style="padding-top: 3%">
-            <div class="col-md-6 col-lg-5 ">
-                <div class="img-box">
-                    <img src="<c:url value="/template/web/assets/images/Raon.jpg"/>" alt="" style="border-radius: 5px; height: 100%; width: 100%">
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-7">
-                <div class="detail-box" style="margin-top: 5%; margin-left: 10%; padding-top: 5%; padding-bottom: 5%; padding-left: 3%; background-color: #f7f8ef; border-radius: 5px">
-                    <div class="heading_container">
-                        <h2>
-                            Raon Hotel
-                        </h2>
-                    </div>
-                    <p>
-                        Nằm ở thành phố Quy Nhơn, cách Bãi biển Quy Nhơn 600 m, RAON Hotel cung cấp chỗ nghỉ với hồ bơi ngoài trời, chỗ đỗ xe riêng miễn phí và sân hiên. Khách sạn 4 sao này có dịch vụ tiền sảnh và bàn đặt tour.
-                    </p>
-                    <a href="">
-                        Chi tiết
-                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- END section -->
+<!--End section most comment place-->
 
+<!-- Recommend Event Section Begin -->
 <section class="probootstrap_section">
     <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
             <div class="col-md-12">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Một số khách sạn khác</h2>
+                <h2 class="display-4 border-bottom probootstrap-section-heading">Gợi ý cho bạn</h2>
             </div>
         </div>
 
-        <div class="row probootstrap-animate">
-            <div class="col-md-12">
-                <div class="owl-carousel js-owl-carousel">
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-teatro-de-la-caridad"></span>
-                        <em>FLEUR DE LYS HOTEL</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-royal-museum-of-the-armed-forces"></span>
-                        <em>Royal Museum of the Armed Forces</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-parthenon"></span>
-                        <em>Parthenon</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-marina-bay-sands"></span>
-                        <em>Marina Bay Sands</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-samarra-minaret"></span>
-                        <em>Samarra Minaret</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-chiang-kai-shek-memorial"></span>
-                        <em>Chiang Kai Shek Memorial</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-heuvelse-kerk-tilburg"></span>
-                        <em>Heuvelse Kerk Tilburg</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-cathedral-of-cordoba"></span>
-                        <em>Cathedral of Cordoba</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-london-bridge"></span>
-                        <em>London Bridge</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-taj-mahal"></span>
-                        <em>Taj Mahal</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-leaning-tower-of-pisa"></span>
-                        <em>Leaning Tower of Pisa</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-burj-al-arab"></span>
-                        <em>Burj al Arab</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-gate-of-india"></span>
-                        <em>Gate of India</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-osaka-castle"></span>
-                        <em>Osaka Castle</em>
-                    </a>
-                    <a class="probootstrap-slide" href="#">
-                        <span class="flaticon-statue-of-liberty"></span>
-                        <em>Statue of Liberty</em>
-                    </a>
-
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/CasaMarina.jpg"/>'); border-radius: 5px; height: 100%; width: 100%">
+                    <div class="text-center" style="padding-top: 2%">
+                        <h6><a href="#" style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;">Casa Marina</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/FleurDeLys.png"/>'); border-radius: 5px; height: 100%; width: 100%">
+                    <div class="text-center" style="padding-top: 2%">
+                        <h6><a href="#" style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;">Fleur de Lys</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="image_1 overlay probootstrap-cover" style="background-image: url('<c:url value="/template/web/assets/images/Raon.jpg"/>'); border-radius: 5px; height: 100%; width: 100%">
+                    <div class="text-center" style="padding-top: 2%">
+                        <h6><a href="#" style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;">Raon Hotel</a></h6>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- END section -->
-
-<section class="probootstrap_section" id="section-feature-testimonial">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-12 text-center mb-5 probootstrap-animate">
-                <h2 class="display-4 border-bottom probootstrap-section-heading">Why we Love Places</h2>
-                <blockquote class="">
-                    <p class="lead mb-4"><em>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</em></p>
-                    <p class="probootstrap-author">
-                        <a href="https://probootstrap.com/" target="_blank">
-                            <img src="assets/images/person_1.jpg" alt="Free Template by ProBootstrap.com" class="rounded-circle">
-                            <span class="probootstrap-name">James Smith</span>
-                            <span class="probootstrap-title">Chief Executive Officer</span>
-                        </a>
-                    </p>
-                </blockquote>
-
-            </div>
-        </div>
-
-    </div>
-</section>
+<!-- Recommend Event Section End -->
 
 </body>
 </html>
