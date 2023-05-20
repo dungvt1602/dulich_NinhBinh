@@ -64,6 +64,20 @@
                     </a>
                     <b class="arrow"></b>
                 </li>
+                <li>
+                    <a href="<c:url value='/quan-tri/hoa-don/danh-sach?page=1&limit=2'/>">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        DS nhà hàng
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+                <li>
+                    <a href="<c:url value='/quan-tri/hoa-don/danh-sach?page=1&limit=10'/>">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        DS hóa đơn
+                    </a>
+                    <b class="arrow"></b>
+                </li>
             </ul>
         </li>
     </ul>
