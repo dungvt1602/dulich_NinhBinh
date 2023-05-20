@@ -1,8 +1,10 @@
 package com.laptrinhjavaweb.service;
 
+import com.laptrinhjavaweb.dto.PlaceDTO;
 import com.laptrinhjavaweb.entity.HotelEntity;
 import com.laptrinhjavaweb.entity.HotelOrderEntity;
 import com.laptrinhjavaweb.entity.UserEntity;
+import org.springframework.data.domain.Pageable;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -22,5 +24,11 @@ public interface IHotelOrderService {
 	List<HotelOrderEntity> danhsachHoaDonHetHan(LocalDate Date);
 
 	HotelOrderEntity updateBill(HotelOrderEntity hotelOrder);
+
+	List<HotelOrderEntity> findAll(Pageable pageable);
+
+	Integer getTotalItem();
+
+	HotelOrderEntity findbyId(long id);
 
 }

@@ -1,22 +1,22 @@
 package com.laptrinhjavaweb.service.impl;
 
 
-import com.laptrinhjavaweb.entity.CategoryEntity;
-import com.laptrinhjavaweb.entity.HotelEntity;
-import com.laptrinhjavaweb.entity.HotelOrderEntity;
-import com.laptrinhjavaweb.entity.UserEntity;
+import com.laptrinhjavaweb.dto.PlaceDTO;
+import com.laptrinhjavaweb.entity.*;
 import com.laptrinhjavaweb.repository.CategoryRepository;
 import com.laptrinhjavaweb.repository.HotelOrderRepository;
 import com.laptrinhjavaweb.repository.UserRepository;
 import com.laptrinhjavaweb.service.IHotelOrderService;
 import com.laptrinhjavaweb.service.IHotelService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -36,7 +36,7 @@ public class OrderService implements IHotelOrderService {
     @Override
     @Transactional
     public HotelOrderEntity addBill(long user_id, long place_id, LocalDate startDate, LocalDate endDate, String sdt
-    ,long sumPrice , long numberRoom) {
+            , long sumPrice, long numberRoom) {
 
         HotelOrderEntity bill = new HotelOrderEntity();
         UserEntity user = userRepository.findOne(user_id);
@@ -50,7 +50,7 @@ public class OrderService implements IHotelOrderService {
         bill.setSumPrice(sumPrice);
         bill.setSoLuong(numberRoom);
 
-        bill =hotelOrderRepository.save(bill);
+        bill = hotelOrderRepository.save(bill);
         return bill;
     }
 
@@ -77,7 +77,7 @@ public class OrderService implements IHotelOrderService {
 
     @Override
     public List<HotelOrderEntity> danhsachHoaDonHetHan(LocalDate date) {
-        return hotelOrderRepository.findByEndDateBeforeAndBillExpired(date , "hoạt động");
+        return hotelOrderRepository.findByEndDateBeforeAndBillExpired(date, "hoạt động");
     }
 
     @Override
@@ -86,5 +86,23 @@ public class OrderService implements IHotelOrderService {
         return hotelOrder;
     }
 
+    //tìm kiếm tất cả theo Pageage
+    @Override
+    public List<HotelOrderEntity> findAll(Pageable pageable) {
+        List<HotelOrderEntity> bills = hotelOrderRepository.findAll(pageable).getContent();
+        return bills;
+    }
+
+    @Override
+    public Integer getTotalItem() {
+        return (int) hotelOrderRepository.count();
+    }
+
+    @Override
+    public HotelOrderEntity findbyId(long id) {
+
+        HotelOrderEntity bill  = hotelOrderRepository.findOne(id);
+        return bill;
+    }
 
 }
