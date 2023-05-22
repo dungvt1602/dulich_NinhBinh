@@ -1,8 +1,8 @@
 <%@include file="/common/taglib.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8"%>
-<c:url var="newAPI" value="/api/web/user"/>
-<c:url var="newURL" value="/quan-tri/nguoi-dung/danh-sach"/>
+<c:url var="newAPI" value="/api/hotel"/>
+<c:url var="newURL" value="/quan-tri/khach-san/danh-sach"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -13,7 +13,7 @@
 
 <body>
 <div class="main-content">
-	<form action="<c:url value='/quan-tri/nguoi-dung/danh-sach'/>" id="formSubmit" method="get">
+	<form action="<c:url value='/quan-tri/khach-san/danh-sach'/>" id="formSubmit" method="get">
 
 		<div class="main-content-inner">
 			<div class="breadcrumbs ace-save-state" id="breadcrumbs">
@@ -37,7 +37,7 @@
 							<div class="table-btn-controls">
 								<div class="pull-right tableTools-container">
 									<div class="dt-buttons btn-overlap btn-group">
-										<c:url var="createNewURL" value="/quan-tri/nguoi-dung/chinh-sua"/>
+										<c:url var="createNewURL" value="/quan-tri/khach-san/chinh-sua"/>
 										<a flag="info"
 										   class="dt-button buttons-colvis btn btn-white btn-primary btn-bold" data-toggle="tooltip"
 										   title='Thêm bài viết' href='${createNewURL}'>
@@ -62,26 +62,23 @@
 										<thead>
 										<tr>
 											<th><input type="checkbox" id="checkAll"></th>
-											<th>Tài khoản</th>
-											<th>Tên người dùng</th>
-											<th>Hoạt động</th>
-											<th>Thao tác</th>
+											<th>Tài khách sạn</th>
+											<th>Địa chỉ</th>
+											<th>Số Phòng</th>
+											<th>Giá tiền</th>
+											<th></th>
 										</tr>
 										</thead>
 										<tbody>
 										<c:forEach var="item" items="${model.listResult}">
 											<tr>
 												<td><input type="checkbox" id="checkbox_${item.id}" value="${item.id}"></td>
-												<td>${item.userName}</td>
-												<td>${item.fullName}</td>
-												<c:if test="${item.status == 1}">
-													<td>Hoạt động</td>
-												</c:if>
-												<c:if test="${item.status == 0}">
-													<td>Không hoạt động</td>
-												</c:if>&nbsp;
+												<td>${item.name}</td>
+												<td>${item.address}</td>
+												<td>${item.numberOfRoom}</td>
+												<td>${item.price}</td>
 												<td>
-													<c:url var="updateNewURL" value="/quan-tri/nguoi-dung/chinh-sua">
+													<c:url var="updateNewURL" value="/quan-tri/khach-san/chinh-sua">
 														<c:param name="id" value="${item.id}"/>
 													</c:url>
 													<a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"

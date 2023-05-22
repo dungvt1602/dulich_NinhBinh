@@ -65,7 +65,7 @@
                     <b class="arrow"></b>
                 </li>
                 <li>
-                    <a href="<c:url value='/quan-tri/hoa-don/danh-sach?page=1&limit=2'/>">
+                    <a href="<c:url value='/quan-tri/khach-san/danh-sach?page=1&limit=2'/>">
                         <i class="menu-icon fa fa-caret-right"></i>
                         DS nhà hàng
                     </a>
