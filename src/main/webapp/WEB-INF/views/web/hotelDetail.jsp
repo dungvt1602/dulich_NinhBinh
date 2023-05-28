@@ -16,7 +16,7 @@
 
 <html>
 <head>
-  <title>Title</title>
+  <title>Khách sạn</title>
 </head>
 <body>
 <style>
@@ -54,11 +54,10 @@
   </ul>
 
 </nav>
-<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/${hotel.thumbnail}"/>');" data-stellar-background-ratio="0.5" id="section-home">
+<section class="probootstrap-cover overflow-hidden relative" style="background-image: url('<c:url value="/template/web/assets/images/${hotel.thumbnail05}"/>');" data-stellar-background-ratio="0.5" id="section-home">
   <div class="overlay"></div>
   <div class="container">
     <div class="row align-items-center">
-
     </div>
   </div>
 
@@ -78,24 +77,11 @@
 <!-- END section -->
 
 <!-- BEGIN section Khách sạn được yêu thích nhất -->
-<section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px">
+<section class="probootstrap-section-half d-md-flex">
   <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${hotel.thumbnail}"/>)"></div>
-  <div class="probootstrap-text order-1">
+  <div class="probootstrap-text order-1" style="background-color: #D5EEFB; font-size: 19px">
     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
-      <h2 class="heading mb-4">${hotel.name}</h2>
-      <p>${hotel.shortDescription}</p>
-      <p>Địa chỉ: ${hotel.address}</p>
-      <p>Tiêu chuẩn: 4 sao</p>
-      <p>Dịch vụ: Bể bơi, Bữa sáng miễn phí, Spa, Nhà hàng.</p>
-      <securtity:authorize access="isAnonymous()">
-        <h2 class="tm-color-primary tm-post-title mb-4">Bạn cần đăng nhập để đặt phòng</h2>
-      </securtity:authorize>
-      <securtity:authorize access="isAuthenticated()">
-      <p><a href="<c:url value='/thanhToan'>
-                            <c:param name='id' value='${hotel.id}'/>
-                        </c:url>" class="btn btn-primary">Đặt phòng</a></p>
-      </securtity:authorize>
-      <hr class="rule">
+      <p style="color: #000000;">${hotel.shortDescription}</p>
     </div>
   </div>
 </section>
@@ -104,11 +90,9 @@
 <!-- BEGIN section Service01 -->
 <section class="probootstrap-section-half d-md-flex" id="section-about">
   <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${hotel.thumbnail02}"/>)"></div>
-  <div class="probootstrap-text">
+  <div class="probootstrap-text" style="background-color: #D5EEFB; font-size: 19px">
     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
-      <h2>Bể bơi</h2>
-      <p>${hotel.shortDescription02}</p>
-      <hr class="rule">
+      <p style="color: #000000;">${hotel.shortDescription02}</p>
     </div>
   </div>
 </section>
@@ -116,27 +100,38 @@
 
 <!-- BEGIN section Service02 -->
 <section class="probootstrap-section-half d-md-flex">
-  <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${hotel.thumbnail}"/>)"></div>
-  <div class="probootstrap-text order-1">
+  <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${hotel.thumbnail03}"/>)"></div>
+  <div class="probootstrap-text order-1" style="background-color: #D5EEFB; font-size: 19px">
     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
-      <h2>Spa</h2>
-      <p>${hotel.shortDescription03}</p>
-      <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
+      <p style="color: #000000;">${hotel.shortDescription03}</p>
     </div>
   </div>
 </section>
 <!-- END section -->
 
 <!-- BEGIN section Service03 -->
-<section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px">
-  <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${hotel.thumbnail}"/>)"></div>
-  <div class="probootstrap-text">
+<section class="probootstrap-section-half d-md-flex" style="padding-bottom: 80px;">
+  <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/images/${hotel.thumbnail04}"/>)"></div>
+  <div class="probootstrap-text" style="background-color: #D5EEFB; font-size: 19px">
     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
-      <h2>Nhà hàng</h2>
-      <p>${hotel.shortDescription04}</p>
-      <p>Mở cửa từ 9 giờ sáng, đóng cửa vào lúc 22 giờ.</p>
+      <p style="color: #000000;">${hotel.shortDescription04}</p>
     </div>
   </div>
+</section>
+<!-- END section -->
+
+<!-- BEGIN section Service03 -->
+<section class="probootstrap_section">
+  <securtity:authorize access="isAnonymous()">
+    <a href="http://localhost:8081/DuLichBinhDinh/dang-nhap">
+      <div class="" style="text-align: center; color: #00a43e; font-size: 25px">Bạn cần đăng nhập để đặt phòng</div>
+    </a>
+  </securtity:authorize>
+  <securtity:authorize access="isAuthenticated()">
+    <p style="text-align: center"><a href="<c:url value='/thanhToan'>
+                            <c:param name='id' value='${hotel.id}'/>
+                        </c:url>" class="btn btn-primary">Đặt phòng</a></p>
+  </securtity:authorize>
 </section>
 <!-- END section -->
 

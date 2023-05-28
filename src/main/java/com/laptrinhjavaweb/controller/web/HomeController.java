@@ -50,6 +50,7 @@ public class HomeController {
 		PlaceEntity top3 = top5.get(2);
 
 
+
 		PlaceDTO dto1 = models.get(0);
 		PlaceDTO dto2 = models.get(1);
 

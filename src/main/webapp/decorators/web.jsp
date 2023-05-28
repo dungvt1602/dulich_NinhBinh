@@ -76,6 +76,9 @@
     <script src="<c:url value="https://code.jquery.com/ui/1.12.1/jquery-ui.js" />"></script>
 
     <script src="<c:url value='/template/web/assets/fonts/fontCormorantUpright/css/fontCormorantUpright.css' />"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+
 </head>
 <body>
 

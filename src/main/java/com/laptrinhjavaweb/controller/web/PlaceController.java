@@ -29,6 +29,7 @@ import java.io.File;
 import java.io.IOError;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -71,6 +72,7 @@ public class PlaceController {
 
 		List<CommentDTO> comments = new ArrayList<>();
 		List<PlaceEntity> lists = placeRepository.findAll();
+		Collections.shuffle(lists);
 		comments = commentService.findAllCommentPlacebyIdPlace(id);
 		CommentDTO comment= new CommentDTO();
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
