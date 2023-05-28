@@ -25,6 +25,9 @@ public class HotelController {
 
         List<HotelEntity> list = hotelService.findAllHotel();
         ModelAndView mav = new ModelAndView("web/khachsan");
+        mav.addObject("hotel1", list.get(0));
+        mav.addObject("hotel2", list.get(1));
+        mav.addObject("hotel3", list.get(2));
         mav.addObject("list" , list);
 
         return mav;

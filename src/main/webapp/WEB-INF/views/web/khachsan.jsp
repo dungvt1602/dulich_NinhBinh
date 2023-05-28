@@ -71,11 +71,14 @@
         <div class="container">
             <div style="width: 100%; height: 100%">
                 <div class="row" >
-                    <img class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" src="<c:url value="/template/web/assets/images/Kadupul.jpg"/>" style="height: 80%; width: 55%; border-radius: 10%; -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); height: 400px;">
+                    <img class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" src="<c:url value="/template/web/assets/images/${hotel1.thumbnail}"/>" style="height: 80%; width: 55%; border-radius: 10%; -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); height: 400px;">
                     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft" style="float: right; vertical-align: center; height: 80%; width: 40%; margin-top: 5%; margin-bottom: 5%; padding: 5%;-webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); background: #D5EEFB;margin-left: 2%">
-                        <h1 style="padding-top: 3%; font-family: 'Font Awesome 5 Brands';text-align: right">Kadupul Hotel</h1>
-                        <p style="padding-top: 2%; line-height: 1.5; color: #1e1a1a; text-align: right">Tất cả phòng nghỉ tại đây được trang bị máy điều hòa, TV truyền hình cáp màn hình phẳng, tủ lạnh, ấm đun nước, vòi sen, dép và tủ để quần áo. Mỗi phòng đều có phòng tắm riêng, máy sấy tóc và ga trải giường.</p>
-                        <p><a href="#" class="btn btn-primary"style="float: right; background-color: #77C1D5; border-color: #77C1D5; border-radius: 50px">Xem thêm</a></p>
+                        <h1 style="padding-top: 3%; font-family: 'Font Awesome 5 Brands';text-align: right">${hotel1.name}</h1>
+                        <p style="padding-top: 2%; line-height: 1.5; color: #1e1a1a; text-align: right">${hotel1.shortDescription}</p>
+                        <c:url var="detail" value="/chitietkhachsan">
+                            <c:param name="id" value="${hotel1.id}" />
+                        </c:url>
+                        <p><a href="${detail}" class="btn btn-primary"style="float: right; background-color: #77C1D5; border-color: #77C1D5; border-radius: 50px">Xem thêm</a></p>
                     </div>
                 </div>
             </div>
