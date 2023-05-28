@@ -93,7 +93,7 @@
     <div class="container">
         <div style="width: 100%; height: 100%">
             <div class="row" >
-                <img class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" src="<c:url value="/template/web/assets/images/BaiTamHoangHau.jpg"/>" style="height: 80%; width: 70%; border-radius: 10%;">
+                <img class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" src="<c:url value="/template/web/assets/images/${top1.thumbnail}"/>" style="height: 80%; width: 70%; border-radius: 10%;">
                 <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft" style="float: right; background: rgba(255, 255, 255, 85%); margin-left: -20%; vertical-align: center; height: 80%; width: 50%; margin-top: 5%; margin-bottom: 5%; padding: 5%; -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1);">
                     <h1 style="padding-top: 3%; font-family: 'Font Awesome 5 Brands';text-align: right">${top1.title}</h1>
                     <p style="padding-top: 2%; line-height: 1.5; color: #1e1a1a; text-align: right">${top1.shortDescription}</p>

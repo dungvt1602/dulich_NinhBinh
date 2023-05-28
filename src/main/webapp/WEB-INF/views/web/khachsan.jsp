@@ -88,9 +88,12 @@
             <div style="width: 100%; height: 100%">
                 <div class="row" >
                     <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft" style="float: left; vertical-align: center; height: 80%; width: 40%; margin-top: 5%; margin-bottom: 5%; padding: 5%;-webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); background: #D5EEFB;">
-                        <h1 style="padding-top: 3%; font-family: 'Font Awesome 5 Brands';text-align: right">Mira Bãi Xếp</h1>
-                        <p style="padding-top: 2%; line-height: 1.5; color: #1e1a1a; text-align: right">Tọa lạc tại Bãi Xép - Phường Ghềnh Ráng - TP Quy Nhơn. Homestay nằm cách biển chỉ 5m, với phong cách thiết kế chủ yếu là Tre, Nứa và các vật liệu đậm chất Mộc đảm bảo sẽ mang lại cho bạn cảm giác thư giãn.</p>
-                        <p><a href="#" class="btn btn-primary"style="float: right; background-color: #77C1D5; border-color: #77C1D5; border-radius: 50px">Xem thêm</a></p>
+                        <h1 style="padding-top: 3%; font-family: 'Font Awesome 5 Brands';text-align: right">${hotel2.name}</h1>
+                        <p style="padding-top: 2%; line-height: 1.5; color: #1e1a1a; text-align: right">${hotel2.shortDescription}</p>
+                        <c:url var="detail" value="/chitietkhachsan">
+                            <c:param name="id" value="${hotel2.id}" />
+                        </c:url>
+                        <p><a href="${detail}" class="btn btn-primary"style="float: right; background-color: #77C1D5; border-color: #77C1D5; border-radius: 50px">Xem thêm</a></p>
                     </div>
                     <img class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" src="<c:url value="/template/web/assets/images/MiraHotel.jpg"/>" style="height: 80%; width: 55%; border-radius: 10%; -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.1); margin-left: 2%; height: 400px;">
                 </div>

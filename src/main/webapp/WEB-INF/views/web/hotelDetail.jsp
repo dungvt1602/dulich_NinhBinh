@@ -135,6 +135,28 @@
 </section>
 <!-- END section -->
 
+<section class="probootstrap_section" style="background-color: #D5EEFB;">
+  <div class="container">
+    <div class="row text-center mb-5 probootstrap-animate">
+      <div class="col-md-12">
+        <h1 class="display-4 border-bottom probootstrap-section-heading" style="font-family: Quicksand; text-align: center"> Gợi ý cho bạn </h1>
+      </div>
+    </div>
+    <div class="row">
+      <c:forEach var="itemRandom" items="${list}" begin="0" end="3">
+        <div class="col-sm-6 col-xl-3">
+          <div class="box">
+            <a href="<c:url value="/chitietkhachsan?id=${itemRandom.id}"/>">
+              <div class="image_1 overlay probootstrap-cover probootstrap-inner probootstrap-animate" data-animate-effect="fadeIn" style="display: block; background-image: url('<c:url value="/template/web/assets/images/${itemRandom.thumbnail}"/>'); height: 100%; width: 100%; border-radius: 5px; vertical-align: top">
+                <div style="background: rgba(0, 0, 0, 50%); display: block; color: #FFFFFF; margin-left: 10%; margin-right: 10%; padding: 2%; border-radius: 5px; text-align: center;"> ${itemRandom.name} </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </c:forEach>
+    </div>
+  </div>
+</section>
 
 <%--<section >--%>
 <%--  <div class="container-fluid">--%>

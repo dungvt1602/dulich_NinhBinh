@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Collections;
 import java.util.List;
 
 @Controller(value = "HotelControllerofWeb")
@@ -40,6 +41,11 @@ public class HotelController {
 
         ModelAndView mav = new ModelAndView("web/hotelDetail");
         mav.addObject("hotel" , hotel);
+
+        List<HotelEntity> list = hotelService.findAllHotel();
+        Collections.shuffle(list);
+        mav.addObject("list" , list);
+
         return mav;
     }
 
