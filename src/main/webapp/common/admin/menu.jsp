@@ -34,6 +34,15 @@
         </div>
     </div>
     <ul class="nav nav-list">
+        <li>
+            <a href="<c:url value="/quan-tri/trang-chu"/> " >
+                <i class="menu-icon fa fa-desktop"></i>
+                <span class="menu-text"></span>
+                Thống kê
+            </a>
+            <ul class="submenu">
+            </ul>
+        </li>
         <li >
             <a href="#" class="dropdown-toggle">
                 <i class="menu-icon fa fa-list"></i>
