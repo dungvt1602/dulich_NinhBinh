@@ -23,7 +23,7 @@
     </button>
     <div class="collapse navbar-collapse" id="probootstrap-menu">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="<c:url value="/trang-chu"/>">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="<c:url value="/trang-chu"/>">Trang chủ</a></li>
         <li class="nav-item"><a class="nav-link" href="<c:url value="/diadanh"/>">Địa danh</a></li>
         <li class="nav-item"><a class="nav-link" href="<c:url value="/event"/>">Sự kiện</a></li>
         <li class="nav-item"><a class="nav-link" href="<c:url value="/dacsan"/>">Ẩm thực</a></li>
@@ -52,13 +52,6 @@
     <div class="row align-items-center text-center">
       <div class="col-md">
         <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Liên hệ với chúng tôi</h2>
-
-        <p class="lead mb-5 probootstrap-animate">
-
-
-        </p>
-        <a href="https://themewagon.com/theme_tag/free/" target="_blank" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">Điền thông tin tại đây</a>
-        </p>
       </div>
     </div>
   </div>
@@ -72,7 +65,7 @@
 
     <div class="row">
       <div class="col-md-6 probootstrap-animate">
-        <p class="mb-5">Du lịch khiến chúng ta thảnh thởi hơn, xua tan đi những mệt mỏi thường ngày.</p>
+        <p class="mb-5">Du lịch khiến chúng ta thảnh thơi hơn, xua tan đi những mệt mỏi thường ngày.</p>
         <div class="row">
           <div class="col-md-6">
             <ul class="probootstrap-contact-details">
@@ -135,30 +128,6 @@
   </div>
 </section>
 <!-- END section -->
-
-<section class="probootstrap_section" id="section-feature-testimonial">
-  <div class="container">
-    <div class="row justify-content-center mb-5">
-      <div class="col-md-12 text-center mb-5 probootstrap-animate">
-        <h2 class="display-4 border-bottom probootstrap-section-heading">Tại sao bạn lại yêu thích Bình Định</h2>
-        <blockquote class="">
-          <p class="lead mb-4"><em>Bình Định là một tỉnh thuộc vùng duyên hải Nam Trung Bộ Việt Nam.
-            Tỉnh lỵ của Bình Định là thành phố cảng Quy Nhơn nằm cách thủ đô Hà Nội 1.070 km về phía nam,
-            cách thành phố Đà Nẵng 323 km về phía nam và cách Thành phố Hồ Chí Minh 652 km về phía bắc theo đường Quốc lộ 1.</em></p>
-          <p class="probootstrap-author">
-            <a href="https://probootstrap.com/" target="_blank">
-              <img src="assets/images/person_1.jpg" alt="Free Template by ProBootstrap.com" class="rounded-circle">
-              <span class="probootstrap-name">Châu</span>
-              <span class="probootstrap-title">Chuyên gia</span>
-            </a>
-          </p>
-        </blockquote>
-
-      </div>
-    </div>
-
-  </div>
-</section>
 
 </body>
 </html>

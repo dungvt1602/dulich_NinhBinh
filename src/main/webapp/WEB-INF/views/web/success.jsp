@@ -17,7 +17,13 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Payment Success !</h1>
-    <a href="<c:url value="/trang-chu" /> " >Go Home</a>
+    <section class="probootstrap_section" style="background-color: #a6e1ec; border-radius: 25%; width: 80%; margin: 5% 10%">
+        <div>
+            <h1 style="text-align: center;">THANH TOÁN THÀNH CÔNG!</h1>
+        </div>
+        <div style="text-align: center">
+            <a class="btn" href="<c:url value="/trang-chu" /> " style="background: lightcoral; margin-top: 2%; font-weight: 800; color: aliceblue;">Go Home</a>
+        </div>
+    </section>
 </body>
 </html>

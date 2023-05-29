@@ -26,7 +26,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="probootstrap-menu">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active"><a class="nav-link" href="<c:url value="/trang-chu"/>">Home</a></li>
+				<li class="nav-item active"><a class="nav-link" href="<c:url value="/trang-chu"/>">Trang chủ</a></li>
 				<li class="nav-item"><a class="nav-link" href="<c:url value="/diadanh"/>">Địa danh</a></li>
 				<li class="nav-item"><a class="nav-link" href="<c:url value="/event"/>">Sự kiện</a></li>
 				<li class="nav-item"><a class="nav-link" href="<c:url value="/dacsan"/>">Ẩm thực</a></li>
@@ -91,8 +91,8 @@
 
 
 						<div class="row">
-							<div class="col-md-6">
-								<button type="submit" class="btn btn-primary btn-block" id="btnAddOrUpdateNew" >Đăng ký</button>
+							<div class="col-md-12" style="text-align: center">
+								<button type="submit" class="btn btn-primary" id="btnAddOrUpdateNew" >Đăng ký</button>
 							</div>
 						</div>
 					</div>
