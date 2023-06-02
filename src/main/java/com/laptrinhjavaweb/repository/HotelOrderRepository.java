@@ -11,5 +11,7 @@ public interface HotelOrderRepository extends JpaRepository<HotelOrderEntity, Lo
 
     List<HotelOrderEntity> findByEndDateBeforeAndBillExpired(LocalDate date ,String expired);
 
+    List<HotelOrderEntity> findByBillState(String state);
+
 
 }
