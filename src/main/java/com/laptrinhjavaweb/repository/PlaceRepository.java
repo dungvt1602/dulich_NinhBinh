@@ -18,4 +18,6 @@ public interface PlaceRepository extends JpaRepository<PlaceEntity, Long> {
 
     List<PlaceEntity> findByTitleContainingIgnoreCase(String keyword);
 
+    List<PlaceEntity> findByCategoryEntityCode(String code);
+
 }

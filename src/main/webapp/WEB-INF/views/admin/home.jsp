@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -119,10 +120,10 @@
 
                     Welcome to
                     <strong class="green">
-                        Ace
+                        Admin
                         <small>(v1.3.3)</small>
                     </strong>,
-                   Thống kê doanh thu và hóa đơn đạt được <a href="https://github.com/bopoda/ace">github</a> (with minified ace js files).
+                   Thống kê doanh thu và hóa đơn đạt được <a href="https://github.com/bopoda/ace">github</a>
                 </div>
 
                 <div class="row">
@@ -135,8 +136,8 @@
                             </div>
 
                             <div class="infobox-data">
-                                <span class="infobox-data-number">32</span>
-                                <div class="infobox-content">comments + 2 reviews</div>
+                                <span class="infobox-data-number">${comments}</span>
+                                <div class="infobox-content">comments</div>
                             </div>
 
                             <div class="stat stat-success">8%</div>
@@ -148,8 +149,8 @@
                             </div>
 
                             <div class="infobox-data">
-                                <span class="infobox-data-number">11</span>
-                                <div class="infobox-content">new followers</div>
+                                <span class="infobox-data-number">${users}</span>
+                                <div class="infobox-content">người dùng</div>
                             </div>
 
                             <div class="badge badge-success">
@@ -164,8 +165,8 @@
                             </div>
 
                             <div class="infobox-data">
-                                <span class="infobox-data-number">8</span>
-                                <div class="infobox-content">new orders</div>
+                                <span class="infobox-data-number">${bill}</span>
+                                <div class="infobox-content">hóa đơn</div>
                             </div>
                             <div class="stat stat-important">4%</div>
                         </div>
@@ -176,8 +177,8 @@
                             </div>
 
                             <div class="infobox-data">
-                                <span class="infobox-data-number">7</span>
-                                <div class="infobox-content">experiments</div>
+                                <span class="infobox-data-number">${places}</span>
+                                <div class="infobox-content">bài viết</div>
                             </div>
                         </div>
 
@@ -187,8 +188,8 @@
                             </div>
 
                             <div class="infobox-data">
-                                <span class="infobox-data-number">6,251</span>
-                                <div class="infobox-content">pageviews</div>
+                                <span class="infobox-data-number">200+</span>
+                                <div class="infobox-content">người xem</div>
                             </div>
 
                             <div class="badge badge-success">
@@ -209,7 +210,7 @@
 
                                 <div class="infobox-content">
                                     <span class="bigger-110">~</span>
-                                    58GB remaining
+                                    58GB còn lại
                                 </div>
                             </div>
                         </div>
@@ -219,13 +220,13 @@
                         <div class="infobox infobox-green infobox-small infobox-dark">
                             <div class="infobox-progress">
                                 <div class="easy-pie-chart percentage" data-percent="61" data-size="39" style="height: 39px; width: 39px; line-height: 38px;">
-                                    <span class="percent">61</span>%
+                                    <span class="percent">80</span>%
                                     <canvas height="48" width="48" style="height: 39px; width: 39px;"></canvas></div>
                             </div>
 
                             <div class="infobox-data">
-                                <div class="infobox-content">Task</div>
-                                <div class="infobox-content">Completion</div>
+                                <div class="infobox-content">Tiến độ</div>
+                                <div class="infobox-content">Hoàn thành</div>
                             </div>
                         </div>
 
@@ -235,8 +236,8 @@
                             </div>
 
                             <div class="infobox-data">
-                                <div class="infobox-content">Earnings</div>
-                                <div class="infobox-content">$32,000</div>
+                                <div class="infobox-content">Tổng tiền</div>
+                                <div class="infobox-content">$${sum_money}</div>
                             </div>
                         </div>
 
@@ -246,7 +247,7 @@
                             </div>
 
                             <div class="infobox-data">
-                                <div class="infobox-content">Downloads</div>
+                                <div class="infobox-content">Dowload</div>
                                 <div class="infobox-content">1,205</div>
                             </div>
                         </div>
@@ -259,13 +260,13 @@
                             <div class="widget-header widget-header-flat widget-header-small">
                                 <h5 class="widget-title">
                                     <i class="ace-icon fa fa-signal"></i>
-                                    Traffic Sources
+                                    Thống Kê Hóa Đơn
                                 </h5>
 
                                 <div class="widget-toolbar no-border">
                                     <div class="inline dropdown-hover">
                                         <button class="btn btn-minier btn-primary">
-                                            This Week
+                                            Tuần này
                                             <i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
                                         </button>
 
@@ -273,14 +274,14 @@
                                             <li class="active">
                                                 <a href="#" class="blue">
                                                     <i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
-                                                    This Week
+                                                    Tuần Này
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="#">
                                                     <i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
-                                                    Last Week
+                                                    Tuần Trước
                                                 </a>
                                             </li>
 
@@ -304,7 +305,18 @@
 
                             <div class="widget-body">
                                 <div class="widget-main">
-                                    <div id="piechart-placeholder" style="width: 90%; min-height: 150px; padding: 0px; position: relative;"><canvas class="flot-base" width="667" height="187" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 534px; height: 150px;"></canvas><canvas class="flot-overlay" width="667" height="187" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 534px; height: 150px;"></canvas><div class="legend"><div style="position: absolute; width: 90px; height: 110px; top: 15px; right: -30px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:15px;right:-30px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #68BC31;overflow:hidden"></div></div></td><td class="legendLabel">social networks</td></tr><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #2091CF;overflow:hidden"></div></div></td><td class="legendLabel">search engines</td></tr><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #AF4E96;overflow:hidden"></div></div></td><td class="legendLabel">ad campaigns</td></tr><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #DA5430;overflow:hidden"></div></div></td><td class="legendLabel">direct traffic</td></tr><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #FEE074;overflow:hidden"></div></div></td><td class="legendLabel">other</td></tr></tbody></table></div></div>
+                                    <div id="piechart-placeholder" style="width: 90%; min-height: 150px; padding: 0px; position: relative;">
+                                        <canvas class="flot-base" width="667" height="187" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 534px; height: 150px;"></canvas>
+                                        <canvas class="flot-overlay" width="667" height="187" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 534px; height: 150px;"></canvas>
+                                        <div class="legend"><div style="position: absolute; width: 90px; height: 110px; top: 15px; right: -30px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div>
+                                            <table style="position:absolute;top:15px;right:-30px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #68BC31;overflow:hidden"></div></div></td>
+                                                <td class="legendLabel">Hóa đơn thành công</td></tr><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #2091CF;overflow:hidden"></div></div></td>
+                                                <td class="legendLabel">Hóa đơn chưa thành công</td></tr><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #AF4E96;overflow:hidden"></div></div></td>
+                                            </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
 
                                     <div class="hr hr8 hr-double"></div>
 
@@ -347,7 +359,7 @@
                             <div class="widget-header widget-header-flat">
                                 <h4 class="widget-title lighter">
                                     <i class="ace-icon fa fa-star orange"></i>
-                                    Popular Domains
+                                    Hóa đơn
                                 </h4>
 
                                 <div class="widget-toolbar">
@@ -377,73 +389,41 @@
                                         </thead>
 
                                         <tbody>
+
+                                        <c:forEach var="item" items="${bills}">
                                         <tr>
-                                            <td>internet.com</td>
+                                            <td>${item.userEntity.fullName}</td>
 
                                             <td>
-                                                <small>
-                                                    <s class="red">$29.99</s>
-                                                </small>
-                                                <b class="green">$19.99</b>
+                                                <b class="blue">$${item.sumPrice}</b>
                                             </td>
-
-                                            <td class="hidden-480">
-                                                <span class="label label-info arrowed-right arrowed-in">on sale</span>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>online.com</td>
-
-                                            <td>
-                                                <b class="blue">$16.45</b>
-                                            </td>
-
+                                            <c:if test="${item.billState == 'Thanh toán thành công'}">
                                             <td class="hidden-480">
                                                 <span class="label label-success arrowed-in arrowed-in-right">approved</span>
                                             </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>newnet.com</td>
-
-                                            <td>
-                                                <b class="blue">$15.00</b>
-                                            </td>
-
+                                            </c:if>
+                                            <c:if test="${item.billState != 'Thanh toán thành công'}">
                                             <td class="hidden-480">
                                                 <span class="label label-danger arrowed">pending</span>
                                             </td>
+                                            </c:if>
                                         </tr>
 
-                                        <tr>
-                                            <td>web.com</td>
+<%--                                        <tr>--%>
+<%--                                            <td>newnet.com</td>--%>
 
-                                            <td>
-                                                <small>
-                                                    <s class="red">$24.99</s>
-                                                </small>
-                                                <b class="green">$19.95</b>
-                                            </td>
+<%--                                            <td>--%>
+<%--                                                <b class="blue">$15.00</b>--%>
+<%--                                            </td>--%>
 
-                                            <td class="hidden-480">
-																	<span class="label arrowed">
-																		<s>out of stock</s>
-																	</span>
-                                            </td>
-                                        </tr>
+<%--                                            <td class="hidden-480">--%>
+<%--                                                <span class="label label-danger arrowed">pending</span>--%>
+<%--                                            </td>--%>
+<%--                                        </tr>--%>
 
-                                        <tr>
-                                            <td>domain.com</td>
 
-                                            <td>
-                                                <b class="blue">$12.00</b>
-                                            </td>
 
-                                            <td class="hidden-480">
-                                                <span class="label label-warning arrowed arrowed-right">SOLD</span>
-                                            </td>
-                                        </tr>
+                                        </c:forEach>
                                         </tbody>
                                     </table>
                                 </div><!-- /.widget-main -->
@@ -526,11 +506,9 @@
 
         var placeholder = $('#piechart-placeholder').css({'width':'90%' , 'min-height':'150px'});
         var data = [
-            { label: "social networks",  data: 38.7, color: "#68BC31"},
-            { label: "search engines",  data: 24.5, color: "#2091CF"},
-            { label: "ad campaigns",  data: 8.2, color: "#AF4E96"},
-            { label: "direct traffic",  data: 18.6, color: "#DA5430"},
-            { label: "other",  data: 10, color: "#FEE074"}
+            { label: "Hóa đơn chưa thanh toán",  data: ${bill_success}, color: "#68BC31"},
+            { label: "Hóa đơn đã thanh toán",  data: ${bill_fail}, color: "#2091CF"},
+
         ]
         function drawPieChart(placeholder, data, position) {
             $.plot(placeholder, data, {

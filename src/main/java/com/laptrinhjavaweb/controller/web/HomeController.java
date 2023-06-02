@@ -5,10 +5,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.laptrinhjavaweb.dto.PlaceDTO;
 import com.laptrinhjavaweb.dto.UserDTO;
+import com.laptrinhjavaweb.entity.CategoryEntity;
 import com.laptrinhjavaweb.entity.PlaceEntity;
+import com.laptrinhjavaweb.repository.CategoryRepository;
 import com.laptrinhjavaweb.repository.PlaceRepository;
 import com.laptrinhjavaweb.service.IPlaceService;
 import com.laptrinhjavaweb.util.MessageUtil;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.Authentication;
@@ -22,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -37,17 +41,27 @@ public class HomeController {
 	@Autowired
 	PlaceRepository placeRepository;
 
+	@Autowired
+	CategoryRepository categoryRepository;
+
 	@RequestMapping(value = "/trang-chu", method = RequestMethod.GET)
 	public ModelAndView homePage() {
 		String image = "p2.jpg";
 		ModelAndView mav = new ModelAndView("web/home");
 		List<PlaceDTO> models = placeService.findNewPlace();
-		List<PlaceEntity> lists = placeRepository.findAll();
+		List<PlaceEntity> lists = placeRepository.findByCategoryEntityCode("dia-diem");
 		List<PlaceEntity> top5 = placeService.findTop5PlacesByNumberOfUsers();
+//		List<PlaceEntity> topdiadanh = categoryRepository.findOneByCode("dia-danh").getPlaces();
+		List<PlaceEntity> placeEntities = new ArrayList<>();
+//		for(PlaceEntity item : lists)
+//		{
+//			if(item.getCategoryEntity().getCode()="")
+//		}
+
 		//lấy ra các địa danh nhiều người thích nhất
-		PlaceEntity top1 = top5.get(0);
-		PlaceEntity top2 = top5.get(1);
-		PlaceEntity top3 = top5.get(2);
+		PlaceEntity top1 = lists.get(0);
+		PlaceEntity top2 = lists.get(1);
+		PlaceEntity top3 = lists.get(2);
 
 
 
