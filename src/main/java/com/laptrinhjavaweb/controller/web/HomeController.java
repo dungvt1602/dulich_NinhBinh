@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -44,12 +45,16 @@ public class HomeController {
 		List<PlaceDTO> models = placeService.findNewPlace();
 		List<PlaceEntity> lists = placeRepository.findAll();
 		List<PlaceEntity> top5 = placeService.findTop5PlacesByNumberOfUsers();
+
+		List<PlaceEntity> places = placeService.findPlace();
+		Collections.shuffle(places);
 		//lấy ra các địa danh nhiều người thích nhất
 		PlaceEntity top1 = top5.get(0);
 		PlaceEntity top2 = top5.get(1);
 		PlaceEntity top3 = top5.get(2);
 
-
+		PlaceEntity place1 = places.get(0);
+		PlaceEntity place2 = places.get(1);
 
 		PlaceDTO dto1 = models.get(0);
 		PlaceDTO dto2 = models.get(1);
@@ -64,6 +69,9 @@ public class HomeController {
 
 		mav.addObject("test" , image);
 		mav.addObject("lists" , lists);
+
+		mav.addObject("place1", place1);
+		mav.addObject("place2", place2);
 		return mav;
 	}
 	

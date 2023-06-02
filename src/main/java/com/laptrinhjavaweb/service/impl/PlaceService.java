@@ -193,6 +193,11 @@ public class PlaceService implements IPlaceService {
 		return placeRepository.findByTitleContainingIgnoreCase(keyword);
 	}
 
+	@Override
+	public List<PlaceEntity> findPlace() {
+		return placeRepository.findPlace();
+	}
+
 
 	//Câu lệch top 5 địa danh yêu thích nhất
 //	@Override

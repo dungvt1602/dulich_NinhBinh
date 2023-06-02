@@ -18,4 +18,6 @@ public interface PlaceRepository extends JpaRepository<PlaceEntity, Long> {
 
     List<PlaceEntity> findByTitleContainingIgnoreCase(String keyword);
 
+    @Query("SELECT p FROM PlaceEntity p WHERE p.categoryEntity.id=2")
+    List<PlaceEntity> findPlace();
 }

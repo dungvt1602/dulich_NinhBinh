@@ -43,5 +43,5 @@ public interface IPlaceService {
     List<PlaceEntity> searchPlace(String keyword);
 
 
-
+    List<PlaceEntity> findPlace();
 }
