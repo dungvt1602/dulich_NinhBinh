@@ -27,7 +27,7 @@
         </button>
         <div class="collapse navbar-collapse" id="probootstrap-menu">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="<c:url value="/trang-chu"/>">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="<c:url value="/trang-chu"/>">Trang chủ</a></li>
                 <li class="nav-item"><a class="nav-link" href="<c:url value="/diadanh"/>">Địa danh</a></li>
                 <li class="nav-item"><a class="nav-link" href="<c:url value="/event"/>">Sự kiện</a></li>
                 <li class="nav-item"><a class="nav-link" href="<c:url value="/dacsan"/>">Ẩm thực</a></li>
@@ -43,7 +43,7 @@
         </securtity:authorize>
 
         <securtity:authorize access="isAuthenticated()">
-            <li class="nav-item "><a class="nav-link" href="<c:url value="/user_profile"/> ">Welcome <%=SecurityUtils.getPrincipal().getFullName()%></a></li>
+            <li class="nav-item "><a class="nav-link" href="<c:url value="/user_profile"/> ">Xin chào <%=SecurityUtils.getPrincipal().getFullName()%></a></li>
             <li class="nav-item "><a class="nav-link" href="<c:url value="/thoat"/> ">Đăng xuất</a></li>
         </securtity:authorize>
     </ul>
@@ -74,6 +74,31 @@
                 <h2 class="display-4 border-bottom probootstrap-section-heading">Thông tin cá nhân:</h2>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-4">
+                <img class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" src="<c:url value="/template/web/assets/images/${model.avatar}"/>" style="width: 100%; border-radius: 25%">
+            </div>
+
+            <div class="col-6" style="margin: auto auto; text-align: center; background-color: #c4e7ee; width: 100%; height: 100%; padding: 5% 0px;">
+                <p style="color: #000000; font-size: 20px">Tên tài khoản: ${model.fullName}</p>
+                <p style="color: #000000; font-size: 20px">Tên đăng nhập: ${model.userName}</p>
+                <c:if test="${model.status == 1}">
+                    <p style="color: #000000; font-size: 20px">Hoạt động: Đang hoạt động</p>
+                </c:if>
+                <c:if test="${model.status == 0}">
+                    <p style="color: #000000; font-size: 20px">Hoạt động: Tài khoản đã vô hiệu hóa</p>
+                </c:if>
+                <p style="color: #000000; font-size: 20px">Số lượng địa điểm đã yêu thích: ${coutLike}</p>
+                <p style="color: #000000; font-size: 20px">Số lượng địa điểm đã check-in bình luận: ${coutComment}</p>
+            </div>
+        </div>
+
+        <div class="col-12" style="margin: 3%">
+            <div style="text-align: center; margin: 2%">
+                <a href="<c:url value="/edit_profile"/>" class="btn btn-primary">Sửa thông tin cá nhân</a>
+            </div>
+        </div>
     </div>
 </section>
 <!-- END section -->
@@ -98,17 +123,7 @@
              </h2>
             <p>Ngày tạo tài khoản: 10 tháng 12 năm 2001</p>
             <p>Địa chỉ emai: abc@gmail.com</p>
-            <c:if test="${model.status == 1}">
-            <p>Hoạt động: Đang hoạt động</p>
-            </c:if>
-            <c:if test="${model.status == 0}">
-                <p>Hoạt động: Tài khoản đã vô hiệu hóa</p>
-            </c:if>
-            <p>Số lượng địa điểm đã yêu thích: ${coutLike}</p>
-            <p>Số lượng địa điểm đã check-in bình luận: ${coutComment}</p>
             <p> </p>
-            <p><a href="<c:url value="/edit_profile"/>" class="btn btn-primary">Sửa thông tin cá nhân</a></p>
-            <label class="btn btn-primary" for="buttonFile">Thay đổi ảnh đại diện</label>
 
         </div>
     </div>
