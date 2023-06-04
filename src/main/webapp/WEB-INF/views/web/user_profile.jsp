@@ -103,52 +103,53 @@
 </section>
 <!-- END section -->
 
-<section class="probootstrap-section-half d-md-flex" id="section-about" style="padding-bottom: 10%">
-    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>); border-radius: 50%; ">
-        <c:url value="/edit_user" var="edit_image"/>
-        <form:form action="${edit_image}" role="form"  method="post" enctype="multipart/form-data">
-        <div class="custom-file">
-            <input type="file" class="custom-file-input" id="customFile" name="files">
-            <label class="custom-file-label" for="customFile">Chọn ảnh</label>
-        </div>
-            <button type="submit" id="buttonFile" hidden>Submit</button>
-        </form:form>
-    </div>
-    <div class="probootstrap-text">
-        <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
-            <h2 class="heading mb-4">Tên: <%=SecurityUtils.getPrincipal().getFullName()%>
-                <security:authorize access="isAuthenticated()">
-                    authenticated as <security:authentication property="principal.username" />
-                </security:authorize>
-             </h2>
-            <p>Ngày tạo tài khoản: 10 tháng 12 năm 2001</p>
-            <p>Địa chỉ emai: abc@gmail.com</p>
-            <p> </p>
+<%--<section class="probootstrap-section-half d-md-flex" id="section-about" style="padding-bottom: 10%">--%>
+<%--    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>); border-radius: 50%; ">--%>
+<%--        <c:url value="/edit_user" var="edit_image"/>--%>
+<%--        <form:form action="${edit_image}" role="form"  method="post" enctype="multipart/form-data">--%>
+<%--        <div class="custom-file">--%>
+<%--            <input type="file" class="custom-file-input" id="customFile" name="files">--%>
+<%--            <label class="custom-file-label" for="customFile">Chọn ảnh</label>--%>
+<%--        </div>--%>
+<%--            <button type="submit" id="buttonFile" hidden>Submit</button>--%>
+<%--        </form:form>--%>
+<%--    </div>--%>
+<%--    <div class="probootstrap-text">--%>
+<%--        <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">--%>
+<%--            <h2 class="heading mb-4">Tên: <%=SecurityUtils.getPrincipal().getFullName()%>--%>
+<%--                <security:authorize access="isAuthenticated()">--%>
+<%--                    authenticated as <security:authentication property="principal.username" />--%>
+<%--                </security:authorize>--%>
+<%--             </h2>--%>
+<%--            <p>Ngày tạo tài khoản: 10 tháng 12 năm 2001</p>--%>
+<%--            <p>Địa chỉ emai: abc@gmail.com</p>--%>
+<%--            <p> </p>--%>
 
-        </div>
-    </div>
-</section>
-<!-- END section -->
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</section>--%>
+<%--<!-- END section -->--%>
 
-<section>
+<section class="probootstrap_section">
     <div class="container-fluid">
         <!-- Comments -->
         <div>
-            <h2 class="tm-color-primary tm-post-title">Bình luận của bạn</h2>
+            <h2 class="tm-color-primary tm-post-title" style="text-align: center; font-size: 40px">Bình luận của bạn</h2>
             <hr class="tm-hr-primary tm-mb-45">
             <c:forEach var="item" items="${comments}">
             <div class="tm-comment-reply tm-mb-45">
                 <h2 class="heading mb-4">${item.placeEntity.title}</h2>
                 <div class="tm-comment">
-                    <figure class="tm-comment-figure">
-                        <img src="<c:url value="/template/web/assets/user_profile/images_and_videos/avata2.jpg"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100px;height: 100px;">
+                    <figure class="tm-comment-figure col-2">
+                        <img src="<c:url value="/template/web/assets/images/${model.avatar}"/>" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 100%; max-height: 205px">
                         <figcaption class="tm-color-primary text-center">${item.userEntity.fullName}</figcaption>
                     </figure>
-                    <p style="font-size: 125%">
+                    <p class="col-10" style="font-size: 125%">
                         ${item.content}
                     </p>
                 </div>
                 <span class="d-block text-right tm-color-primary">${item.createdDate}</span>
+                <hr>
             </div>
             </c:forEach>
         </div>
